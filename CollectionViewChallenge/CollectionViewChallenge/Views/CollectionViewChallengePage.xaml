@@ -1,10 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
     <ContentPage.Content>
         <StackLayout>
-            <!-- Use your own layout and functionality here! -->
+            <!-- Use your own layout and functionality here!
             <CollectionView>
                 <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -24,6 +26,143 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            -->
+
+
+            <Grid Grid.Row="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="0.5" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0"
+                      ColumnSpacing="10"
+                      Opacity="0.6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="63" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0"
+                           Margin="0,0,0,0"
+                           FontAttributes="Bold"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Center"
+                           Text="#"
+                           TextColor="Gray"
+                           VerticalTextAlignment="Center" />
+                    <Label Grid.Column="2"
+                           FontAttributes="Bold"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Start"
+                           Text="Name"
+                           TextColor="Gray"
+                           VerticalTextAlignment="Center" />
+
+                    <Label Grid.Column="3"
+                           FontAttributes="Bold"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Start"
+                           Text="Team"
+                           TextColor="Gray"
+                           VerticalTextAlignment="Center" />
+                    <Label Grid.Column="4"
+                           FontAttributes="Bold"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Start"
+                           Text="Score"
+                           TextColor="Gray"
+                           VerticalTextAlignment="Center" />
+                </Grid>
+
+
+                <BoxView Grid.Row="1"
+                         HeightRequest="0.5"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand"
+                         BackgroundColor="Black"
+                         Opacity="0.5" />
+
+
+
+                <CollectionView 
+                          Grid.Row="2"
+                          Margin="0"
+                                            
+                            ItemSizingStrategy="MeasureFirstItem"
+                          BackgroundColor="White"
+                          ItemsSource="{Binding Items}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                                <Grid Margin="0"
+                                      ColumnSpacing="10"
+                                      RowSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30" />
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition Width="1.5*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="63" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60" />
+                                    </Grid.RowDefinitions>
+
+
+
+                                    <Label Grid.Column="0"
+                                           HorizontalTextAlignment="Center"
+                                           Text="{Binding Id}"
+                                           TextColor="Black"
+                                           VerticalTextAlignment="Center" />
+
+                                    <Image Grid.Column="1"
+                                           WidthRequest="45"
+                                           HeightRequest="45"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                           Aspect="AspectFill"
+                                           Source="{Binding ImageUrl}" />
+
+                                    <Label Grid.Column="2"
+                                           HorizontalTextAlignment="Start"
+                                           Text="{Binding Name}"
+                                           TextColor="Black"
+                                           VerticalTextAlignment="Center" />
+
+                                    <Label Grid.Column="3"
+                                           HorizontalTextAlignment="Start"
+                                           Text="{Binding Team}"
+                                           TextColor="Black"
+                                           VerticalTextAlignment="Center" />
+
+                                    <Label Grid.Column="4"
+                                           FontFamily="CorporateS-Regular"
+                                           HorizontalTextAlignment="Start"
+                                           Text="{Binding Points}"
+                                           TextColor="Black"
+                                           VerticalTextAlignment="Center" />
+                                </Grid>
+                                
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.EmptyView>
+            <StackLayout>
+                <Label Text="No results matched your filter."
+                       Margin="10,25,10,10"
+                       FontAttributes="Bold"
+                       FontSize="18"
+                       HorizontalOptions="Fill"
+                       HorizontalTextAlignment="Center" />
+            </StackLayout>
+                        </CollectionView.EmptyView>
+                </CollectionView>
+            </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

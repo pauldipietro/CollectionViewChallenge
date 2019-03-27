@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using ContextMenu.iOS;
 using Foundation;
 using UIKit;
 
@@ -24,6 +24,7 @@ namespace CollectionViewChallenge.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init();
+            ContextMenuScrollViewRenderer.Initialize();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -13,6 +13,7 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.250467-pre7" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+    <PackageReference Include="ContextViewCell" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>

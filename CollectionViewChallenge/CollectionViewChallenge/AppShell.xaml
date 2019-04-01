@@ -75,5 +75,10 @@
                 <local:CollectionViewChallengePage Title="CollectionView"/>
             </ShellContent>
         </ShellSection>
+         <ShellSection Title="ListView" Icon="tab_feed.png">
+            <ShellContent Title="ListView">
+                <local:ListViewPage Title="ListView"/>
+            </ShellContent>
+        </ShellSection>
     </ShellItem>
 </Shell>

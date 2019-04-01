@@ -1,29 +1,221 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+    xmlns:vm="clr-namespace:CollectionViewChallenge.ViewModels"
+    BackgroundColor="#EEEEEE">
+    <!--Shell related bug, page is behind Title bar on iOS, bug exists on GitHub-->
+    <ContentPage.Padding>
+        <OnPlatform
+            Android="0"
+            iOS="0,88,0,88" />
+    </ContentPage.Padding>
+    <ContentPage.BindingContext>
+        <vm:CollectionViewChallengeViewModel
+            x:name="VM" />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+        <!-- Use your own layout and functionality here! -->
+        <Grid>
+            <CollectionView
+                ItemsSource="{Binding Items}"
+                x:Name="Collection">
+                <!---Pull to refresh isn't needed in this app but is in almost every ListView I use, looking forward to seeing the RefreshView -->
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding}" FontSize="10"/>
-                        </StackLayout>
+                        <!--It would be cool to be able to omit this tag as short hand and just put a view in.  -->
+                        <Grid
+                            RowSpacing="5"
+                            Padding="7">
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="*" />
+                                <RowDefinition
+                                    Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="Auto" />
+                                <ColumnDefinition
+                                    Width="*" />
+                                <ColumnDefinition
+                                    Width="*" />
+                                <ColumnDefinition
+                                    Width="Auto" />
+                                <ColumnDefinition
+                                    Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <BoxView
+                                BackgroundColor="White"
+                                Grid.RowSpan="2"
+                                CornerRadius="1"
+                                Grid.ColumnSpan="5"
+                                Margin="-5" />
+                            <Label
+                                Text="Location"
+                                Style="{StaticResource CellLabel}" />
+                            <Label
+                                Grid.Row="1"
+                                Style="{StaticResource CellLabel}"
+                                Text="{Binding Latitude}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span
+                                            Text="{Binding Latitude, StringFormat='{0:f3}'}" />
+                                        <Span
+                                            Text="," />
+                                        <Span
+                                            Text="{Binding Longitude, StringFormat='{0:f3}'}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label
+                                Text="Time"
+                                Grid.Column="1"
+                                HorizontalTextAlignment="End"
+                                Style="{StaticResource CellLabel}" />
+                            <Label
+                                Grid.Column="1"
+                                HorizontalTextAlignment="End"
+                                Grid.Row="1"
+                                Style="{StaticResource CellLabel}"
+                                Text="{Binding AlarmTime, StringFormat='{0:hh\\:mm}'}" />
+                            <Label
+                                Text="Radius"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="End"
+                                Style="{StaticResource CellLabel}"
+                                Grid.Column="2" />
+                            <Label
+                                Grid.Column="2"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="End"
+                                Grid.Row="1"
+                                Style="{StaticResource CellLabel}"
+                                Text="{Binding Radius, StringFormat='{0}km'}" />
+                            <Button
+                                Grid.RowSpan="2"
+                                Text="✎"
+                                Grid.Column="3"
+                                Rotation="90"
+                                Command="{Binding EditCommand}"
+                                CommandParameter="{x:Reference Collection}"
+                                Style="{StaticResource ButtonStyle}" />
+                            <Button
+                                Grid.Column="4"
+                                Grid.RowSpan="2"
+                                Text="×"
+                                BackgroundColor="DarkRed"
+                                Style="{StaticResource ButtonStyle}"
+                                Command="{Binding DeleteCommand}"
+                                CommandParameter="{x:Reference Collection}" />
+                        </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
+                <!--I Love the empty view, thank you -->
+                <CollectionView.EmptyView>
+                    <StackLayout
+                        Spacing="25"
+                        Padding="30">
+                        <Label
+                            Style="{StaticResource EmptyLabel}"
+                            Text="Want to get notified when there's a Geohash near your home or work?" />
+                        <Label
+                            Style="{StaticResource EmptyLabel}"
+                            Text="What if the global hash is in your country?" />
+                        <Label
+                            Style="{StaticResource EmptyLabel}"
+                            Text="Click the + button to set up a notification." />
+                    </StackLayout>
+                </CollectionView.EmptyView>
+                <!--I would like to have a footer view so that data flows in smoothly from the bottom of the screen but the bottom cell in my list isn't hidden by floating buttons and the curve of iPhone X.                -->
+                <!--                <CollectionView.FooterView>-->
+                <!--                    <BoxView HeightRequest="70" />-->
+                <!--                </CollectionView.FooterView>-->
             </CollectionView>
-        </StackLayout>
+            <Frame
+                BackgroundColor="Transparent"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                Padding="0">
+                <Button
+                    FontSize="Large"
+                    HeightRequest="50"
+                    Margin="20"
+                    WidthRequest="50"
+                    CornerRadius="25"
+                    Style="{StaticResource ButtonStyle}"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    Command="{Binding AddSubscriptionCommand}" />
+            </Frame>
+        </Grid>
     </ContentPage.Content>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style
+                x:Key="CellLabel"
+                TargetType="Label">
+                <Setter
+                    Property="FontSize"
+                    Value="Small" />
+                <Setter
+                    Property="VerticalTextAlignment"
+                    Value="Center" />
+            </Style>
+            <Style
+                x:Key="EmptyLabel"
+                TargetType="Label">
+                <Setter
+                    Property="FontSize"
+                    Value="Large" />
+                <Setter
+                    Property="VerticalTextAlignment"
+                    Value="Center" />
+                <Setter
+                    Property="HorizontalTextAlignment"
+                    Value="Center" />
+            </Style>
+            <Color
+                x:Key="Primary">#3F51B5</Color>
+            <Style
+                x:Key="ButtonStyle"
+                TargetType="Button">
+                <Setter
+                    Property="BorderColor"
+                    Value="White" />
+                <Setter
+                    Property="BorderWidth"
+                    Value="1" />
+                <Setter
+                    Property="HorizontalOptions"
+                    Value="Center" />
+                <Setter
+                    Property="VerticalOptions"
+                    Value="Center" />
+                <Setter
+                    Property="CornerRadius"
+                    Value="20" />
+                <Setter
+                    Property="Text"
+                    Value="+" />
+                <Setter
+                    Property="TextColor"
+                    Value="White" />
+                <Setter
+                    Property="BackgroundColor"
+                    Value="{StaticResource Primary}" />
+                <Setter
+                    Property="HeightRequest"
+                    Value="40" />
+                <Setter
+                    Property="WidthRequest"
+                    Value="40" />
+                <Setter
+                    Property="FontSize"
+                    Value="Medium" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 </ContentPage>

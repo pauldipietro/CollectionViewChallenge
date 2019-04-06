@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
-
-namespace CollectionViewChallenge
+﻿namespace CollectionViewChallenge
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {

@@ -1,7 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using CollectionViewChallenge.Views;
+﻿using Xamarin.Forms;
 
 namespace CollectionViewChallenge
 {

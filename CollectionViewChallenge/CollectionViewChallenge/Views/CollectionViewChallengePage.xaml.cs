@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using CollectionViewChallenge.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +10,24 @@ namespace CollectionViewChallenge.Views
         public CollectionViewChallengePage()
         {
             InitializeComponent();
+            BindingContext = new PlayersViewModel();
+        }
+
+        void Vertical_Clicked(object sender, System.EventArgs e)
+        {
+            PlayersCollectionView.ItemsLayout = ListItemsLayout.VerticalList;
+            //PlayersCollectionView.rel
+            //PlayersCollectionView.
+        }
+
+        void GridVertical_Clicked(object sender, System.EventArgs e)
+        {
+            PlayersCollectionView.ItemsLayout = new GridItemsLayout(2, ItemsLayoutOrientation.Vertical);
+        }
+
+        void GridHorizontal_Clicked(object sender, System.EventArgs e)
+        {
+            PlayersCollectionView.ItemsLayout = new GridItemsLayout(2, ItemsLayoutOrientation.Horizontal);
         }
     }
 }

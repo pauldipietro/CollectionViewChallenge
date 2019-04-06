@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    x:Class="CollectionViewChallenge.Views.ListViewPage"
+    ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        <ListView
+            Margin="20"
+            HasUnevenRows="true"
+            SeparatorVisibility="None"
+            ItemsSource="{Binding Players}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <custom:PancakeView
+                            Padding="10"
+                            Margin="10"
+                            BackgroundColor="#aaeeeeee"
+                            CornerRadius="20,20,20,20"
+                            HorizontalOptions="FillAndExpand"
+                            IsClippedToBounds="true"
+                            BorderIsDashed="true">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="80" />
+                                    <RowDefinition
+                                        Height="20" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="100" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Source="{Binding Image}"
+                                    Aspect="AspectFit" />
+                                <Label
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    FontSize="Small"
+                                    Text="{Binding Name}"
+                                    LineBreakMode="TailTruncation"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="End" />
+                                <StackLayout
+                                    Grid.RowSpan="2"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2">
+                                    <Label
+                                        Text="P.p.g"
+                                        FontSize="Small"
+                                        LineBreakMode="TailTruncation" />
+                                    <Label
+                                        Text="{Binding PointsPerGame}"
+                                        FontSize="Small"
+                                        LineBreakMode="TailTruncation" />
+                                </StackLayout>
+                            </Grid>
+                        </custom:PancakeView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

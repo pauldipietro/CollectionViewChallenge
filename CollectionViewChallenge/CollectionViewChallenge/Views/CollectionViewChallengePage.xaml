@@ -1,29 +1,123 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+    ios:Page.UseSafeArea="true">
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+        <StackLayout
+            Margin="10">
+            <CollectionView
+                ItemsSource="{Binding Teams}"
+                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                SelectionMode="Single"
+                SelectedItem="{Binding SelectedTeam, Mode=TwoWay}"
+                SelectionChangedCommand="{Binding LoadPlayersCommand}"
+                HeightRequest="110">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding}" FontSize="10"/>
-                        </StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="60" />
+                                <RowDefinition
+                                    Height="15" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="100" />
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                Grid.Row="0"
+                                Source="{Binding Image}"
+                                Aspect="AspectFit" />
+                            <Label
+                                Grid.Row="1"
+                                Text="{Binding Name}"
+                                FontSize="Small"
+                                LineBreakMode="TailTruncation"
+                                HorizontalOptions="Center"
+                                VerticalOptions="End" />
+                        </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            <StackLayout>
+                <Label
+                    Text="Players of selected team" />
+                <StackLayout
+                    Orientation="Horizontal">
+                    <Button
+                        Text="Vertical"
+                        Clicked="Vertical_Clicked" />
+                    <Button
+                        Text="Grid Vertical"
+                        Clicked="GridVertical_Clicked" />
+                    <Button
+                        Text="Grid Horizontal"
+                        Clicked="GridHorizontal_Clicked" />
+                </StackLayout>
+                <CollectionView
+                    x:Name="PlayersCollectionView"
+                    ItemsSource="{Binding Players}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                        <custom:PancakeView
+                            Padding="10"
+                            Margin="10"
+                            BackgroundColor="#aaeeeeee"
+                            CornerRadius="20,20,20,20"
+                            HorizontalOptions="FillAndExpand"
+                            IsClippedToBounds="true"
+                            BorderIsDashed="true">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="80" />
+                                    <RowDefinition
+                                        Height="20" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="100" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Source="{Binding Image}"
+                                    Aspect="AspectFit" />
+                                <Label
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    FontSize="Small"
+                                    Text="{Binding Name}"
+                                    LineBreakMode="TailTruncation"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="End" />
+                                <StackLayout
+                                    Grid.RowSpan="2"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2">
+                                    <Label
+                                        Text="P.p.g"
+                                        FontSize="Small"
+                                        LineBreakMode="TailTruncation" />
+                                    <Label
+                                        Text="{Binding PointsPerGame}"
+                                        FontSize="Small"
+                                        LineBreakMode="TailTruncation" />
+                                </StackLayout>
+                            </Grid>
+                             </custom:PancakeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

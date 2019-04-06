@@ -133,13 +133,25 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.250467-pre7" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.304370-pre8" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms.PancakeView">
+      <Version>1.0.21</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>

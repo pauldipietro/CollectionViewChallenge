@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
 using UIKit;
+using Xamarin.Forms;
 
 namespace CollectionViewChallenge.iOS
 {
@@ -20,13 +17,14 @@ namespace CollectionViewChallenge.iOS
         //
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
-            global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
-            global::Xamarin.Forms.Forms.Init();
+            Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            Forms.Init();
             LoadApplication(new App());
 
-            return base.FinishedLaunching(app, options);
+            return base.FinishedLaunching(uiApplication, launchOptions);
         }
     }
 }

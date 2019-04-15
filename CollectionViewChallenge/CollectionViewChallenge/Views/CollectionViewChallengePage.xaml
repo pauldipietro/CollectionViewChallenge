@@ -1,25 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             BackgroundColor="#40407a">
     <ContentPage.Content>
         <StackLayout>
             <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+            <CollectionView x:Name="cvEvents" SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="5">
-                            <Label Text="{Binding}" FontSize="10"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Title}" TextColor="White" LineBreakMode="TailTruncation" VerticalTextAlignment="Center"></Label>
+                                <Image Source="down_arrow.png" HorizontalOptions="EndAndExpand" WidthRequest="20">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image" Binding="{Binding DropDownVisible}" Value="True">
+                                            <Setter Property="IsVisible" Value="False"></Setter>
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+
+                            <Label TextColor="White" IsVisible="{Binding DropDownVisible}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Description}"></Span>
+                                        <Span Text="{Binding StartDate, StringFormat='{} ({0:MMM d yyyy} -'}"></Span>
+                                        <Span Text="{Binding EndDate, StringFormat='{} {0:MMM d yyyy})'}"></Span>
+                                        <Span Text="&#10;"></Span>
+                                        <Span Text="{Binding SubmittedOn, StringFormat='{}Date Submitted: {0:d/MMM/yyyy}'}"></Span>
+                                        <Span Text="&#10;"></Span>
+                                        <Span Text="{Binding Points,StringFormat='{}Points:{0}'}"></Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <BoxView Color="White" HeightRequest="0.5"></BoxView>
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

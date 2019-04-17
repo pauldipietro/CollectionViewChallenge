@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CollectionViewChallenge.App">
     <Application.Resources>
-        
+        <Color x:Key="backgroundColor">#2F3136</Color>
+        <Color x:Key="textColor">LightGray</Color>
+        <Color x:Key="altTextColor">White</Color>
+        <Color x:Key="brandColor">#7F00FF</Color>
+        <Color x:Key="messageBackgroundColor">#484B51</Color>
+        <Color x:Key="messageTextColor">LightGray</Color>
     </Application.Resources>
 </Application>

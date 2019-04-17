@@ -1,32 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+             xmlns:ffsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:c="clr-namespace:CollectionViewChallenge.Converters"
+             xmlns:models="clr-namespace:CollectionViewChallenge.Models"
+             xmlns:v="clr-namespace:CollectionViewChallenge.Views"
+             xmlns:vm="clr-namespace:CollectionViewChallenge.ViewModels"
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             x:DataType="vm:FortifyViewModel"
+             BackgroundColor="{DynamicResource backgroundColor}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <c:FactionToLogo x:Key="factionLogo"/>
+            <c:StationPadToImage x:Key="stationImage"/>
+            <c:BoolToInverse x:Key="inverseBool"/>
+
+            <DataTemplate x:Key="fortTemplate" x:DataType="models:FortItem">
+                <ViewCell>
+                    <ContentView Padding="15, 5">
+                        <Frame Padding="10" BackgroundColor="Transparent" BorderColor="{StaticResource brandColor}">
+                            <Grid ColumnSpacing="5" HorizontalOptions="Fill">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="70"/>
+                                </Grid.ColumnDefinitions>
+                                <ffsvg:SvgCachedImage Grid.Row="0" Grid.Column="0" 
+                                                      Source="{Binding Path=StationPad, Converter={StaticResource stationImage}, Mode=OneWay}" 
+                                                      HeightRequest="70" 
+                                                      VerticalOptions="Center"/>
+                                <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalOptions="Center" Spacing="0">
+                                    <Label Text="{Binding SystemName, Mode=OneWay}" LineBreakMode="WordWrap" MaxLines="2" TextColor="{DynamicResource textColor}" FontAttributes="Bold" FontSize="Large"/>
+                                    <Label Text="{Binding Path=DistanceToHQ, StringFormat='Distance From HQ: {0}', Mode=OneWay}" LineBreakMode="NoWrap" TextColor="{DynamicResource textColor}"/>
+                                    <Label Text="{Binding Path=StationDistance, StringFormat='SC Distance: {0}', Mode=OneWay}" LineBreakMode="NoWrap" TextColor="{DynamicResource textColor}"/>
+                                </StackLayout>
+                                <ffsvg:SvgCachedImage Grid.Row="0" Grid.Column="2" 
+                                                      Source="{Binding Path=MajorFaction, Converter={StaticResource factionLogo}, Mode=OneWay}" 
+                                                      HeightRequest="70" 
+                                                      VerticalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+                    </ContentView>
+                </ViewCell>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+
+        <StackLayout Spacing="5" VerticalOptions="FillAndExpand">
+
+            <ContentView BackgroundColor="{StaticResource brandColor}" Margin="0, 5, 0, 0">
+                <Label Text="{Binding Path=CCBalance, StringFormat='Projected CC Balance: {0}', Mode=OneWay}" TextColor="{StaticResource altTextColor}" FontAttributes="Bold" LineBreakMode="NoWrap" Margin="10, 0"/>
+            </ContentView>
+
+            <StackLayout Orientation="Vertical" Spacing="5" Margin="10, 0">
+                <Label Text="Deliver units of Lavigny Garrison Supplies from Kamadhenu to contacts in controlled systems to help fortify Emperor Lavigny-Duval's hold over them." TextColor="{DynamicResource textColor}"/>
+                <Label Text="Fortifying over 100% is wasted effort. The UI is not always up to date so deliver 1 unit of supplies and check that fortification has not been completed before completing your delivery." TextColor="{DynamicResource textColor}"/>
+            </StackLayout>
+
+            <ListView ItemTemplate="{StaticResource fortTemplate}" 
+                      ItemsSource="{Binding Targets, Mode=OneWay}" 
+                      IsVisible="{Binding ShowMessage, Converter={StaticResource inverseBool}, Mode=OneWay}" 
+                      SeparatorVisibility="None" 
+                      HasUnevenRows="True"/>
+
+            <v:MessagePanelView IsVisible="{Binding ShowMessage, Mode=OneWay}"
+                                Padding="20, 10"
+                                Spacing="5"
+                                ImageSource="resource://CollectionViewChallenge.Resources.ald.logo.svg"
+                                ImageHeightRequest="150"
+                                Message="{Binding Message, Mode=OneWay}"
+                                ButtonText="Retry"
+                                ButtonCommand="{Binding RetryDownloadCommand, Mode=OneWay}"
+                                ButtonBackgroundColour="{StaticResource brandColor}"
+                                ButtonTextColour="{StaticResource altTextColor}"
+                                ButtonIsVisible="{Binding IsErrorMessage, Mode=OneWay}"/>
+
+            <StackLayout Orientation="Horizontal" Spacing="10" BackgroundColor="{StaticResource brandColor}">
+                <Label Text="{Binding Cycle, Mode=OneWay}" HorizontalOptions="Start" TextColor="{StaticResource altTextColor}" Margin="10, 0, 0, 0"/>
+                <Label Text="{Binding LastUpdated, StringFormat='Updated: {0}', Mode=OneWay}" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End" TextColor="{StaticResource altTextColor}" Margin="0, 0, 10, 0"/>
+            </StackLayout>
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

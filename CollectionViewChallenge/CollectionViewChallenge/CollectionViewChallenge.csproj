@@ -11,6 +11,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\ald.logo.svg" />
+    <None Remove="Resources\alliance.green.svg" />
+    <None Remove="Resources\coriolis.orange.svg" />
+    <None Remove="Resources\empire.blue.svg" />
+    <None Remove="Resources\federation.red.svg" />
+    <None Remove="Resources\independent.orange.svg" />
+    <None Remove="Resources\outpost.orange.svg" />
+    <None Remove="Resources\surface-port.orange.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ald.logo.svg" />
+    <EmbeddedResource Include="Resources\alliance.green.svg" />
+    <EmbeddedResource Include="Resources\coriolis.orange.svg" />
+    <EmbeddedResource Include="Resources\empire.blue.svg" />
+    <EmbeddedResource Include="Resources\federation.red.svg" />
+    <EmbeddedResource Include="Resources\independent.orange.svg" />
+    <EmbeddedResource Include="Resources\outpost.orange.svg" />
+    <EmbeddedResource Include="Resources\surface-port.orange.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="1.68.0" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.5.900-pre" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.346134-pre9" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>

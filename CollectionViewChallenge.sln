@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionViewChallenge.And
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionViewChallenge.iOS", "CollectionViewChallenge\CollectionViewChallenge.iOS\CollectionViewChallenge.iOS.csproj", "{94E3CD1D-1EF3-490B-AF87-B47DDE1D886E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionViewChallenge", "CollectionViewChallenge\CollectionViewChallenge\CollectionViewChallenge.csproj", "{9A9DDEE5-8C48-4274-82D7-22EB79C97206}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionViewChallenge", "CollectionViewChallenge\CollectionViewChallenge\CollectionViewChallenge.csproj", "{9A9DDEE5-8C48-4274-82D7-22EB79C97206}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,7 +38,6 @@ Global
 		{3CB35ADD-B981-4B4B-9C26-7ECB1B1BD266}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{3CB35ADD-B981-4B4B-9C26-7ECB1B1BD266}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{94E3CD1D-1EF3-490B-AF87-B47DDE1D886E}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{94E3CD1D-1EF3-490B-AF87-B47DDE1D886E}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{94E3CD1D-1EF3-490B-AF87-B47DDE1D886E}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{94E3CD1D-1EF3-490B-AF87-B47DDE1D886E}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{94E3CD1D-1EF3-490B-AF87-B47DDE1D886E}.Debug|iPhone.Build.0 = Debug|iPhone

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:v="clr-namespace:CollectionViewChallenge.Views"
+             x:Name="this"
+             x:Class="CollectionViewChallenge.Views.MessagePanelView"
+             x:DataType="v:MessagePanelView"
+             BackgroundColor="{DynamicResource messageBackgroundColor}" 
+             HorizontalOptions="Fill" 
+             VerticalOptions="FillAndExpand" 
+             Padding="20">
+
+    <ScrollView>
+
+        <StackLayout Orientation="Vertical" 
+                     Spacing="{Binding Source={x:Reference this}, Path=Spacing, Mode=OneWay}" 
+                     HorizontalOptions="Center" 
+                     VerticalOptions="Center">
+
+            <ffsvg:SvgCachedImage Source="{Binding Source={x:Reference this}, Path=ImageSource, Mode=OneWay}" 
+                                  HeightRequest="{Binding Source={x:Reference this}, Path=ImageHeightRequest, Mode=OneWay}" 
+                                  HorizontalOptions="Center"/>
+
+            <Label Text="{Binding Source={x:Reference this}, Path=Message, Mode=OneWay}" 
+                   TextColor="{DynamicResource messageTextColor}"
+                   LineBreakMode="WordWrap" 
+                   HorizontalOptions="Center"/>
+
+            <Button Text="{Binding Source={x:Reference this}, Path=ButtonText, Mode=OneWay}" 
+                    Command="{Binding Source={x:Reference this}, Path=ButtonCommand, Mode=OneWay}" 
+                    BackgroundColor="{Binding Source={x:Reference this}, Path=ButtonBackgroundColour, Mode=OneWay}" 
+                    TextColor="{Binding Source={x:Reference this}, Path=ButtonTextColour, Mode=OneWay}" 
+                    IsVisible="{Binding Source={x:Reference this}, Path=ButtonIsVisible, Mode=OneWay}" 
+                    HorizontalOptions="Center" 
+                    Padding="15, 0"/>
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentView>

@@ -18,7 +18,7 @@
             <c:BoolToInverse x:Key="inverseBool"/>
 
             <DataTemplate x:Key="fortTemplate" x:DataType="models:FortItem">
-                <ViewCell>
+                <!--<ViewCell>-->
                     <ContentView Padding="15, 5">
                         <Frame Padding="10" BackgroundColor="Transparent" BorderColor="{StaticResource brandColor}">
                             <Grid ColumnSpacing="5" HorizontalOptions="Fill">
@@ -40,13 +40,13 @@
                                     <Label Text="{Binding Path=StationDistance, StringFormat='SC Distance: {0}', Mode=OneWay}" LineBreakMode="NoWrap" TextColor="{DynamicResource textColor}"/>
                                 </StackLayout>
                                 <ffsvg:SvgCachedImage Grid.Row="0" Grid.Column="2" 
-                                                      Source="{Binding Path=MajorFaction, Converter={StaticResource factionLogo}, Mode=OneWay}" 
-                                                      HeightRequest="70" 
-                                                      VerticalOptions="Center"/>
+                                                    Source="{Binding Path=MajorFaction, Converter={StaticResource factionLogo}, Mode=OneWay}" 
+                                                    HeightRequest="70" 
+                                                    VerticalOptions="Center"/>
                             </Grid>
                         </Frame>
                     </ContentView>
-                </ViewCell>
+                <!--</ViewCell>-->
             </DataTemplate>
 
         </ResourceDictionary>
@@ -65,11 +65,17 @@
                 <Label Text="Fortifying over 100% is wasted effort. The UI is not always up to date so deliver 1 unit of supplies and check that fortification has not been completed before completing your delivery." TextColor="{DynamicResource textColor}"/>
             </StackLayout>
 
-            <ListView ItemTemplate="{StaticResource fortTemplate}" 
+            <!--<ListView ItemTemplate="{StaticResource fortTemplate}" 
                       ItemsSource="{Binding Targets, Mode=OneWay}" 
                       IsVisible="{Binding ShowMessage, Converter={StaticResource inverseBool}, Mode=OneWay}" 
                       SeparatorVisibility="None" 
-                      HasUnevenRows="True"/>
+                      HasUnevenRows="True"/>-->
+
+            <CollectionView ItemTemplate="{StaticResource fortTemplate}"
+                            ItemsSource="{Binding Targets, Mode=OneWay}" 
+                            IsVisible="{Binding ShowMessage, Converter={StaticResource inverseBool}, Mode=OneWay}" 
+                            ItemSizingStrategy="MeasureFirstItem"
+                            VerticalOptions="FillAndExpand"/>
 
             <v:MessagePanelView IsVisible="{Binding ShowMessage, Mode=OneWay}"
                                 Padding="20, 10"

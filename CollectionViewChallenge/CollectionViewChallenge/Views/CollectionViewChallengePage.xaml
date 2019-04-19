@@ -1,32 +1,56 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage" Padding="10">
     <ContentPage.Content>
-        <StackLayout>
+        <Grid>
             <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                   <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ActivityIndicator x:Name="indicator" Grid.Row="0" HeightRequest="35"/>
+            <StackLayout Grid.Row="1" HeightRequest="400" VerticalOptions="FillAndExpand">
+            <Label Text="Listen for free" TextColor="Olive" VerticalOptions="Center" FontSize="18" Margin="10"/>
+            <CollectionView HeightRequest="200" x:Name="free" ItemsLayout="{x:Static ListItemsLayout.HorizontalList}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
+                        <Frame HasShadow="false" Padding="1" Margin="2" CornerRadius="2" HeightRequest="200" BorderColor="Gray">
+                                <StackLayout WidthRequest="250" HeightRequest="200">
+                                        <Image Source="{Binding ImagePath}"  HeightRequest="120" WidthRequest="200" Aspect="AspectFill"/>
+                                     <Label Text="{Binding Title}"  TextColor="#3498db" FontSize="15" Margin="5"/>
+                                    <Label Text="{Binding Category}"/>
+                                </StackLayout>
+                            </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </StackLayout>
+                </StackLayout>
+            <StackLayout Grid.Row="2">
+                  <Label Text="Trending" TextColor="Olive" VerticalOptions="Center" FontSize="18" Margin="10"/>
+            <CollectionView  x:Name="paid">
+                <CollectionView.ItemsLayout>
+       <GridItemsLayout Orientation="Vertical"
+                        Span="2" />
+    </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame HasShadow="true" Padding="7" Margin="5" CornerRadius="2">
+                            <StackLayout>
+                                <Image Source="{Binding ImagePath}" HeightRequest="150" WidthRequest="150" Aspect="AspectFill"/>
+                                
+                                    <Label Text="{Binding Title}" TextColor="#3498db" FontSize="15" />
+                                    <Label Text="{Binding Category}"/>
+                           </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+                </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -14,7 +14,7 @@ namespace CollectionViewChallenge
 
             MainPage = new AppShell();
         }
-
+        public static string AppKey { get { return "b3c8f22b-079c-4255-ab53-86f17cdcfac6"; } }
         protected override void OnStart()
         {
             // Handle when your app starts

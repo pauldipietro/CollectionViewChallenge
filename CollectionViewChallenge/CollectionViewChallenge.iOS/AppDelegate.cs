@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using ImageCircle.Forms.Plugin.iOS;
 using UIKit;
 
 namespace CollectionViewChallenge.iOS
@@ -24,6 +25,7 @@ namespace CollectionViewChallenge.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init();
+            ImageCircleRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

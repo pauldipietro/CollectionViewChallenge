@@ -3,29 +3,78 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:roundImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              mc:Ignorable="d"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
              BackgroundColor="Gray">
     <ContentPage.Content>
         <StackLayout Padding="0,100,0,30">
-            <!-- Use your own layout and functionality here! -->
+            
             <CollectionView ItemsSource="{Binding TimelineItems}"  Margin="10">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5" BackgroundColor="White">
-                            <!-- header -->
-                            <StackLayout>
-                                <Label Text="{Binding Member.FullName}" FontSize="Small" />
-                                <Label Text="{Binding Created}" FontSize="Small" />
-                            </StackLayout>
-                            
-                            <Label Text="{Binding Message}" FontSize="Small" />
-                            <BoxView BackgroundColor="Green" />
-                            
-                            <StackLayout Orientation="Horizontal" Margin="5">
-                                <Label Text="Like" FontSize="Small" />
-                                <Label Text="Comment" FontSize="Small" HorizontalOptions="CenterAndExpand"/>
-                                <Label Text="Share" FontSize="Small" />
+                        <StackLayout Padding="5" BackgroundColor="Gray">
+                            <StackLayout Padding="5" BackgroundColor="White">
+                                
+                                <!-- header -->
+                                <Grid>
+                                    
+                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                    </Grid.RowDefinitions>
+                                    
+                                    <roundImage:CircleImage 
+                                        Source="{Binding Member.Avatar}" Aspect="AspectFill"
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2">
+                                      <roundImage:CircleImage.WidthRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                          <On Platform="Android, iOS">25</On>
+                                        </OnPlatform>
+                                      </roundImage:CircleImage.WidthRequest>
+                                      <roundImage:CircleImage.HeightRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                          <On Platform="Android, iOS">25</On>
+                                        </OnPlatform>
+                                      </roundImage:CircleImage.HeightRequest>
+                                    </roundImage:CircleImage>
+                                    
+                                    <Label Grid.Column="1" Grid.Row="0" Text="{Binding Member.FullName}" FontAttributes="Bold" FontSize="Small" VerticalTextAlignment="Center" />
+                                    <Label Grid.Column="1" Grid.Row="1" Text="{Binding HumanizedDate}" FontSize="Small" VerticalTextAlignment="Start"/>
+                                    
+                                </Grid>
+                                
+                                <StackLayout>
+                                    
+                                    
+                                </StackLayout>
+                                
+                                <!-- main -->
+                                <Label Text="{Binding Message}" FontSize="Small" />
+                                <Image Source="{Binding ImageUrl}" HorizontalOptions="FillAndExpand" Aspect="AspectFill"/>
+                                
+                                <!-- footer -->
+                                <StackLayout Orientation="Horizontal" Margin="5">
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Command="{Binding AddReactionCommand}"/>
+                                        </StackLayout.GestureRecognizers>
+                                        
+                                        <Image Source="{Binding LikeImage}"/>
+                                        
+                                        <Label Text="Like" FontSize="Small" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding ReactionsText}" FontSize="Small" VerticalTextAlignment="Center"/>
+                                    </StackLayout>
+                                    <Label Text="Comment" FontSize="Small" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                                    <Label Text="Share" FontSize="Small" />
+                                </StackLayout>
                             </StackLayout>
                         </StackLayout>
                     </DataTemplate>

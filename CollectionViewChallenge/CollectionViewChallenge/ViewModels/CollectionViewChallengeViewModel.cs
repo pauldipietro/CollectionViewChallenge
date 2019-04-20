@@ -3,6 +3,7 @@ using CollectionViewChallenge.Models;
 using CollectionViewChallenge.Services;
 using Microsoft.Extensions.DependencyInjection;
 using MvvmHelpers;
+using System.Linq;
 
 namespace CollectionViewChallenge.ViewModels
 {
@@ -15,7 +16,7 @@ namespace CollectionViewChallenge.ViewModels
         {
             _timelineService = App.ServiceProvider.GetRequiredService<ITimelineService>();
 
-            TimelineItems = _timelineService.GetTimelineItems(10);
+            TimelineItems = _timelineService.GetTimelineItems(10).ToList();
         }
 
         public List<TimelineItem> TimelineItems { get; set; }

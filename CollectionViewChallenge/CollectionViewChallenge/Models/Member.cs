@@ -11,5 +11,7 @@ namespace CollectionViewChallenge.Models
         public string LastName { get; set; }
 
         public string FullName => $"{FirstName} {LastName}";
+
+        public string Avatar { get; set; }
     }
 }

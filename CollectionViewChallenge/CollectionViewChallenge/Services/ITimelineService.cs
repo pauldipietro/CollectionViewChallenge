@@ -5,6 +5,8 @@ namespace CollectionViewChallenge.Services
 {
     public interface ITimelineService
     {
-        List<TimelineItem> GetTimelineItems(int amount);
+        List<Member> Members { get; }
+
+        IEnumerable<TimelineItem> GetTimelineItems(int amount);
     }
 }

@@ -1,9 +1,8 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using CollectionViewChallenge.Views;
-using Microsoft.Extensions.DependencyInjection;
+﻿using System.Linq;
+using CollectionViewChallenge.Models;
 using CollectionViewChallenge.Services;
+using Microsoft.Extensions.DependencyInjection;
+using Xamarin.Forms;
 
 namespace CollectionViewChallenge
 {
@@ -11,11 +10,16 @@ namespace CollectionViewChallenge
     {
         public static ServiceProvider ServiceProvider { get; private set; }
 
+        public static Member CurrentUser { get; private set; }
+
         public App()
         {
             InitializeComponent();
 
             ServiceProvider = CreateServiceProvider();
+
+            var timelineService = App.ServiceProvider.GetRequiredService<ITimelineService>();
+            CurrentUser = timelineService.Members.First();
 
             MainPage = new AppShell();
         }

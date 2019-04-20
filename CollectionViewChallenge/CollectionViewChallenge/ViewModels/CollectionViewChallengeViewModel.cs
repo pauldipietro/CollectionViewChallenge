@@ -1,7 +1,10 @@
 ﻿using CollectionViewChallenge.Models;
 using CollectionViewChallenge.Services;
 using MvvmHelpers;
+using System;
 using System.Collections.Generic;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace CollectionViewChallenge.ViewModels
 {
@@ -18,5 +21,6 @@ namespace CollectionViewChallenge.ViewModels
         }
 
         public List<TimelineItem> TimelineItems { get; set; }
+
     }
 }

@@ -1,10 +1,8 @@
-﻿using CollectionViewChallenge.Models;
+﻿using System.Collections.Generic;
+using CollectionViewChallenge.Models;
 using CollectionViewChallenge.Services;
+using Microsoft.Extensions.DependencyInjection;
 using MvvmHelpers;
-using System;
-using System.Collections.Generic;
-using System.Windows.Input;
-using Xamarin.Forms;
 
 namespace CollectionViewChallenge.ViewModels
 {
@@ -13,9 +11,9 @@ namespace CollectionViewChallenge.ViewModels
     {
         private readonly ITimelineService _timelineService;
 
-        public CollectionViewChallengeViewModel(ITimelineService timelineService)
+        public CollectionViewChallengeViewModel()
         {
-            _timelineService = timelineService;
+            _timelineService = App.ServiceProvider.GetRequiredService<ITimelineService>();
 
             TimelineItems = _timelineService.GetTimelineItems(10);
         }

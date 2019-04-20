@@ -72,6 +72,18 @@ namespace CollectionViewChallenge.ViewModels
                     Name = "Apocalypse",
                     Description = "",
                     Path = "https://i.annihil.us/u/prod/marvel/i/mg/f/e0/526166076a1d0.jpg"
+                },
+                new Character
+                {
+                    Name = "Thanos",
+                    Description = "The Mad Titan Thanos, a melancholy, brooding individual, consumed with the concept of death, sought out personal power and increased strength, endowing himself with cybernetic implants until he became more powerful than any of his brethren.",
+                    Path = "https://i.annihil.us/u/prod/marvel/i/mg/6/40/5274137e3e2cd.jpg"
+                },
+                new Character
+                {
+                    Name = "Black Widow/Natasha Romanoff (MAA)",
+                    Description = "Natasha Romanoff, also known as Black Widow, is a world-renowned super spy and one of S.H.I.E.L.D.'s top agents. Her hand-to-hand combat skills, intelligence, and unpredictability make her a deadly secret weapon. True to her mysterious nature, Black Widow comes and goes as she pleases, but always appears exactly when her particular skills are needed.",
+                    Path = "https://i.annihil.us/u/prod/marvel/i/mg/a/03/523219743a99b.jpg"
                 }
             };
         }

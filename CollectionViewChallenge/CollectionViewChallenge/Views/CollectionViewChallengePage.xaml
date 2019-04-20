@@ -5,50 +5,56 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:FFImageLoading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:FFImageTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             BackgroundColor="#f1f1f1">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand"
-                     Padding="8">
-            
+                     Padding="6">
+
             <Label Text="Marvel Characters"
+                   FontAttributes="Bold"
                    FontSize="25"
                    HorizontalOptions="CenterAndExpand"></Label>
-            
+
             <CollectionView ItemsSource="{Binding Characters}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame HasShadow="True"
-                               CornerRadius="2"
-                               Margin="2,3,2,3">
-                            <StackLayout Orientation="Horizontal"
-                                         Spacing="10">
+                        <StackLayout Orientation="Vertical">
+                            <Frame HasShadow="True"
+                                   CornerRadius="18"
+                                   Margin="2,3,2,3"
+                                   Padding="10,20,20,20">
+                                <StackLayout Orientation="Horizontal"
+                                             Spacing="10">
+                                    <FFImageLoading:CachedImage Source="{Binding Path}"
+                                                                WidthRequest="70"
+                                                                HeightRequest="70"
+                                                                HorizontalOptions="Center"
+                                                                VerticalOptions="Center"
+                                                                DownsampleToViewSize="True">
+                                        <FFImageLoading:CachedImage.Transformations>
+                                            <FFImageTransformations:CircleTransformation/>
+                                        </FFImageLoading:CachedImage.Transformations>
+                                    </FFImageLoading:CachedImage>
 
-                                <Image Source="{Binding Path}"
-                                       WidthRequest="70"
-                                       HeightRequest="70"
-                                       HorizontalOptions="Center"
-                                       VerticalOptions="Center">                                    
-                                </Image>
+                                    <StackLayout Orientation="Vertical"
+                                                 VerticalOptions="Center"
+                                                 HorizontalOptions="Center">
 
-                                <StackLayout Orientation="Vertical"
-                                             VerticalOptions="Center"
-                                             HorizontalOptions="Center">
+                                        <Label Text="{Binding Name}"
+                                               HorizontalOptions="StartAndExpand"
+                                               VerticalOptions="Center"
+                                               FontSize="20"></Label>
 
-                                    <Label Text="{Binding Name}"
-                                           HorizontalOptions="CenterAndExpand"
-                                           VerticalOptions="Center"
-                                           FontSize="20"></Label>
-
-                                    <Label Text="{Binding Description}"
-                                           HorizontalOptions="CenterAndExpand"
-                                           VerticalOptions="Center"
-                                           FontSize="15"
-                                           LineBreakMode="TailTruncation"></Label>
-
+                                        <Label Text="{Binding Description}"
+                                               HorizontalOptions="StartAndExpand"
+                                               VerticalOptions="Center"
+                                               FontSize="17"
+                                               LineBreakMode="TailTruncation"></Label>
+                                    </StackLayout>
                                 </StackLayout>
-
-                            </StackLayout>
-                        </Frame>
+                            </Frame>
+                        </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

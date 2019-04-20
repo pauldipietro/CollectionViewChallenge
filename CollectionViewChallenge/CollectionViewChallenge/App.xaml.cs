@@ -7,12 +7,18 @@ namespace CollectionViewChallenge
 {
     public partial class App : Application
     {
+        public static INavigation Navigation;
 
         public App()
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+//#if DEBUG
+//            HotReloader.Current.Start(this);
+//#endif
+
+            MainPage = new NavigationPage(new ListViewPage());
+            Navigation = MainPage.Navigation;
         }
 
         protected override void OnStart()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CollectionViewChallenge.Models
 {
-    public class TimeLineItem
+    public class TimelineItem
     {
         public Guid Id { get; set; }
         public Member Member { get; set; }
@@ -14,7 +14,7 @@ namespace CollectionViewChallenge.Models
 
         public List<Reaction> Reactions { get; set; }
 
-        public List<Comment> Comments { get; set; }
+        public List<Comment> Comments { get; set; }
 
         public DateTime Created { get; set; }
     }

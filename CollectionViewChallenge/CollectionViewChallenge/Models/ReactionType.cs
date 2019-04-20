@@ -6,6 +6,6 @@
         Happy,
         Sad,
         Love,
-        Dislike
+        Dislike
     }
 }

@@ -16,5 +16,10 @@ namespace CollectionViewChallenge.Views
         {
             InitializeComponent();
         }
+
+        private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,7 +7,8 @@
        Route="CollectionViewChallenge"
        FlyoutBehavior="Disabled"
        Title="CollectionViewChallenge"
-       x:Class="CollectionViewChallenge.AppShell">
+       x:Class="CollectionViewChallenge.AppShell"
+       Visual="Material">
 
     <!--
         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

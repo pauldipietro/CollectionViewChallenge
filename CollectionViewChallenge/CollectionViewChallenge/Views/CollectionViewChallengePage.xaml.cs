@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CollectionViewChallenge.ViewModels;
 
 namespace CollectionViewChallenge.Views
 {
@@ -15,6 +16,8 @@ namespace CollectionViewChallenge.Views
         public CollectionViewChallengePage()
         {
             InitializeComponent();
+
+            BindingContext = new CollectionViewChallengeViewModel();
         }
     }
 }

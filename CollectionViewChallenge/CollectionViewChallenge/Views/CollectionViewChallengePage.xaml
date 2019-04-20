@@ -3,27 +3,52 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
+             xmlns:FFImageLoading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:FFImageTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     Padding="8">
+            
+            <Label Text="Marvel Characters"
+                   FontSize="25"
+                   HorizontalOptions="CenterAndExpand"></Label>
+            
+            <CollectionView ItemsSource="{Binding Characters}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
+                        <Frame HasShadow="True"
+                               CornerRadius="2"
+                               Margin="2,3,2,3">
+                            <StackLayout Orientation="Horizontal"
+                                         Spacing="10">
+
+                                <Image Source="{Binding Path}"
+                                       WidthRequest="70"
+                                       HeightRequest="70"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center">                                    
+                                </Image>
+
+                                <StackLayout Orientation="Vertical"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Center">
+
+                                    <Label Text="{Binding Name}"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="Center"
+                                           FontSize="20"></Label>
+
+                                    <Label Text="{Binding Description}"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="Center"
+                                           FontSize="15"
+                                           LineBreakMode="TailTruncation"></Label>
+
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

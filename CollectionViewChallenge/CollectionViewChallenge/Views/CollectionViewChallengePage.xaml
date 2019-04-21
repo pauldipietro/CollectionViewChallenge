@@ -4,12 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             BackgroundImage="background.png">
     <ContentPage.Content>
         <StackLayout>
             <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
+            <CollectionView ItemsSource="{Binding Courses}">
+                <d:CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>This is a CollectionView!</x:String>
                         <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
@@ -18,15 +19,55 @@
                         <x:String>2. How is the performance compared to the ListView?</x:String>
                         <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
                     </x:Array>
-                </CollectionView.ItemsSource>
+                </d:CollectionView.ItemsSource>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                                         Padding="40,0,0,0">
+                                <Frame CornerRadius="30"
+                                            HeightRequest="90"
+                                            WidthRequest="90"
+                                            Margin="0"
+                                            Padding="0" BackgroundColor="Yellow">
+                                    <Image Source="{Binding ImageUrl}" d:Source="placeholder.png"/>
+                                </Frame>
+                                <StackLayout Orientation="Vertical" Padding="10,0,0,0">
+                                    <Frame CornerRadius="30"
+                                            HeightRequest="30"
+                                            WidthRequest="30"
+                                            Margin="0"
+                                            Padding="0" BackgroundColor="#307FEC">
+                                        <Label Text="{Binding ReviewsWords}" d:Text="6" FontSize="Small" HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               TextColor="White"/>
+                                    </Frame>
+                                    <Frame CornerRadius="30"
+                                            HeightRequest="30"
+                                            WidthRequest="30"
+                                            Margin="0"
+                                            Padding="0"
+                                           BackgroundColor="#EC3030">
+                                        <Label Text="{Binding DifficultWords}" d:Text="10" FontSize="Small" FontAttributes="Bold" 
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               TextColor="White"/>
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <Label Text="{Binding Title}" d:Text="1 - Words and Phrases" FontSize="Medium" HorizontalTextAlignment="Center"
+                                   TextColor="White"/>
+                            <Label Text="{Binding Description}" d:Text="Phrases: Make Them Laugh" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                                   TextColor="White"/>
+
+                            <Image Source="separator.png" d:Source="separator.png"
+                                   IsVisible="{Binding}" Margin="0,20"/>
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            <Image Source="bottom.png" d:Source="bottom.png" VerticalOptions="EndAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

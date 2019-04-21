@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CollectionViewChallenge.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace CollectionViewChallenge.Views
         public CollectionViewChallengePage()
         {
             InitializeComponent();
+            BindingContext = new CollectionViewChallengeViewModel();
         }
     }
 }

@@ -52,7 +52,7 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#000000</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="Shell.ShellForegroundColor" Value="White" />
@@ -65,6 +65,10 @@
                 <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+            
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#ffffff" />
+            </Style>
         </ResourceDictionary>
     </Shell.Resources>
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="CollectionViewChallenge.Templates.Netflix.Standard"
+>
+    <ContentView.Content>
+        <StackLayout>
+            <Image 
+                Source="{Binding Photo}"
+                HeightRequest="{Binding Height}"
+                Margin="5,0"
+            />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

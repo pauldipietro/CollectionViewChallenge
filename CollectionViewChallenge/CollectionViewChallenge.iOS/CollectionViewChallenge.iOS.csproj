@@ -123,6 +123,49 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\brauer_neue_std.ttf" />
+    <BundleResource Include="Resources\ciutadella_medium.ttf" />
+    <BundleResource Include="Resources\ciutadella_regular.ttf" />
+    <BundleResource Include="Resources\ciutadella_semibold.ttf" />
+    <BundleResource Include="Resources\ic_confirmed_16%403x.png" />
+    <BundleResource Include="Resources\ic_confirmed_16%402x.png" />
+    <BundleResource Include="Resources\ic_confirmed_16.png" />
+    <BundleResource Include="Resources\BusinessRewardsAdvice%403x.jpg" />
+    <BundleResource Include="Resources\BusinessRewardsAdvice%402x.jpg" />
+    <BundleResource Include="Resources\BusinessRewardsAdvice.jpg" />
+    <BundleResource Include="Resources\Competitions%403x.jpg" />
+    <BundleResource Include="Resources\Competitions%402x.jpg" />
+    <BundleResource Include="Resources\Competitions.jpg" />
+    <BundleResource Include="Resources\EntertainmentExperiences%403x.jpg" />
+    <BundleResource Include="Resources\EntertainmentExperiences%402x.jpg" />
+    <BundleResource Include="Resources\EntertainmentExperiences.jpg" />
+    <BundleResource Include="Resources\FamilyKids%403x.jpg" />
+    <BundleResource Include="Resources\FamilyKids%402x.jpg" />
+    <BundleResource Include="Resources\FamilyKids.jpg" />
+    <BundleResource Include="Resources\FashionShopping%403x.jpg" />
+    <BundleResource Include="Resources\FashionShopping%402x.jpg" />
+    <BundleResource Include="Resources\FashionShopping.jpg" />
+    <BundleResource Include="Resources\FoodWine%403x.jpg" />
+    <BundleResource Include="Resources\FoodWine%402x.jpg" />
+    <BundleResource Include="Resources\FoodWine.jpg" />
+    <BundleResource Include="Resources\HealthWellness%403x.jpg" />
+    <BundleResource Include="Resources\HealthWellness%402x.jpg" />
+    <BundleResource Include="Resources\HealthWellness.jpg" />
+    <BundleResource Include="Resources\OffersDiscounts%403x.jpg" />
+    <BundleResource Include="Resources\OffersDiscounts%402x.jpg" />
+    <BundleResource Include="Resources\OffersDiscounts.jpg" />
+    <BundleResource Include="Resources\SmartMoney%403x.jpg" />
+    <BundleResource Include="Resources\SmartMoney%402x.jpg" />
+    <BundleResource Include="Resources\SmartMoney.jpg" />
+    <BundleResource Include="Resources\Sport%403x.jpg" />
+    <BundleResource Include="Resources\Sport%402x.jpg" />
+    <BundleResource Include="Resources\Sport.jpg" />
+    <BundleResource Include="Resources\TechnologyInnovation%403x.jpg" />
+    <BundleResource Include="Resources\TechnologyInnovation%402x.jpg" />
+    <BundleResource Include="Resources\TechnologyInnovation.jpg" />
+    <BundleResource Include="Resources\Travel%403x.jpg" />
+    <BundleResource Include="Resources\Travel%402x.jpg" />
+    <BundleResource Include="Resources\Travel.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -139,8 +182,11 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 </Project>

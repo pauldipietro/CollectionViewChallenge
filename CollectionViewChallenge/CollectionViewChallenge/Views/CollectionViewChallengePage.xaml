@@ -1,32 +1,80 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:CollectionViewChallenge.Templates"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             BackgroundColor="Black">
+    <Shell.TitleView>
+        <Grid
+            VerticalOptions="Center"
+        >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Image 
+                Grid.Column="0"
+                Source="netflix.png"
+                VerticalOptions="Center"
+                WidthRequest="35"
+            />
+            
+            <Label 
+                Grid.Column="1"
+                Text="TV Shows"
+                VerticalOptions="Center"
+            />
+            
+            <Label 
+                Grid.Column="2"
+                Text="Movies"
+                VerticalOptions="Center"
+            />
+            
+            <Label 
+                Grid.Column="3"
+                Text="My List"
+                VerticalOptions="Center"
+            />
+        </Grid>
+    </Shell.TitleView>
+    
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
-                <CollectionView.ItemTemplate>
+        <ScrollView
+            x:Name="scroll"
+            Scrolled="AfterScroll"
+        >
+            <StackLayout
+                BindableLayout.ItemsSource="{Binding Movies}"
+            >
+                <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
+                        <StackLayout
+                        >
+                            <Label 
+                                Text="{Binding GroupName}"
+                                FontAttributes="Bold"
+                                Margin="5,15,5,0"
+                            />
+                            
+                            <CollectionView
+                                ItemsSource="{Binding .}"
+                                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                                ItemSizingStrategy="MeasureFirstItem"
+                                HeightRequest="{Binding Height}"
+                                ItemTemplate="{templates:NetflixTemplate}"
+                            >
+                            </CollectionView>
                         </StackLayout>
                     </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -14,10 +14,10 @@
                     <Frame HasShadow="True"
                            Margin="10, 0"
                            Padding="5"
-                           BackgroundColor="LightSlateGray">
+                           BackgroundColor="Beige">
                         <StackLayout>
                             <Label Text="{Binding Title}"
-                                   TextColor="White"
+                                   TextColor="LightSlateGray"
                                    FontSize="14"/>
                             <Image Source="{Binding Image}"
                                    Aspect="AspectFill"
@@ -35,13 +35,13 @@
                    FontSize="16"
                    FontAttributes="Bold" />
             <CollectionView ItemsSource="{Binding ActionMovies}" 
-                            ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
-                            ItemTemplate="{StaticResource MovieTemplate}" />
+                            ItemTemplate="{StaticResource MovieTemplate}"
+                            ItemsLayout="{m:SnapHorizontalList}" />
             <Label Text="Comedies"
                    FontSize="16"
                    FontAttributes="Bold" />
             <CollectionView ItemsSource="{Binding ComedyMovies}"
-                            ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                            ItemsLayout="{m:SnapHorizontalList}"
                             ItemTemplate="{StaticResource MovieTemplate}" />
         </StackLayout>
     </ContentPage.Content>

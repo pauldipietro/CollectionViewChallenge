@@ -6,11 +6,11 @@ using Xamarin.Forms;
 
 namespace CollectionViewChallenge
 {
+    // This view sizes itself to be as big as the collection view frame
     public class SizableView : ContentView
     { 
         protected override SizeRequest OnMeasure(double widthConstraint, double heightConstraint)
-        {
-            //Debug.WriteLine($"Measure width: {widthConstraint} height {heightConstraint}");
+        { 
             var collection = Parent as CollectionView;
             if (collection != null)
             {

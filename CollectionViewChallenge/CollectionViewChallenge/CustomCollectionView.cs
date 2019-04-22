@@ -5,6 +5,9 @@ using Xamarin.Forms;
 
 namespace CollectionViewChallenge
 {
+    /// <summary>
+    /// Custom collection view to add inset and scroll events/properties.
+    /// </summary>
     public class CustomCollectionView : CollectionView
     {
         public static readonly BindableProperty InsetProperty =

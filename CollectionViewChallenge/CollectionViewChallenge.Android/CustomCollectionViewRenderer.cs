@@ -27,23 +27,24 @@ namespace CollectionViewChallenge.Droid
 
         protected override void OnSizeChanged(int w, int h, int oldw, int oldh)
         {
+            // Inset is only required for the preview collection
             if(CollectionElement.Inset)
             {
                 SetClipToPadding(false);
-                var firstItemSize = h;
-                var lastItemSize = h;
-                SetPadding(w / 2 - firstItemSize, 0, w / 2 , 0);
+                // Take a little less then half of the width in order for the first image to be centered
+                var horizontalInset = w / 2 - h / 2;
+                SetPadding(horizontalInset, 0, horizontalInset, 0);
             }
             
             base.OnSizeChanged(w, h, oldw, oldh);
         }
 
         public override void OnScrolled(int dx, int dy)
-        {
-            var x1 = ComputeHorizontalScrollExtent();
-            var x2 = ComputeHorizontalScrollOffset();
-            var x3 = ComputeHorizontalScrollRange();
-            CollectionElement.UpdateXScroll(x2, x3);
+        { 
+            // Propagede the scroll events to the view, this is quite easy on android :)
+            var scrollOffsetX = ComputeHorizontalScrollOffset();
+            var totalWidth = ComputeHorizontalScrollRange();
+            CollectionElement.UpdateXScroll(scrollOffsetX, totalWidth);
             base.OnScrolled(dx, dy);
         }
     }

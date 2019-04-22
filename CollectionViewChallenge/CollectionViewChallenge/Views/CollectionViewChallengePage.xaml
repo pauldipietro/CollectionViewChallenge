@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -6,7 +6,6 @@
              xmlns:views="clr-namespace:CollectionViewChallenge.Views"
              xmlns:collectionviewchallenge="clr-namespace:CollectionViewChallenge"
              mc:Ignorable="d"
-             BackgroundColor="LightGray"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
     <ContentPage.Resources>
         <views:ItemsCell x:Key="TemplatASDASDe"></views:ItemsCell>
@@ -30,10 +29,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <collectionviewchallenge:SizableView>
-                            <Frame  Margin="10, 10, 10, 5" Padding="0" CornerRadius="5">
-                                <Image Source="{Binding ImageSource}" Aspect="AspectFit"/>
-                            </Frame>
-                           
+                            <Image Source="{Binding ImageSource}" Aspect="AspectFit"/>
                         </collectionviewchallenge:SizableView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -49,7 +45,7 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <ContentView VerticalOptions="Fill" HeightRequest="80" HorizontalOptions="FillAndExpand">
-                                <Image Source="{Binding ImageSource}" WidthRequest="{Binding Width}" Aspect="Fill" />
+                                <Image Source="{Binding ImageSource}" Margin="2, 0" WidthRequest="{Binding Width}" Aspect="Fill" />
                             </ContentView>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

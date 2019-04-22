@@ -63,6 +63,9 @@ namespace CollectionViewChallenge.Views
             }
             previewTargetPosition = -1;
 
+            position = position >= 0 ? position : 0;
+            position = position > Items.Count - 1 ? Items.Count - 1 : position;
+
             if (position != _lastPositon)
             {
                 _lastPositon = position;
@@ -79,6 +82,7 @@ namespace CollectionViewChallenge.Views
         private void FullViewCollection_HorizontalScrollUpdated(object sender, int e)
         {
             var scrollProgress = FullViewCollection.ScrollX == 0 ? 0 : (double)FullViewCollection.ScrollX / FullViewCollection.ScrollXWidth;
+            scrollProgress = scrollProgress < 0 ? 0 : scrollProgress;
             var position = (int)Math.Round(Items.Count * scrollProgress);
 
             if (fullSizeTargetPosition >= 0 && fullSizeTargetPosition != position)
@@ -87,8 +91,10 @@ namespace CollectionViewChallenge.Views
                 return;
             }
             fullSizeTargetPosition = -1;
+            position = position >= 0 ? position : 0;
+            position = position > Items.Count - 1 ? Items.Count - 1 : position;
 
-            if (position != _lastPositon)
+            if (position != _lastPositon )
             {
                 _lastPositon = position;
                 var middleImage = Items[position];

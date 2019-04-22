@@ -6,7 +6,7 @@
        RouteScheme="app"
        Route="CollectionViewChallenge"
        FlyoutBehavior="Disabled"
-       Title="CollectionViewChallenge"
+       Title="Sloth collection"
        x:Class="CollectionViewChallenge.AppShell">
 
     <!--
@@ -70,9 +70,9 @@
 
     <!-- Your Pages -->
     <ShellItem>
-        <ShellSection Title="CollectionView" Icon="tab_feed.png">
-            <ShellContent Title="CollectionView">
-                <local:CollectionViewChallengePage Title="CollectionView"/>
+        <ShellSection Title="Sloth collection" Icon="tab_feed.png">
+            <ShellContent Title="Sloth collection">
+                <local:CollectionViewChallengePage Title="Sloth collection"/>
             </ShellContent>
         </ShellSection>
     </ShellItem>

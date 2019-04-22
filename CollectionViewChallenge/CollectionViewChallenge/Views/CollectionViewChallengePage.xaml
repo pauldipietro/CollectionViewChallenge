@@ -4,11 +4,48 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:m="clr-namespace:CollectionViewChallenge.Models"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="MovieTemplate">
+                <StackLayout HeightRequest="250"
+                             WidthRequest="250">
+                    <Frame HasShadow="True"
+                           Margin="10, 0"
+                           Padding="5"
+                           BackgroundColor="LightSlateGray">
+                        <StackLayout>
+                            <Label Text="{Binding Title}"
+                                   TextColor="White"
+                                   FontSize="14"/>
+                            <Image Source="{Binding Image}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="200"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="10, 5">
+            <Label Text="Action Movies"
+                   FontSize="16"
+                   FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding ActionMovies}" 
+                            ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                            ItemTemplate="{StaticResource MovieTemplate}" />
+            <Label Text="Comedies"
+                   FontSize="16"
+                   FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding ComedyMovies}"
+                            ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                            ItemTemplate="{StaticResource MovieTemplate}" />
+            
             <!-- Use your own layout and functionality here! -->
-            <CollectionView>
+            <!--<CollectionView>
                 <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>This is a CollectionView!</x:String>
@@ -22,11 +59,11 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
+                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="16"/>
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-            </CollectionView>
+            </CollectionView>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

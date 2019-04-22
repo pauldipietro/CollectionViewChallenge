@@ -1,32 +1,223 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             Shell.SetPaddingInsets="true"
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             x:Name="CollectionViewPage"
+             BackgroundColor="{StaticResource Primary}">
+             <!--xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+             mc:Ignorable="d"-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#B92107</Color>
+            <Color x:Key="PrimaryDark">#861C17</Color>
+            <Color x:Key="PrimaryLight">#CD2D25</Color>
+            <Color x:Key="Secondary">#00CCFF</Color>
+            
+            <OnPlatform x:Key="FrameHasShadow" x:TypeArguments="x:Boolean" Android="true" iOS="false"/>
+            
+            <Style x:Key="BaseLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            
+            <Style x:Key="SwitchLabel" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            
+            <Style x:Key="TitleLabel" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="MaxLines" Value="2"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="LineBreakMode" Value="TailTruncation"/>
+            </Style>
+            
+            <Style x:Key="BaseFrame" TargetType="Frame">
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="HasShadow" Value="{StaticResource FrameHasShadow}"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+            
+            <Style x:Key="PosterFrame" TargetType="Frame" BasedOn="{StaticResource BaseFrame}">
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="CornerRadius" Value="0"/>
+            </Style>
+            
+            <Style x:Key="BaseBoxView" TargetType="BoxView">
+                <Setter Property="Color" Value="White"/>
+                <Setter Property="HeightRequest" Value="1"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+            
+            <Style x:Key="TopBoxView" TargetType="BoxView" BasedOn="{StaticResource BaseBoxView}">
+                <Setter Property="VerticalOptions" Value="Start"/>
+            </Style>
+            
+            <Style x:Key="BottomBoxView" TargetType="BoxView" BasedOn="{StaticResource BaseBoxView}">
+                <Setter Property="VerticalOptions" Value="End"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Column="0">
+                <Label Text="Now Showing" Style="{StaticResource SwitchLabel}"/>
+                
+                <Grid.Triggers>
+                    <DataTrigger Binding="{Binding IsComingSoon}" Value="true" TargetType="Grid">
+                        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLight}"/>
+                    </DataTrigger>
+                    
+                    <DataTrigger Binding="{Binding IsComingSoon}" Value="false" TargetType="Grid">
+                        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDark}"/>
+                    </DataTrigger>
+                </Grid.Triggers>
+                
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SwitchCommand}" CommandParameter="NowShowing"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+            
+            <Grid Grid.Column="1">
+                <Label Text="Coming Soon" Style="{StaticResource SwitchLabel}"/>
+                
+                <Grid.Triggers>
+                    <DataTrigger Binding="{Binding IsComingSoon}" Value="true" TargetType="Grid">
+                        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDark}"/>
+                    </DataTrigger>
+                    
+                    <DataTrigger Binding="{Binding IsComingSoon}" Value="false" TargetType="Grid">
+                        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLight}"/>
+                    </DataTrigger>
+                </Grid.Triggers>
+                
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SwitchCommand}" CommandParameter="ComingSoon"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+            
+            <BoxView Grid.ColumnSpan="2" Style="{StaticResource TopBoxView}"/>
+            <BoxView Grid.ColumnSpan="2" Style="{StaticResource BottomBoxView}"/>
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <CollectionView ItemsSource="{Binding CollectionItemSource}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2"/>
+                </CollectionView.ItemsLayout>
+                
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
+                        <Grid Padding="10,10,10,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="230"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Frame Style="{StaticResource PosterFrame}" Margin="15,0">
+                                <Grid RowSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="5"/>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="175"/>
+                                    </Grid.RowDefinitions>
+                                    
+                                    <Grid Grid.RowSpan="4">
+                                        <Image Source="{Binding PosterUrl}" Aspect="AspectFill"/>
+                                    </Grid>
+                                    
+                                    <Grid BackgroundColor="White"> 
+                                        <Label Text="ADVANCE SALES" FontSize="14" TextColor="{StaticResource Primary}"
+                                               VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        
+                                        <Grid.Triggers>
+                                            <DataTrigger Binding="{Binding IsAdvanced}" Value="true" TargetType="Grid">
+                                                <Setter Property="Grid.Row" Value="0"/>
+                                                <Setter Property="Grid.RowSpan" Value="2"/>
+                                                <Setter Property="IsVisible" Value="true"/>
+                                            </DataTrigger>
+                                            
+                                            <DataTrigger Binding="{Binding IsAdvanced}" Value="false" TargetType="Grid">
+                                                <Setter Property="IsVisible" Value="false"/>
+                                            </DataTrigger>
+                                        </Grid.Triggers>
+                                    </Grid>
+                                    
+                                    <Grid BackgroundColor="{StaticResource Secondary}">
+                                        <Label Text="WATCH IT IN IMAX" FontSize="14" TextColor="White" FontAttributes="Bold"
+                                               VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        
+                                        <Grid.Triggers>
+                                            <MultiTrigger TargetType="Grid">
+                                                <MultiTrigger.Conditions>
+                                                    <BindingCondition Binding="{Binding HasIMAX}" Value="true"/>
+                                                    <BindingCondition Binding="{Binding IsAdvanced}" Value="false"/>
+                                                </MultiTrigger.Conditions>
+                                                
+                                                <Setter Property="Grid.Row" Value="0"/>
+                                                <Setter Property="IsVisible" Value="true"/>
+                                            </MultiTrigger>
+                                            
+                                            <MultiTrigger TargetType="Grid">
+                                                <MultiTrigger.Conditions>
+                                                    <BindingCondition Binding="{Binding HasIMAX}" Value="true"/>
+                                                    <BindingCondition Binding="{Binding IsAdvanced}" Value="true"/>
+                                                </MultiTrigger.Conditions>
+                                                
+                                                <Setter Property="Grid.Row" Value="2"/>
+                                                <Setter Property="IsVisible" Value="true"/>
+                                            </MultiTrigger>
+                                            
+                                            <MultiTrigger TargetType="Grid">
+                                                <MultiTrigger.Conditions>
+                                                    <BindingCondition Binding="{Binding HasIMAX}" Value="false"/>
+                                                    <BindingCondition Binding="{Binding IsAdvanced}" Value="false"/>
+                                                </MultiTrigger.Conditions>
+                                                
+                                                <Setter Property="IsVisible" Value="false"/>
+                                            </MultiTrigger>
+                                            
+                                            <MultiTrigger TargetType="Grid">
+                                                <MultiTrigger.Conditions>
+                                                    <BindingCondition Binding="{Binding HasIMAX}" Value="false"/>
+                                                    <BindingCondition Binding="{Binding IsAdvanced}" Value="true"/>
+                                                </MultiTrigger.Conditions>
+                                                
+                                                <Setter Property="IsVisible" Value="false"/>
+                                            </MultiTrigger>
+                                        </Grid.Triggers>
+                                    </Grid>
+                                </Grid>
+                            </Frame>
+                            
+                            <Grid Grid.Row="1">
+                                <Label Text="{Binding Title}" Style="{StaticResource TitleLabel}"/>
+                            </Grid>
+                            
+                            <!--<Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding BindingContext.ViewCommand, Source={x:Reference CollectionViewPage}}" 
+                                                      CommandParameter="{Binding .}"/>
+                            </Grid.GestureRecognizers>-->
+                        </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </StackLayout>
-    </ContentPage.Content>
+        </Grid>
+    </Grid>
 </ContentPage>

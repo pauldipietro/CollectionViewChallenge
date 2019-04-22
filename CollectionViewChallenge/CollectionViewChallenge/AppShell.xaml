@@ -53,11 +53,11 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#FEFEFE</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="Shell.ShellForegroundColor" Value="White" />
-                <Setter Property="Shell.ShellTitleColor" Value="White" />
+                <Setter Property="Shell.ShellTitleColor" Value="#393A3A" />
                 <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
                 <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
@@ -73,6 +73,7 @@
     <ShellItem>
         <ShellSection Title="CollectionView" Icon="tab_feed.png">
             <ShellContent Title="CollectionView">
+                <local:FeedPreferencesPage Title="Feed Preferences"/>
             </ShellContent>
         </ShellSection>
     </ShellItem>

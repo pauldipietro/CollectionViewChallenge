@@ -73,7 +73,6 @@
     <ShellItem>
         <ShellSection Title="CollectionView" Icon="tab_feed.png">
             <ShellContent Title="CollectionView">
-                <local:CollectionViewChallengePage Title="CollectionView"/>
             </ShellContent>
         </ShellSection>
     </ShellItem>

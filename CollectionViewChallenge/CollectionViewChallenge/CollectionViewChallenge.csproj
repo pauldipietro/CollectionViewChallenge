@@ -11,6 +11,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\sloth0.JPG" />
+    <None Remove="Images\sloth1.JPG" />
+    <None Remove="Images\sloth2.JPG" />
+    <None Remove="Images\sloth3.JPG" />
+    <None Remove="Images\sloth4.JPG" />
+    <None Remove="Images\sloth5.JPG" />
+    <None Remove="Images\sloth6.JPG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\sloth0.JPG" />
+    <EmbeddedResource Include="Images\sloth1.JPG" />
+    <EmbeddedResource Include="Images\sloth2.JPG" />
+    <EmbeddedResource Include="Images\sloth3.JPG" />
+    <EmbeddedResource Include="Images\sloth4.JPG" />
+    <EmbeddedResource Include="Images\sloth5.JPG" />
+    <EmbeddedResource Include="Images\sloth6.JPG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0006" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.346134-pre9" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>
@@ -19,10 +40,12 @@
     <EmbeddedResource Update="Views\CollectionViewChallengePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>

@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
@@ -62,6 +61,9 @@
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material">
+      <Version>4.0.0.346134-pre9</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -74,8 +76,6 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Tabbar.axml" />
-    <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
@@ -93,18 +93,106 @@
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
     <AndroidResource Include="Resources\drawable\tab_about.png" />
     <AndroidResource Include="Resources\drawable\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_confirmed_16.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_confirmed_16.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_confirmed_16.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_confirmed_16.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_confirmed_16.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_confirmed_16.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\BusinessRewardsAdvice.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\BusinessRewardsAdvice.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\BusinessRewardsAdvice.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\BusinessRewardsAdvice.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\BusinessRewardsAdvice.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\BusinessRewardsAdvice.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Competitions.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Competitions.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Competitions.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Competitions.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\Competitions.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\Competitions.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\EntertainmentExperiences.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\EntertainmentExperiences.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\EntertainmentExperiences.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\EntertainmentExperiences.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\EntertainmentExperiences.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\EntertainmentExperiences.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\FamilyKids.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\FamilyKids.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\FamilyKids.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\FamilyKids.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\FamilyKids.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\FamilyKids.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\FashionShopping.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\FashionShopping.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\FashionShopping.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\FashionShopping.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\FashionShopping.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\FashionShopping.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\FoodWine.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\FoodWine.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\FoodWine.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\FoodWine.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\FoodWine.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\FoodWine.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\HealthWellness.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\HealthWellness.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\HealthWellness.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\HealthWellness.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\HealthWellness.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\HealthWellness.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OffersDiscounts.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OffersDiscounts.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OffersDiscounts.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\OffersDiscounts.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\OffersDiscounts.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\OffersDiscounts.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\SmartMoney.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\SmartMoney.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SmartMoney.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\SmartMoney.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\SmartMoney.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\SmartMoney.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Sport.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Sport.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Sport.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Sport.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\Sport.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\Sport.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\TechnologyInnovation.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\TechnologyInnovation.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\TechnologyInnovation.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\TechnologyInnovation.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\TechnologyInnovation.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\TechnologyInnovation.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Travel.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Travel.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Travel.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Travel.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\Travel.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\Travel.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-ldpi\" />
+    <Folder Include="Resources\layout\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\brauer_neue_std.ttf" />
+    <AndroidAsset Include="Assets\ciutadella_medium.ttf" />
+    <AndroidAsset Include="Assets\ciutadella_regular.ttf" />
+    <AndroidAsset Include="Assets\ciutadella_semibold.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

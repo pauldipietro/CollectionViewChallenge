@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
@@ -93,6 +92,28 @@
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
     <AndroidResource Include="Resources\drawable\tab_about.png" />
     <AndroidResource Include="Resources\drawable\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable\avengers_endgame_special.jpeg" />
+    <AndroidResource Include="Resources\drawable\avengers_endgame.jpeg" />
+    <AndroidResource Include="Resources\drawable\brightburn.jpeg" />
+    <AndroidResource Include="Resources\drawable\captain_marvel.jpeg" />
+    <AndroidResource Include="Resources\drawable\heart_icon.png" />
+    <AndroidResource Include="Resources\drawable\hellboy.png" />
+    <AndroidResource Include="Resources\drawable\history_icon.png" />
+    <AndroidResource Include="Resources\drawable\invincible_dragon.jpeg" />
+    <AndroidResource Include="Resources\drawable\kalank.jpeg" />
+    <AndroidResource Include="Resources\drawable\kanchana.jpeg" />
+    <AndroidResource Include="Resources\drawable\location_icon.png" />
+    <AndroidResource Include="Resources\drawable\london_sweeties.jpeg" />
+    <AndroidResource Include="Resources\drawable\mata_batin.jpeg" />
+    <AndroidResource Include="Resources\drawable\movie_icon.png" />
+    <AndroidResource Include="Resources\drawable\promotion_icon.png" />
+    <AndroidResource Include="Resources\drawable\shazam.jpg" />
+    <AndroidResource Include="Resources\drawable\star_icon.png" />
+    <AndroidResource Include="Resources\drawable\student.jpeg" />
+    <AndroidResource Include="Resources\drawable\supermum.jpeg" />
+    <AndroidResource Include="Resources\drawable\the_curse.jpeg" />
+    <AndroidResource Include="Resources\drawable\the_sun.jpeg" />
+    <AndroidResource Include="Resources\drawable\ugly_dolls.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -102,7 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>

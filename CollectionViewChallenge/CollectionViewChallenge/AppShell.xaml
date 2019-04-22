@@ -11,6 +11,7 @@
 
     <!--
         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        XXXXXXXXXX                          XXXXXXXXXX
         XXXXXXXX|                            |XXXXXXXX
         XXXXXXX'                              'XXXXXXX
         XXXXXx.                                .xNXXXX
@@ -27,6 +28,7 @@
         XXXXXx.                                .xXXXXX
         XXXXXXO'                              'OXXXXXX
         XXXXXXXX|                            |XXXXXXXX
+        XXXXXXXXXX                          XXXXXXXXXX
         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
         Shell is an all new way to quickly get started with your application. There are 3 levels to a Shell app:
@@ -52,28 +54,62 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#DE2A15</Color>
+            <Color x:Key="TabbedBar">#3B3B3B</Color>
+            
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellForegroundColor" Value="White" />
-                <Setter Property="Shell.ShellTitleColor" Value="White" />
-                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.ShellTitleColor" Value="White"/>
+                <Setter Property="Shell.SetPaddingInsets" Value="true"/>
+                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF"/>
+                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}"/>
+                <Setter Property="Shell.ShellForegroundColor" Value="{StaticResource NavigationPrimary}"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="{StaticResource NavigationPrimary}"/>
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="Black"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="White"/>
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource TabbedBar}"/>
             </Style>
+            
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
 
     <!-- Your Pages -->
     <ShellItem>
-        <ShellSection Title="CollectionView" Icon="tab_feed.png">
-            <ShellContent Title="CollectionView">
+        <ShellSection Title="Movie" Icon="movie_icon.png">
+            <ShellContent>
                 <local:CollectionViewChallengePage Title="CollectionView"/>
             </ShellContent>
         </ShellSection>
+        
+        <ShellSection Title="MovieClub" Icon="heart_icon.png">
+            <ShellContent>
+                <ContentPage BackgroundColor="Blue"/>
+            </ShellContent>
+        </ShellSection>
+        
+        <ShellSection Title="Favourite" Icon="star_icon.png">
+            <ShellContent>
+                <ContentPage BackgroundColor="Green"/>
+            </ShellContent>
+        </ShellSection>
+            
+        <ShellSection Title="Cinema" Icon="location_icon.png">
+            <ShellContent>
+                <ContentPage BackgroundColor="Fuchsia"/>
+            </ShellContent>
+        </ShellSection>
+        
+        <ShellSection Title="Promotion" Icon="promotion_icon.png">
+            <ShellContent>
+                <ContentPage BackgroundColor="Aqua"/>
+            </ShellContent>
+        </ShellSection>
+        
+        <!--<ShellSection Title="History" Icon="history_icon.png">
+            <ShellContent>
+                <ContentPage BackgroundColor="Lime"/>
+            </ShellContent>
+        </ShellSection>-->
     </ShellItem>
 </Shell>

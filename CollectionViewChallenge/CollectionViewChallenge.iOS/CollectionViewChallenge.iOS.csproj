@@ -123,6 +123,28 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\avengers_endgame.jpeg" />
+    <BundleResource Include="Resources\avengers_endgame_special.jpeg" />
+    <BundleResource Include="Resources\hellboy.png" />
+    <BundleResource Include="Resources\kalank.jpeg" />
+    <BundleResource Include="Resources\kanchana.jpeg" />
+    <BundleResource Include="Resources\shazam.jpg" />
+    <BundleResource Include="Resources\the_curse.jpeg" />
+    <BundleResource Include="Resources\captain_marvel.jpeg" />
+    <BundleResource Include="Resources\heart_icon.png" />
+    <BundleResource Include="Resources\history_icon.png" />
+    <BundleResource Include="Resources\location_icon.png" />
+    <BundleResource Include="Resources\movie_icon.png" />
+    <BundleResource Include="Resources\promotion_icon.png" />
+    <BundleResource Include="Resources\star_icon.png" />
+    <BundleResource Include="Resources\brightburn.jpeg" />
+    <BundleResource Include="Resources\invincible_dragon.jpeg" />
+    <BundleResource Include="Resources\london_sweeties.jpeg" />
+    <BundleResource Include="Resources\mata_batin.jpeg" />
+    <BundleResource Include="Resources\student.jpeg" />
+    <BundleResource Include="Resources\supermum.jpeg" />
+    <BundleResource Include="Resources\the_sun.jpeg" />
+    <BundleResource Include="Resources\ugly_dolls.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -139,7 +161,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>

@@ -10,6 +10,8 @@ namespace CollectionViewChallenge
         public AppShell()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, true);
         }
     }
 }

@@ -1,18 +1,24 @@
-# CollectionView Challenge
+### Screenshots ###
 
-Following up on the [Visual Challenge](https://github.com/davidortinau/VisualChallenge), the CollectionView Challenge is aimed at taking a previous or current project's ListView and convert it to the new CollectionView.
+###### Android ######
+<img src="https://github.com/er7santana/CollectionViewChallenge/blob/master/screenshots/android_image.gif" width="250px"/>
 
-_Note: Some functionality may not be (fully) implemented yet as of this time. We're working to make sure that it is, but we still want your feedback on what's available now!_
+###### iOS ######
+<img src="https://github.com/er7santana/CollectionViewChallenge/blob/master/screenshots/ios_image.png" width="250px"/>
 
-## Challenge Quick Start
+### What went well? ###
 
-1. Fork this repository
-2. Open `CollectionViewChallengePage.xaml`
-3. Take a ListView from another project, previous or current, and convert it to a CollectionView, replacing the placeholder on the page. If you need to, you can replace any data with placeholders; the goal is to replicate the functionality that your app's ListView utilizes.
-4. Submit a pull request of your progress back to this repository. Please include the following feedback:
-   - Comparison screenshots of your results! If you really want to go the extra mile, video is awesome to see, too.
-   - Your experience converting the `ListView` to a `CollectionView` (Any difficulties?)
-   - How is the performance compared to the `ListView`?
-   - Is there anything missing that you'd like to see?
+It was very easy and smooth the implementation. The new layout options such as HorizontalList, GridList are amazing and are going to substitute lots of "extra work" that we need to do today.
 
-`CollectionView` docs can be found [here](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/collectionview/).
+### What didn't go well? ###
+
+Actually, the only tiny issue that I faced in Android platform was that I was using a Grid with 3 rows, 1 for an Image, and 2 for Labels. 
+Using ListView, I was able to set the rows heights as "Auto" for the labels and it worked as expected, but with CollectionView I had to specify the Height of the row with a real value, otherwise the rows with the Labels were not visible in Android devices, the first row with the image occupied all the ItemTemplate space. 
+
+### How is the performance? ###
+
+I didn't have any problems with performance. I think it's just fine.
+
+### Missing or Desired Things: ###
+
+I think it would be interesting to have a PullToRefresh feature just like ListView.

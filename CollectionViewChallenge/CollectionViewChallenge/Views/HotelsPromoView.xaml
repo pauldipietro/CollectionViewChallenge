@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CollectionViewChallenge.Views.HotelsPromoView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms">
+    <ContentPage.Resources>
+        <Color x:Key="NavigationBlue">#03258C</Color>
+        <Color x:Key="NavigationLightBlue">#05AFF2</Color>
+        <Color x:Key="NavigationGray">#2D3B40</Color>
+        <Color x:Key="NavigationLightGray">#a5b9c0</Color>
+        <Color x:Key="NavigationGreen">#8CBF3F</Color>
+        <Color x:Key="NavigationYellow">#F2B705</Color>
+        <Color x:Key="NavigationBrown">#8C5320</Color>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="54" />
+        </Grid.RowDefinitions>
+        <CollectionView
+            x:Name="CV"
+            Grid.Row="0"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    Orientation="Horizontal"
+                    SnapPointsAlignment="Center"
+                    SnapPointsType="Mandatory"
+                    Span="2" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="88" />
+                            <ColumnDefinition Width="88" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="45" />
+                            <RowDefinition Height="40" />
+                        </Grid.RowDefinitions>
+                        <Image
+                            Grid.Row="0"
+                            Grid.RowSpan="6"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Aspect="AspectFill"
+                            Source="{Binding Image}" />
+                        <BoxView
+                            Grid.Row="0"
+                            Grid.RowSpan="6"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            BackgroundColor="Black"
+                            Opacity=".3" />
+                        <Grid
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                HorizontalOptions="Center"
+                                Source="ratingCircle.png" />
+                            <Label
+                                Grid.Row="0"
+                                HorizontalOptions="Center"
+                                Text="{Binding Rating}"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <Label
+                                Grid.Row="1"
+                                HorizontalOptions="Center"
+                                Text="100"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                        </Grid>
+                        <lottie:AnimationView
+                            x:Name="starsRatingAnimation"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Animation="stars.json"
+                            AutoPlay="True"
+                            HorizontalOptions="Fill"
+                            IsPlaying="True"
+                            Loop="True"
+                            VerticalOptions="Fill" />
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Name}"
+                            TextColor="White"
+                            VerticalOptions="Start"
+                            VerticalTextAlignment="Center" />
+                        <Grid
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <BoxView Grid.Column="0" BackgroundColor="{StaticResource NavigationYellow}" />
+                            <Label
+                                Grid.Column="0"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding BestDiscount, StringFormat=' {0}% OFF'}"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <BoxView Grid.Column="1" BackgroundColor="{StaticResource NavigationGreen}" />
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label
+                                    Grid.Row="0"
+                                    Margin="15,0"
+                                    FontSize="10"
+                                    HorizontalTextAlignment="Start"
+                                    Text="{Binding RoomPrice, StringFormat='${0}'}"
+                                    TextColor="White"
+                                    TextDecorations="Strikethrough"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    Grid.Row="0"
+                                    Margin="0,0,20,0"
+                                    FontAttributes="Bold"
+                                    FontSize="14"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding RoomPrice, StringFormat='$ {0}'}"
+                                    TextColor="White"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    Grid.Row="1"
+                                    Margin="0,0,20,0"
+                                    FontSize="12"
+                                    HorizontalTextAlignment="End"
+                                    Text="AVG / NIGHT"
+                                    TextColor="White"
+                                    VerticalOptions="Center" />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <BoxView Grid.Row="1" BackgroundColor="{StaticResource NavigationGray}" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="54" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="54" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="54" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="54" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <BoxView
+                Grid.Column="1"
+                BackgroundColor="{StaticResource NavigationGreen}"
+                CornerRadius="27"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                Source="binoculars"
+                VerticalOptions="Center"
+                WidthRequest="30" />
+            <BoxView
+                Grid.Column="3"
+                BackgroundColor="{StaticResource NavigationGreen}"
+                CornerRadius="27"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                Source="loupe"
+                VerticalOptions="Center"
+                WidthRequest="30" />
+            <BoxView
+                Grid.Column="5"
+                BackgroundColor="{StaticResource NavigationGreen}"
+                CornerRadius="27"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Column="5"
+                HorizontalOptions="Center"
+                Source="tag"
+                VerticalOptions="Center"
+                WidthRequest="30" />
+            <BoxView
+                Grid.Column="7"
+                BackgroundColor="{StaticResource NavigationGreen}"
+                CornerRadius="27"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Column="7"
+                HorizontalOptions="Center"
+                Source="user"
+                VerticalOptions="Center"
+                WidthRequest="30" />
+        </Grid>
+    </Grid>
+</ContentPage>

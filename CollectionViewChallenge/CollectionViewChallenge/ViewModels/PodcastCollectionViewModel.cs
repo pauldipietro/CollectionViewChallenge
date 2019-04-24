@@ -164,6 +164,60 @@ namespace CollectionViewChallenge.ViewModels
                 CellType = PodcastCellType.Standard
             });
 
+            podcasts.Add(new Podcast
+            {
+                Title = "The Joe Rogan Experience",
+                Image = "http://static.libsyn.com/p/assets/7/1/f/3/71f3014e14ef2722/JREiTunesImage2.jpg",
+                Author = "Joe Rogan",
+                Category = "Comedy",
+                CellType = Enum.PodcastCellType.Standard
+            });
+
+            podcasts.Add(new Podcast
+            {
+                Title = "The Daily",
+                Image = "https://static01.nyt.com/images/2017/01/29/podcasts/the-daily-album-art/the-daily-album-art-square320-v4.png",
+                Author = "The New York Times",
+                Category = "Comedy",
+                CellType = Enum.PodcastCellType.Standard
+            });
+
+            podcasts.Add(new Podcast
+            {
+                Title = "TED Radio Hour",
+                Image = "https://media.npr.org/assets/img/2018/08/03/npr_ted_podcasttile_sq-f924b1a84a189479b7555a19b030778d88ee55f5.jpg?s=1400",
+                Author = "NPR",
+                Category = "Comedy",
+                CellType = Enum.PodcastCellType.Standard
+            });
+
+            podcasts.Add(new Podcast
+            {
+                Title = "Stuff You Should Know",
+                Image = "https://image-ticketfly.imgix.net/00/02/57/10/25-og.jpg?w=500&h=500",
+                Author = "iHeartRadio",
+                Category = "Comedy",
+                CellType = Enum.PodcastCellType.Standard
+            });
+
+            podcasts.Add(new Podcast
+            {
+                Title = "This American Life",
+                Image = "https://media.npr.org/images/podcasts/primary/icon_381444650-04c1bad8586e69edf04b78ea319846614c4a6a6b.png?s=1400",
+                Author = "This American Life",
+                Category = "Comedy",
+                CellType = Enum.PodcastCellType.Standard
+            });
+
+            podcasts.Add(new Podcast
+            {
+                Title = "Planet Money",
+                Image = "https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/NPR_Planet_Money_cover_art.jpg/220px-NPR_Planet_Money_cover_art.jpg",
+                Author = "NPR",
+                Category = "Comedy",
+                CellType = Enum.PodcastCellType.Standard
+            });
+
             var tempList =  podcasts
                 .GroupBy(podcast => podcast.Category)
                 .Select(group => new GroupPodcast(group.Key, group.ToList()))

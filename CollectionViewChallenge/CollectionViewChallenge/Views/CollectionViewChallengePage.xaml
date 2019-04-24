@@ -15,16 +15,15 @@
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <StackLayout
-                            Padding="20,20,0,20">
+                            Padding="20,20,0,0">
                             <Label
                                 Text="{Binding GroupName}"
                                 FontAttributes="Bold"
-                                Margin="5,15,5,0" />
+                                Margin="5,0,5,0" />
                             <CollectionView
                                 ItemsSource="{Binding .}"
                                 ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
-                                HeightRequest="150"
-                                WidthRequest="75"
+                                HeightRequest="175"
                                 ItemTemplate="{templates:PodcastCellDataTemplateSelector}">
                             </CollectionView>
                         </StackLayout>

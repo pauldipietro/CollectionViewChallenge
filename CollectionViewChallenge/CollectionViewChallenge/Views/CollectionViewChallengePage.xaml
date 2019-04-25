@@ -8,7 +8,7 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true"
              BackgroundColor="White">
-  <ScrollView>
+  <ScrollView VerticalScrollBarVisibility="Never">
         <StackLayout Margin="0,20,0,0" 
                      Spacing="0" 
                      BackgroundColor="#f2f2f2">
@@ -112,7 +112,9 @@
                              <StackLayout Spacing="15" 
                                           Padding="0, 10, 10, 0">
                                 <Image Source="{Binding Foto}" />
-                                <Label Text="{Binding Nome}" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding Nome}" 
+                                       HorizontalTextAlignment="Center"
+                                       TextColor="#b7b4b1"/>
                             </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

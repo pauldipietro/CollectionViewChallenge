@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
@@ -93,18 +92,38 @@
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
     <AndroidResource Include="Resources\drawable\tab_about.png" />
     <AndroidResource Include="Resources\drawable\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable\home_icon.png" />
+    <AndroidResource Include="Resources\drawable\library_icon.png" />
+    <AndroidResource Include="Resources\drawable\search_icon.png" />
+    <AndroidResource Include="Resources\drawable\daily_mix1.jpeg" />
+    <AndroidResource Include="Resources\drawable\daily_mix2.jpeg" />
+    <AndroidResource Include="Resources\drawable\daily_mix3.jpeg" />
+    <AndroidResource Include="Resources\drawable\daily_mix4.jpeg" />
+    <AndroidResource Include="Resources\drawable\main_cover.jpg" />
+    <AndroidResource Include="Resources\drawable\recently_played1.jpeg" />
+    <AndroidResource Include="Resources\drawable\recently_played2.jpeg" />
+    <AndroidResource Include="Resources\drawable\recently_played3.jpeg" />
+    <AndroidResource Include="Resources\drawable\recently_played4.jpeg" />
+    <AndroidResource Include="Resources\drawable\sing_along1.jpeg" />
+    <AndroidResource Include="Resources\drawable\sing_along2.jpeg" />
+    <AndroidResource Include="Resources\drawable\sing_along3.jpeg" />
+    <AndroidResource Include="Resources\drawable\sing_along4.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Assets\Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Fonts\Font Awesome 5 Free-Solid-900.otf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

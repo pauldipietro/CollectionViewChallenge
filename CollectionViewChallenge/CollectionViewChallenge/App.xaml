@@ -1,8 +1,99 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CollectionViewChallenge.App">
     <Application.Resources>
-        
+        <ResourceDictionary>
+            <Color x:Key="Success">#28A745</Color>
+            
+            <OnPlatform x:Key="IconFontFamily" x:TypeArguments="x:String" 
+                        iOS="Font Awesome 5 Free"
+                        Android="Fonts/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free"/>
+            
+            <OnPlatform x:Key="SmallSize" x:TypeArguments="x:Double" iOS="10" Android="10"/>
+            <OnPlatform x:Key="NormalSize" x:TypeArguments="x:Double" iOS="12" Android="12"/>
+            <OnPlatform x:Key="MediumSize" x:TypeArguments="x:Double" iOS="14" Android="14"/>
+            <OnPlatform x:Key="LargeSize" x:TypeArguments="x:Double" iOS="16" Android="16"/>
+            <OnPlatform x:Key="HeaderSize" x:TypeArguments="x:Double" iOS="20" Android="20"/>
+            
+            <Style x:Key="BaseLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource SmallSize}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            
+            <Style x:Key="BaseIconLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource HeaderSize}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="{StaticResource IconFontFamily}"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            
+            <Style x:Key="BaseBoldLabel" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            
+            <Style x:Key="MediumLabel" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="FontSize" Value="{StaticResource MediumSize}"/>
+            </Style>
+            
+            <Style x:Key="LargeLabel" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="FontSize" Value="{StaticResource LargeSize}"/>
+            </Style>
+            
+            <Style x:Key="MediumBoldLabel" TargetType="Label" BasedOn="{StaticResource MediumLabel}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            
+            <Style x:Key="LargeBoldLabel" TargetType="Label" BasedOn="{StaticResource LargeLabel}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            
+            <Style x:Key="BaseSpan" TargetType="Span">
+                <Setter Property="FontSize" Value="{StaticResource SmallSize}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            
+            <Style x:Key="NormalSpan" TargetType="Span" BasedOn="{StaticResource BaseSpan}">
+                <Setter Property="FontSize" Value="{StaticResource NormalSize}"/>
+            </Style>
+            
+            <Style x:Key="NormalSilverSpan" TargetType="Span" BasedOn="{StaticResource NormalSpan}">
+                <Setter Property="TextColor" Value="Silver"/>
+            </Style>
+            
+            <Style x:Key="BaseIconSpan" TargetType="Span" BasedOn="{StaticResource BaseSpan}">
+                <Setter Property="FontFamily" Value="{StaticResource IconFontFamily}"/>
+            </Style>
+            
+            <Style x:Key="BaseCollectionView" TargetType="CollectionView">
+                <Setter Property="Margin" Value="10,0"/>
+                <Setter Property="SelectionMode" Value="None"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+            </Style>
+            
+            <Style x:Key="HomeCollectionView" TargetType="CollectionView" BasedOn="{StaticResource BaseCollectionView}">
+                <Setter Property="HeightRequest" Value="250"/>
+            </Style>
+            
+            <Style x:Key="RecentlyPlayedCollectionView" TargetType="CollectionView" BasedOn="{StaticResource BaseCollectionView}">
+                <Setter Property="HeightRequest" Value="210"/>
+            </Style>
+            
+            <Style x:Key="BaseBoxView" TargetType="BoxView">
+                <Setter Property="Color" Value="Gray"/>
+                <Setter Property="HeightRequest" Value="3"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+            
+            <Style x:Key="ProgressBoxView" TargetType="BoxView" BasedOn="{StaticResource BaseBoxView}">
+                <Setter Property="Color" Value="White"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

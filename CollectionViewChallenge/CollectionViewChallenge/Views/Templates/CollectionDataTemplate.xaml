@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataTemplate xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="CollectionViewChallenge.Views.Templates.CollectionDataTemplate">
+    <Grid Padding="5" WidthRequest="170">
+        <Grid RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="160"/>
+                <RowDefinition Height="{Binding DescRowHeight}"/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0">
+                <Image Source="{Binding CoverUrl}" Aspect="AspectFit" HorizontalOptions="Center"/>
+            </Grid>
+            
+            <StackLayout Grid.Row="1" Spacing="3" Padding="5,0">
+                <Label Text="{Binding Title}" Style="{StaticResource BaseBoldLabel}"/>
+                <Label Text="{Binding Description}" Style="{StaticResource BaseLabel}"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</DataTemplate>

@@ -1,32 +1,61 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:CollectionViewChallenge.Views;assembly=CollectionViewChallenge"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
              mc:Ignorable="d"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="White">#F8F8F8</Color>
+            <Color x:Key="Accent">#008DA8</Color>
+
+            <Style x:Key="TabStyle" TargetType="tabs:UnderlinedTabItem">
+                <Setter Property="SelectedTabColor" Value="{StaticResource White}" />
+                <Setter Property="LabelSize" Value="14" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Accent}" />
+                <Setter Property="UnselectedLabelColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="1.5*" />
+            </Grid.RowDefinitions>
+            
+            <maps:Map x:Name="map" Grid.Row="0" />
+            
+            <Grid RowSpacing="0" ColumnSpacing="0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                
+                <tabs:TabHostView x:Name="TabHost"
+                                  BackgroundColor="White"
+                                  SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
+                                  ShadowType="Bottom"
+                                  Grid.Row="0">
+                    <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="stats" />
+                    <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="kudos" />
+                    <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="comments" />
+                </tabs:TabHostView>
+
+                <ScrollView Grid.Row="1">
+                    <tabs:ViewSwitcher x:Name="Switcher"
+                                       Animate="True"
+                                       SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}">
+                        <views:StatsView />
+                        <views:KudosView />
+                        <views:CommentsView />
+                    </tabs:ViewSwitcher>
+                </ScrollView>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

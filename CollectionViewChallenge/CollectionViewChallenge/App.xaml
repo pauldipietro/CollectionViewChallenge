@@ -1,8 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CollectionViewChallenge.App">
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:CollectionViewChallenge.Converters"
+    xmlns:consts="clr-namespace:CollectionViewChallenge.Utility.Constants"
+    x:Class="CollectionViewChallenge.App">
+    
     <Application.Resources>
         
+        <!-- Converters -->
+        
+        <converters:StringDateConverter x:Key="StringDateConverter" />
+        <converters:TrophyCountConverter x:Key="TrophyCountConverter" />
+
+        <!-- End Converters -->
+        
+        <Style TargetType="NavigationPage">
+            <Setter Property="HasNavigationBar" Value="true" />
+            <Setter Property="BarTextColor" Value="White" />
+            <Setter Property="BarBackgroundColor" Value="{x:Static consts:Colours.PrimaryColour}" />
+        </Style>
+
+        <!-- Label Styles -->
+
+        <Style x:Key="BaseLabelStyle" TargetType="Label" >
+            <Setter Property="TextColor" Value="{x:Static consts:Colours.PrimaryTextColour}" />
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="TitleLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}" >
+            <Setter Property="TextColor" Value="{x:Static consts:Colours.PrimaryColour}" />
+        </Style>
+
+        <Style x:Key="SubtitleLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}" >
+            <Setter Property="TextColor" Value="{x:Static consts:Colours.SecondaryTextColour}" />
+        </Style>
+
+        <Style x:Key="MicroSubtitleLabelStyle" TargetType="Label" BasedOn="{StaticResource SubtitleLabelStyle}" >
+            <Setter Property="FontSize" Value="Micro" />
+        </Style>
+
+        <!-- End Label Styles -->
+
     </Application.Resources>
+    
 </Application>

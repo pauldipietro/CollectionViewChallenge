@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:consts="clr-namespace:CollectionViewChallenge.Utility.Constants"
+    xmlns:controls="clr-namespace:CollectionViewChallenge.Controls"
+    x:Class="CollectionViewChallenge.Views.Cells.GameViewCell">
+
+    <StackLayout
+        Padding="{x:Static consts:Thicknesses.CellPadding8}"
+        Spacing="8"
+        Orientation="Horizontal"
+        BackgroundColor="White">
+        <StackLayout.Triggers>
+            <DataTrigger TargetType="StackLayout"
+                Binding="{Binding EarnedTrophies.Platinum}"
+                Value="1">
+                <Setter Property="BackgroundColor" Value="{x:Static consts:Colours.PlatinumEarnedCellBackgroundColour}" />
+            </DataTrigger>
+        </StackLayout.Triggers>
+
+        <ff:CachedImage
+            x:Name="IconImage"
+            WidthRequest="100"
+            HeightRequest="56"
+            Aspect="AspectFit"
+            DownsampleToViewSize="true"
+            Source="{Binding Icon, Mode=OneTime}"/>
+
+        <StackLayout
+            Spacing="2"
+            Orientation="Vertical"
+            VerticalOptions="Center"
+            HorizontalOptions="Start">
+            <Label
+                x:Name="TitleLabel"
+                Text="{Binding Title}"
+                Style="{StaticResource TitleLabelStyle}"/>
+            <Label
+                x:Name="TrophyCountLabel"
+                Text="{Binding ., Converter={StaticResource TrophyCountConverter}}"
+                Style="{StaticResource MicroSubtitleLabelStyle}"/>
+            <Label
+                x:Name="LastUpdatedLabel"
+                Text="{Binding LastUpdatedDate, Converter={StaticResource StringDateConverter}, ConverterParameter='{0} MMMM yyyy'}"
+                Style="{StaticResource MicroSubtitleLabelStyle}"/>
+        </StackLayout>
+
+        <controls:TagControl
+            Spacing="2"
+            Orientation="Vertical"
+            MinimumWidthRequest="38"
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="EndAndExpand"
+            Tags="{Binding PlatformTags}"
+            TagPadding="5, 1"
+            TagCornerRadius="2"
+            TagColour="{x:Static consts:Colours.PrimaryColour}"/>
+
+    </StackLayout>
+
+</ViewCell>

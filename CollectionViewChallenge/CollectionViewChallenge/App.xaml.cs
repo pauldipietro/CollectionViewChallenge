@@ -12,7 +12,7 @@ namespace CollectionViewChallenge
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new CollectionViewChallengePage();
         }
 
         protected override void OnStart()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Sharpnado.Presentation.Forms.iOS;
 using UIKit;
 
 namespace CollectionViewChallenge.iOS
@@ -24,7 +25,9 @@ namespace CollectionViewChallenge.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init();
+            global::Xamarin.FormsMaps.Init();
             LoadApplication(new App());
+            SharpnadoInitializer.Initialize();
 
             return base.FinishedLaunching(app, options);
         }

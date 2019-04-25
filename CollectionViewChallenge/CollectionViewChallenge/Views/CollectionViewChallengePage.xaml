@@ -3,30 +3,75 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:models="clr-namespace:CollectionViewChallenge.Models"
+             xmlns:consts="clr-namespace:CollectionViewChallenge.Utility.Constants"
+             xmlns:controls="clr-namespace:CollectionViewChallenge.Controls"
              mc:Ignorable="d"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
     <ContentPage.Content>
         <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+
+            <CollectionView
+                ItemsSource="{Binding Games}">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
+                    <DataTemplate x:DataType="models:GameModel">
+                        <StackLayout
+                            Padding="{x:Static consts:Thicknesses.CellPadding8}"
+                            Spacing="8"
+                            Orientation="Horizontal"
+                            BackgroundColor="White">
+                            <StackLayout.Triggers>
+                                <DataTrigger TargetType="StackLayout"
+                                    Binding="{Binding EarnedTrophies.Platinum}"
+                                    Value="1">
+                                    <Setter Property="BackgroundColor" Value="{x:Static consts:Colours.PlatinumEarnedCellBackgroundColour}" />
+                                </DataTrigger>
+                            </StackLayout.Triggers>
+
+                            <ff:CachedImage
+                                x:Name="IconImage"
+                                WidthRequest="100"
+                                HeightRequest="56"
+                                Aspect="AspectFit"
+                                DownsampleToViewSize="true"
+                                Source="{Binding Icon, Mode=OneTime}"/>
+
+                            <StackLayout
+                                Spacing="2"
+                                Orientation="Vertical"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start">
+                            <Label
+                                x:Name="TitleLabel"
+                                Text="{Binding Title}"
+                                Style="{StaticResource TitleLabelStyle}"/>
+                            <Label
+                                x:Name="TrophyCountLabel"
+                                Text="{Binding ., Converter={StaticResource TrophyCountConverter}}"
+                                Style="{StaticResource MicroSubtitleLabelStyle}"/>
+                            <Label
+                                x:Name="LastUpdatedLabel"
+                                Text="{Binding LastUpdatedDate, Converter={StaticResource StringDateConverter}, ConverterParameter='{0} MMMM yyyy'}"
+                                Style="{StaticResource MicroSubtitleLabelStyle}"/>
+                            </StackLayout>
+
+                            <controls:TagControl
+                                Spacing="2"
+                                Orientation="Vertical"
+                                MinimumWidthRequest="38"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="EndAndExpand"
+                                Tags="{Binding PlatformTags}"
+                                TagPadding="5, 1"
+                                TagCornerRadius="2"
+                                TagColour="{x:Static consts:Colours.PrimaryColour}"/>
+
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

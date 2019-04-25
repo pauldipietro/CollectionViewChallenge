@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:CollectionViewChallenge.Models"
+    xmlns:consts="clr-namespace:CollectionViewChallenge.Utility.Constants"
+    xmlns:views="clr-namespace:CollectionViewChallenge.Views.Cells"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    ios:Page.UseSafeArea="true"
+    x:Class="CollectionViewChallenge.Views.ListViewPage">
+
+    <ListView
+        x:Name="GameList"
+        HasUnevenRows="True"
+        SelectionMode="None"
+        ios:ListView.SeparatorStyle="FullWidth"
+        SeparatorColor="{x:Static consts:Colours.SeparatorColour}"
+        CachingStrategy="RecycleElement"
+        ItemsSource="{Binding Games}">
+
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="models:GameModel">
+                <views:GameViewCell />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+    
+</ContentPage>

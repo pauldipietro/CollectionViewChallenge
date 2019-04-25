@@ -6,26 +6,53 @@
              mc:Ignorable="d"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="White">
             <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+            <CollectionView x:Name="collectionList" Margin="10">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
+                        <Grid Padding="10" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Frame BackgroundColor="White" Grid.RowSpan="2" CornerRadius="5" Padding="10">
+                                <Image
+                       Source="iphone6.jpeg"
+                       Aspect="AspectFill"
+                       HeightRequest="100"
+                       WidthRequest="100" />
+                            </Frame>
+                            <Label Grid.Column="1"
+                       Text="{Binding Title}"
+                       FontAttributes="Bold" />
+                            <Label Margin="0,20,0,0" Grid.Column="1"
+                       Text="{Binding Description}"
+                       FontAttributes="Bold" />
+                            <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding Price}"
+                       VerticalOptions="End" />
+                            <Frame Grid.Row="0"
+                       Grid.Column="2" BackgroundColor="Pink" Padding="10">
+                                <Label TextColor="White" 
+                       Text="{Binding Percentage}"
+                       VerticalOptions="Start" />
+                            </Frame>
+                            
+                            <Image Grid.Row="1" Grid.Column="2"
+                       Source="star.png"
+                       HeightRequest="5"
+                       WidthRequest="5" />
+                        </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
+
             </CollectionView>
         </StackLayout>
     </ContentPage.Content>

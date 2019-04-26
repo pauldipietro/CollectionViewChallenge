@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using CollectionViewChallenge.Enum;
 using CollectionViewChallenge.Models;
+using Xamarin.Forms;
 
 namespace CollectionViewChallenge.ViewModels
 {

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CollectionViewChallenge.Views.PodcastDetailPage">
+    <ContentPage.Content>
+       <StackLayout
+            VerticalOptions="Center">
+            
+            <Image HeightRequest="250" WidthRequest="250" Source="{Binding Image}" Aspect="AspectFill"/>
+            <Label Text="{Binding Title}" FontSize="Medium" HorizontalTextAlignment="Center" />
+            <Label Text="{Binding Author}" FontSize="Small"  HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

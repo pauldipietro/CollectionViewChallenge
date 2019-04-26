@@ -46,9 +46,12 @@
             <StackLayout
                 Padding="20,20,0,0">
                 <CollectionView
+                    x:Name="FavoritesGrid"
                     Margin="-10,-10,10,10"
                     ItemsSource="{Binding PodcastFavoritesList}"
-                    HeightRequest="300">
+                    HeightRequest="300"
+                    SelectionMode="Single"
+                    SelectionChanged="Handle_SelectionChanged">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout
                             Orientation="Horizontal"
@@ -100,27 +103,27 @@
                     HeightRequest="175"
                     ItemTemplate="{templates:PodcastCellDataTemplateSelector}">
                 </CollectionView>
-                
                 <StackLayout
-                BindableLayout.ItemsSource="{Binding PodcastList}">
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout>
-                            <Label
-                                Text="{Binding GroupName}"
-                                FontAttributes="Bold"
-                                Margin="5,15,5,0" />
-                            <CollectionView
-                                ItemsSource="{Binding .}"
-                                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
-                                HeightRequest="175"
-                                ItemTemplate="{templates:PodcastCellDataTemplateSelector}">
-                            </CollectionView>
-                        </StackLayout>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
-            </StackLayout>
-                
+                    BindableLayout.ItemsSource="{Binding PodcastList}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label
+                                    Text="{Binding GroupName}"
+                                    FontAttributes="Bold"
+                                    Margin="5,15,5,0" />
+                                <CollectionView
+                                    ItemsSource="{Binding .}"
+                                    ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                                    HeightRequest="175"
+                                    ItemTemplate="{templates:PodcastCellDataTemplateSelector}"
+                                    SelectionMode="Single"
+                                    SelectionChanged="CollectionView2_Tapped">
+                                </CollectionView>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

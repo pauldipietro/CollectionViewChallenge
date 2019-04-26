@@ -20,23 +20,22 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid ColumnSpacing="0" RowSpacing="0">
+        <Grid ColumnSpacing="0" RowSpacing="0"
+              Margin="0,65,0,0"> <!-- The Shell title is pasted OVER the content !! -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
-                <RowDefinition Height="1.5*" />
+                <RowDefinition Height="2*" />
             </Grid.RowDefinitions>
             
             <maps:Map x:Name="map" Grid.Row="0" />
-            
-<!--            <Grid RowSpacing="0" ColumnSpacing="0" HeightRequest="40" WidthRequest="40"
-                  BackgroundColor="Lime"
-                  Grid.Row="0">
-                <imagecontrol:CircleImage Source="http://dgalywyr863hv.cloudfront.net/pictures/athletes/4736940/1492208/2/medium.jpg"
-                                          Aspect="AspectFill"
-                                          WidthRequest="40" HeightRequest="40"
-                                          VerticalOptions="Center" HorizontalOptions="Center"
-                                          Grid.Row="0" />
-            </Grid>-->
+
+            <imagecontrol:CircleImage Source="http://dgalywyr863hv.cloudfront.net/pictures/athletes/4736940/1492208/2/medium.jpg"
+                                      Aspect="AspectFill"
+                                      WidthRequest="50" HeightRequest="50"
+                                      Margin="12"
+                                      BorderColor="Gray" BorderThickness="1"
+                                      VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand"
+                                      Grid.Row="0" />
             
             <Grid RowSpacing="0" ColumnSpacing="0" Grid.Row="1">
                 <Grid.RowDefinitions>

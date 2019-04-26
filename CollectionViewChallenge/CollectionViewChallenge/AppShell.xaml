@@ -8,7 +8,6 @@
        FlyoutBehavior="Disabled"
        Title="CollectionViewChallenge"
        x:Class="CollectionViewChallenge.AppShell">
-
     <!--
         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         XXXXXXXX|                            |XXXXXXXX
@@ -69,7 +68,7 @@
     </Shell.Resources>
 
     <!-- Your Pages -->
-    <ShellItem>
+    <ShellItem Shell.FlyoutBehavior="Disabled">
         <ShellSection Title="CollectionView" Icon="tab_feed.png">
             <ShellContent Title="CollectionView">
                 <local:CollectionViewChallengePage Title="CollectionView"/>

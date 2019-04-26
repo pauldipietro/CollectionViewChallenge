@@ -59,7 +59,7 @@
                                   Grid.Row="0">
                     <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="stats" />
                     <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="kudos" />
-                    <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="comments" />
+<!--                    <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="comments" />-->
                 </tabs:TabHostView>
 
                 <ScrollView Grid.Row="1">
@@ -68,7 +68,7 @@
                                        SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}">
                         <views:StatsView />
                         <customViews:LazyView x:TypeArguments="views:KudosView" />
-                        <customViews:LazyView x:TypeArguments="views:CommentsView" />
+<!--                        <customViews:LazyView x:TypeArguments="views:CommentsView" />-->
                     </tabs:ViewSwitcher>
                 </ScrollView>
             </Grid>

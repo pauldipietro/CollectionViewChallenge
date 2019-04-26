@@ -1,0 +1,1188 @@
+{
+    "sfx_items": [
+        {
+            "id": 2018041500100001,
+            "name": "TORNADO SIREN",
+            "file": "tornado_siren.mp3",
+            "category": 1,
+            "likeCount": 76,
+            "enabled": true
+        },
+        {
+            "id": 2018041500200001,
+            "name": "SCREAMING GOAT",
+            "file": "goat.mp3",
+            "category": 2,
+            "likeCount": 92,
+            "enabled": true
+        },
+        {
+            "id": 2018041500300001,
+            "name": "UNEXPECTED JOHN CENA",
+            "file": "jc_short.mp3",
+            "category": 3,
+            "likeCount": 90,
+            "enabled": true
+        },
+        {
+            "id": 2018041500300002,
+            "name": "PPAP",
+            "file": "ppap_full.mp3",
+            "category": 3,
+            "likeCount": 57,
+            "enabled": true
+        },
+        {
+            "id": 2018041500300003,
+            "name": "YOU NAME IT (RAP)",
+            "file": "YouNameIt.mp3",
+            "category": 3,
+            "likeCount": 104,
+            "enabled": true
+        },
+        {
+            "id": 2018041500500001,
+            "name": "BA DUM TSS",
+            "file": "Badumtss.mp3",
+            "category": 5,
+            "likeCount": 64,
+            "enabled": true
+        },
+        {
+            "id": 2018041500400002,
+            "name": "BLEEP",
+            "file": "bleep.mp3",
+            "category": 5,
+            "likeCount": 45,
+            "enabled": true
+        },
+        {
+            "id": 2018060620300004,
+            "name": "GOOOL!!!",
+            "file": "Gol.mp3",
+            "category": 3,
+            "likeCount": 18,
+            "enabled": true
+        },
+        {
+            "id": 2018060620300005,
+            "name": "HOY SE BEBE",
+            "file": "hsbb.mp3",
+            "category": 3,
+            "likeCount": 6,
+            "enabled": true
+        },
+        {
+            "id": 2018060620300006,
+            "name": "TDFW (OHHH!!)",
+            "file": "tdfw_ohh.mp3",
+            "category": 3,
+            "likeCount": 81,
+            "enabled": true
+        },
+        {
+            "id": 2018060720300007,
+            "name": "SAFE!!",
+            "file": "Safe.mp3",
+            "category": 3,
+            "likeCount": 30,
+            "enabled": true
+        },
+        {
+            "id": 2018060720400001,
+            "name": "MLB ORGAN THEME",
+            "file": "baseball_organ.mp3",
+            "category": 4,
+            "likeCount": 21,
+            "enabled": true
+        },
+        {
+            "id": 2018060720100002,
+            "name": "ALIEN SIREN",
+            "file": "alien_siren.mp3",
+            "category": 1,
+            "likeCount": 12,
+            "enabled": true
+        },
+        {
+            "id": 2018060720200002,
+            "name": "ANGRY CAT",
+            "file": "angry_catmp3.mp3",
+            "category": 2,
+            "likeCount": 35,
+            "enabled": true
+        },
+        {
+            "id": 2018060720500002,
+            "name": "rain and cricets",
+            "file": "rain_and_crickets.mp3",
+            "category": 5,
+            "likeCount": 8,
+            "enabled": true
+        },
+        {
+            "id": 2018060920400002,
+            "name": "ALCATEL E101",
+            "file": "alcatel_e101.mp3",
+            "category": 4,
+            "likeCount": 16,
+            "enabled": true
+        },
+        {
+            "id": 2018061220400003,
+            "name": "EPIC SAX GUY",
+            "file": "epic sax guy.mp3",
+            "category": 4,
+            "likeCount": 135,
+            "enabled": true
+        },
+        {
+            "id": 2018061220500003,
+            "name": "AIR HORN",
+            "file": "air horn.mp3",
+            "category": 5,
+            "likeCount": 34,
+            "enabled": true
+        },
+        {
+            "id": 2018061220500004,
+            "name": "KISS",
+            "file": "kiss.mp3",
+            "category": 5,
+            "likeCount": 17,
+            "enabled": true
+        },
+        {
+            "id": 2018061220500005,
+            "name": "DIAL TONE",
+            "file": "america_dial_tone.mp3",
+            "category": 5,
+            "likeCount": 29,
+            "enabled": true
+        },
+        {
+            "id": 2018061220500006,
+            "name": "ANALOG ALARMCLOCK",
+            "file": "analog_watch_alarm.mp3",
+            "category": 5,
+            "likeCount": 4,
+            "enabled": true
+        },
+        {
+            "id": 2018061220200003,
+            "name": "BARKING DOG",
+            "file": "barking_dog.mp3",
+            "category": 2,
+            "likeCount": 9,
+            "enabled": true
+        },
+        {
+            "id": 2018061220500007,
+            "name": "CHAINS RATTLING",
+            "file": "chains_rattling.mp3",
+            "category": 5,
+            "likeCount": 6,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500008,
+            "name": "APPLAUSE",
+            "file": "applause.mp3",
+            "category": 5,
+            "likeCount": 38,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500009,
+            "name": "AWWW!",
+            "file": "aww.mp3",
+            "category": 5,
+            "likeCount": 22,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500010,
+            "name": "BABY LAUGHING",
+            "file": "baby laugh.mp3",
+            "category": 5,
+            "likeCount": 18,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300008,
+            "name": "BRUH",
+            "file": "bruh.mp3",
+            "category": 3,
+            "likeCount": 137,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300009,
+            "name": "BURNED",
+            "file": "burned.mp3",
+            "category": 3,
+            "likeCount": 10,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500011,
+            "name": "CHURCH BELL RINGING",
+            "file": "church_bell_chime.mp3",
+            "category": 5,
+            "likeCount": 4,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300010,
+            "name": "COMBO BREAKER",
+            "file": "combo breaker.mp3",
+            "category": 3,
+            "likeCount": 17,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300011,
+            "name": "COOKIE MONSTER",
+            "file": "cookie monster.mp3",
+            "category": 3,
+            "likeCount": 16,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300012,
+            "name": "COOL STORY BRO",
+            "file": "cool story bro.mp3",
+            "category": 3,
+            "likeCount": 28,
+            "enabled": true
+        },
+        {
+            "id": 2018061320200004,
+            "name": "COW",
+            "file": "cow.mp3",
+            "category": 2,
+            "likeCount": 10,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300013,
+            "name": "FATALITY",
+            "file": "fatality.mp3",
+            "category": 3,
+            "likeCount": 26,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300014,
+            "name": "HARLEM SHAKE",
+            "file": "harlem shake.mp3",
+            "category": 3,
+            "likeCount": 75,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500012,
+            "name": "HEAVY RAIN",
+            "file": "heavy_rain.mp3",
+            "category": 5,
+            "likeCount": 10,
+            "enabled": true
+        },
+        {
+            "id": 2018061320200005,
+            "name": "HYENA LAUGHING",
+            "file": "hyena_laughing.mp3",
+            "category": 2,
+            "likeCount": 30,
+            "enabled": true
+        },
+        {
+            "id": 2018061320400004,
+            "name": "LOVE",
+            "file": "love.mp3",
+            "category": 4,
+            "likeCount": 50,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500013,
+            "name": "METAL GEAR CODEC",
+            "file": "metal gear codec.mp3",
+            "category": 5,
+            "likeCount": 5,
+            "enabled": true
+        },
+        {
+            "id": 2018061320100003,
+            "name": "NUKE ALARM",
+            "file": "nuclear alarm.mp3",
+            "category": 1,
+            "likeCount": 59,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500014,
+            "name": "POKER CHIPS",
+            "file": "poker_chips.mp3",
+            "category": 5,
+            "likeCount": 3,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500015,
+            "name": "POLICE WHISTLE",
+            "file": "police_whistle.mp3",
+            "category": 5,
+            "likeCount": 6,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500016,
+            "name": "LOBBY BELL",
+            "file": "front_desk_bells.mp3",
+            "category": 5,
+            "likeCount": 3,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500017,
+            "name": "PUNCH",
+            "file": "punch.mp3",
+            "category": 5,
+            "likeCount": 40,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500018,
+            "name": "STEAM TRAIN WHISTLE",
+            "file": "steam_train_whistle.mp3",
+            "category": 5,
+            "likeCount": 9,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500019,
+            "name": "WATER DROP",
+            "file": "water_drop.mp3",
+            "category": 5,
+            "likeCount": 5,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500020,
+            "name": "WATER DROPS ROOM",
+            "file": "water_drops_room.mp3",
+            "category": 5,
+            "likeCount": 4,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500021,
+            "name": "WATERFALL",
+            "file": "waterfall.mp3",
+            "category": 5,
+            "likeCount": 3,
+            "enabled": true
+        },
+        {
+            "id": 2018061320500022,
+            "name": "WHIP",
+            "file": "whip.mp3",
+            "category": 5,
+            "likeCount": 25,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300015,
+            "name": "WAT!!?",
+            "file": "wat.mp3",
+            "category": 3,
+            "likeCount": 94,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300016,
+            "name": "BANKAI",
+            "file": "bankai.mp3",
+            "category": 3,
+            "likeCount": 12,
+            "enabled": true
+        },
+        {
+            "id": 2018061320200006,
+            "name": "CAT NOO!",
+            "file": "cat noo.mp3",
+            "category": 2,
+            "likeCount": 60,
+            "enabled": true
+        },
+        {
+            "id": 2018061320400005,
+            "name": "EPIC DROP",
+            "file": "epic drop.mp3",
+            "category": 4,
+            "likeCount": 117,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300017,
+            "name": "HOLY SHIT",
+            "file": "holy shit.mp3",
+            "category": 3,
+            "likeCount": 24,
+            "enabled": true
+        },
+        {
+            "id": 2018061320400006,
+            "name": "MONEY",
+            "file": "money.mp3",
+            "category": 4,
+            "likeCount": 60,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300018,
+            "name": "RUN",
+            "file": "run.mp3",
+            "category": 3,
+            "likeCount": 332,
+            "enabled": true
+        },
+        {
+            "id": 2018061320300019,
+            "name": "SHOTS FIRED",
+            "file": "shotz fired.mp3",
+            "category": 3,
+            "likeCount": 5,
+            "enabled": true
+        },
+        {
+            "id": 2018061320400007,
+            "name": "SOUND OF SILENCE",
+            "file": "sound of silence.mp3",
+            "category": 4,
+            "likeCount": 158,
+            "enabled": true
+        },
+        {
+            "id": 2018061320400008,
+            "name": "DAME TU COSITA",
+            "file": "dame tu cosita.mp3",
+            "category": 4,
+            "likeCount": 78,
+            "enabled": true
+        },
+        {
+            "id": 2018061320400009,
+            "name": "AWESOME BEAT",
+            "file": "awesome.mp3",
+            "category": 4,
+            "likeCount": 43,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300020,
+            "name": "NEXPECTED DONALD TRUMP",
+            "file": "and his name is donald trump.mp3",
+            "category": 3,
+            "likeCount": 44,
+            "enabled": true
+        },
+        {
+            "id": 2018061620100004,
+            "name": "TRUMP BUILD A WALL",
+            "file": "build a wall trump.mp3",
+            "category": 1,
+            "likeCount": 36,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300021,
+            "name": "BULBASAUR",
+            "file": "bulbasaur.mp3",
+            "category": 3,
+            "likeCount": 23,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300022,
+            "name": "CHARMANDER",
+            "file": "charmander.mp3",
+            "category": 3,
+            "likeCount": 13,
+            "enabled": true
+        },
+        {
+            "id": 2018061620400010,
+            "name": "DANGEROUS THEME",
+            "file": "dangerous theme.mp3",
+            "category": 4,
+            "likeCount": 18,
+            "enabled": true
+        },
+        {
+            "id": 2018061620400011,
+            "name": "DARKNESS THEME",
+            "file": "darkness theme.mp3",
+            "category": 4,
+            "likeCount": 15,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300023,
+            "name": "EEVEE",
+            "file": "eevee.mp3",
+            "category": 3,
+            "likeCount": 21,
+            "enabled": true
+        },
+        {
+            "id": 2018061620400012,
+            "name": "FPS DUBSTEP",
+            "file": "fps dubstep.mp3",
+            "category": 4,
+            "likeCount": 78,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300024,
+            "name": "GRANNY I SEE YOU",
+            "file": "granny i see you.mp3",
+            "category": 3,
+            "likeCount": 37,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300025,
+            "name": "GREAT NEWS",
+            "file": "great news.mp3",
+            "category": 3,
+            "likeCount": 8,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300026,
+            "name": "I DONT HAVE MONEY",
+            "file": "i dont have money.mp3",
+            "category": 3,
+            "likeCount": 13,
+            "enabled": true
+        },
+        {
+            "id": 2018061620400013,
+            "name": "OBLIVION",
+            "file": "oblivion.mp3",
+            "category": 4,
+            "likeCount": 46,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300027,
+            "name": "OH SNAP!",
+            "file": "oh snap.mp3",
+            "category": 3,
+            "likeCount": 19,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300028,
+            "name": "SI!! RONALDO",
+            "file": "ronaldo si.mp3",
+            "category": 3,
+            "likeCount": 18,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300029,
+            "name": "SHOT UP MY FWIEN",
+            "file": "shot up my fwien.mp3",
+            "category": 3,
+            "likeCount": 7,
+            "enabled": true
+        },
+        {
+            "id": 2018061620400014,
+            "name": "STAYIN ALIVE",
+            "file": "stayin alive.mp3",
+            "category": 4,
+            "likeCount": 88,
+            "enabled": true
+        },
+        {
+            "id": 2018061620400015,
+            "name": "TRUMP CHINA REMIX",
+            "file": "Trump China Remix.mp3",
+            "category": 4,
+            "likeCount": 78,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300030,
+            "name": "AWWW!",
+            "file": "aww.mp3",
+            "category": 3,
+            "likeCount": 14,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300031,
+            "name": "DEEZ NUTZ",
+            "file": "deez nuts.mp3",
+            "category": 3,
+            "likeCount": 36,
+            "enabled": true
+        },
+        {
+            "id": 2018061620500023,
+            "name": "FART",
+            "file": "fart.mp3",
+            "category": 5,
+            "likeCount": 49,
+            "enabled": true
+        },
+        {
+            "id": 2018061620300032,
+            "name": "JUST DO IT",
+            "file": "just do it.mp3",
+            "category": 3,
+            "likeCount": 72,
+            "enabled": true
+        },
+        {
+            "id": 2018061620400016,
+            "name": "THUG LIFE",
+            "file": "thug life.mp3",
+            "category": 4,
+            "likeCount": 58,
+            "enabled": true
+        },
+        {
+            "id": 2018061620400017,
+            "name": "WESTERN",
+            "file": "western.mp3",
+            "category": 4,
+            "likeCount": 39,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300033,
+            "name": "3 DAYS LATER",
+            "file": "3 days later.mp3",
+            "category": 3,
+            "likeCount": 102,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300034,
+            "name": "ALLAHU AKBAR",
+            "file": "allahu akbar.mp3",
+            "category": 3,
+            "likeCount": 110,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300035,
+            "name": "ARE YOU CRAZY",
+            "file": "are you crazy.mp3",
+            "category": 3,
+            "likeCount": 27,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400018,
+            "name": "BASS TEST",
+            "file": "bass test.mp3",
+            "category": 4,
+            "likeCount": 27,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300036,
+            "name": "WTF! BOOM",
+            "file": "beep wtf boom!!!.mp3",
+            "category": 3,
+            "likeCount": 84,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400019,
+            "name": "BOOM",
+            "file": "boom.mp3",
+            "category": 4,
+            "likeCount": 53,
+            "enabled": true
+        },
+        {
+            "id": 2018061820200007,
+            "name": "CAT MEAOW",
+            "file": "cat meaou.mp3",
+            "category": 2,
+            "likeCount": 6,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400020,
+            "name": "DANK MUSIC",
+            "file": "dank music.mp3",
+            "category": 4,
+            "likeCount": 83,
+            "enabled": true
+        },
+        {
+            "id": 2018061820200008,
+            "name": "DUCK",
+            "file": "duck.mp3",
+            "category": 2,
+            "likeCount": 32,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300037,
+            "name": "HE NEED SOME MILK",
+            "file": "he need some milk.mp3",
+            "category": 3,
+            "likeCount": 78,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300038,
+            "name": "THATS PRETTY COOL",
+            "file": "hey thats pretty good.mp3",
+            "category": 3,
+            "likeCount": 23,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400021,
+            "name": "ITS EVERYDAY BRO",
+            "file": "its everyday bro.mp3",
+            "category": 4,
+            "likeCount": 33,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300039,
+            "name": "LEMME SMASH",
+            "file": "lemme smash.mp3",
+            "category": 3,
+            "likeCount": 25,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300040,
+            "name": "MISSION FAILED",
+            "file": "mission failed.mp3",
+            "category": 3,
+            "likeCount": 164,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300041,
+            "name": "NA NI",
+            "file": "nani.mp3",
+            "category": 3,
+            "likeCount": 157,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300042,
+            "name": "NO ONE HAS EVER DONE THAT",
+            "file": "no one has ever done that.mp3",
+            "category": 3,
+            "likeCount": 18,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300043,
+            "name": "OH HI MARK",
+            "file": "oh hi mark.mp3",
+            "category": 3,
+            "likeCount": 40,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400022,
+            "name": "SHOOTING STARS",
+            "file": "shooting stars.mp3",
+            "category": 4,
+            "likeCount": 216,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400023,
+            "name": "SNOOP DOG THUG LIFE",
+            "file": "snoop dogg thug life.mp3",
+            "category": 4,
+            "likeCount": 101,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400024,
+            "name": "SUPRISE MOTHERFUCKER",
+            "file": "surprise mothefacker.mp3",
+            "category": 4,
+            "likeCount": 151,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300044,
+            "name": "WHAT A STORY MARK",
+            "file": "what a story mark.mp3",
+            "category": 3,
+            "likeCount": 13,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300045,
+            "name": "HEN LIFE GIVES YOU LEMONS",
+            "file": "when life gives you lemons.mp3",
+            "category": 3,
+            "likeCount": 37,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400025,
+            "name": "YOU MAD BRO",
+            "file": "why you mad bro troll.mp3",
+            "category": 4,
+            "likeCount": 45,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400026,
+            "name": "YODELING KID REMIX",
+            "file": "yodeling kid remix.mp3",
+            "category": 4,
+            "likeCount": 202,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300046,
+            "name": "YODELING KID",
+            "file": "yodeling kid.mp3",
+            "category": 3,
+            "likeCount": 62,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400027,
+            "name": "AMERIKA RAMMSTEIN",
+            "file": "amerika rammstein.mp3",
+            "category": 4,
+            "likeCount": 12,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300047,
+            "name": "DEJA LA DROGA",
+            "file": "deja la droga.mp3",
+            "category": 3,
+            "likeCount": 11,
+            "enabled": true
+        },
+        {
+            "id": 2018061820300048,
+            "name": "DR. FADUL DROGA",
+            "file": "DrFadul droga.mp3",
+            "category": 3,
+            "likeCount": 10,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400028,
+            "name": "HEAVY MUSIC",
+            "file": "heavy music.mp3",
+            "category": 4,
+            "likeCount": 26,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400029,
+            "name": "HERE COMES THE MONEY",
+            "file": "here comes the money.mp3",
+            "category": 4,
+            "likeCount": 32,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400030,
+            "name": "PA PANAMERICANO",
+            "file": "papanamericano.mp3",
+            "category": 4,
+            "likeCount": 39,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400031,
+            "name": "RADIOACTIVE",
+            "file": "radioactive.mp3",
+            "category": 4,
+            "likeCount": 41,
+            "enabled": true
+        },
+        {
+            "id": 2018061820400032,
+            "name": "RAMMSTEIN",
+            "file": "rammstein.mp3",
+            "category": 4,
+            "likeCount": 10,
+            "enabled": true
+        },
+        {
+            "id": 2018061920100005,
+            "name": "AMBULANCE",
+            "file": "ambulance.mp3",
+            "category": 1,
+            "likeCount": 15,
+            "enabled": true
+        },
+        {
+            "id": 2018061920400033,
+            "name": "CHICKEN ATTACK",
+            "file": "chicken attack.mp3",
+            "category": 4,
+            "likeCount": 40,
+            "enabled": true
+        },
+        {
+            "id": 2018061920300049,
+            "name": "GETSUGA TENSHOU",
+            "file": "getsuga tenshou.mp3",
+            "category": 3,
+            "likeCount": 7,
+            "enabled": true
+        },
+        {
+            "id": 2018061920500024,
+            "name": "MAGIC MISSILE",
+            "file": "magic missile.mp3",
+            "category": 5,
+            "likeCount": 9,
+            "enabled": true
+        },
+        {
+            "id": 2018061920100006,
+            "name": "MISSILE BASE",
+            "file": "missile base.mp3",
+            "category": 1,
+            "likeCount": 23,
+            "enabled": true
+        },
+        {
+            "id": 2018061920100007,
+            "name": "POLICE SIREN",
+            "file": "police siren.mp3",
+            "category": 1,
+            "likeCount": 23,
+            "enabled": true
+        },
+        {
+            "id": 2018061920200009,
+            "name": "SHEEP BAH",
+            "file": "sheep bah.mp3",
+            "category": 2,
+            "likeCount": 10,
+            "enabled": true
+        },
+        {
+            "id": 2018061920300050,
+            "name": "SHUT UP!!",
+            "file": "shut up.mp3",
+            "category": 3,
+            "likeCount": 41,
+            "enabled": true
+        },
+        {
+            "id": 2018061920400034,
+            "name": "WHAT DOES THE FOX SAY",
+            "file": "what the fox say.mp3",
+            "category": 4,
+            "likeCount": 44,
+            "enabled": true
+        },
+        {
+            "id": 2018062020300051,
+            "name": "OK GRACIAS",
+            "file": "ok gracias.mp3",
+            "category": 3,
+            "likeCount": 20,
+            "enabled": true
+        },
+        {
+            "id": 2018062120500025,
+            "name": "FAIL TRUMPET",
+            "file": "fail trumpet.mp3",
+            "category": 5,
+            "likeCount": 62,
+            "enabled": true
+        },
+        {
+            "id": 2018062120300052,
+            "name": "GET NOSCOPED",
+            "file": "GET NOSCOPED Sound effect.mp3",
+            "category": 3,
+            "likeCount": 34,
+            "enabled": true
+        },
+        {
+            "id": 2018062120300053,
+            "name": "GOTCHA BITCH",
+            "file": "Gotcha bitch Sound Effect Got you.mp3",
+            "category": 3,
+            "likeCount": 105,
+            "enabled": true
+        },
+        {
+            "id": 2018062120500026,
+            "name": "GTA V WASTED",
+            "file": "GTA V WastedBusted Sound Effect.mp3",
+            "category": 5,
+            "likeCount": 103,
+            "enabled": true
+        },
+        {
+            "id": 2018062120300054,
+            "name": "HELP. ME. NIGGA",
+            "file": "HELP ME HELP. ME... NIGGA Sound Effect.mp3",
+            "category": 3,
+            "likeCount": 56,
+            "enabled": true
+        },
+        {
+            "id": 2018062120500027,
+            "name": "DISTORTED SAD VIOLEN",
+            "file": "Hyper Distorted Sad Violin Sound Effect.mp3",
+            "category": 5,
+            "likeCount": 56,
+            "enabled": true
+        },
+        {
+            "id": 2018062120300055,
+            "name": "I DONT GIVE A FUCK",
+            "file": "I Dont Give A Fuck Sound Effect.mp3",
+            "category": 3,
+            "likeCount": 115,
+            "enabled": true
+        },
+        {
+            "id": 2018062120400035,
+            "name": "ILLUMINATI CONFIRMED",
+            "file": "Illuminati Confirmed Sound Effect.mp3",
+            "category": 4,
+            "likeCount": 130,
+            "enabled": true
+        },
+        {
+            "id": 2018062120300056,
+            "name": "LEEROY JENKINS",
+            "file": "Leeroy Jenkins Sound Effect.mp3",
+            "category": 3,
+            "likeCount": 38,
+            "enabled": true
+        },
+        {
+            "id": 2018062120300057,
+            "name": "MOM GET THE CAMERA",
+            "file": "Mom Get The Camera Sound Effect.mp3",
+            "category": 3,
+            "likeCount": 42,
+            "enabled": true
+        },
+        {
+            "id": 2018062120300058,
+            "name": "SHUT YOUR BITCH ASS UP",
+            "file": "Shut Your Bitch Ass Up Sound Effect.mp3",
+            "category": 3,
+            "likeCount": 85,
+            "enabled": true
+        },
+        {
+            "id": 2018062120300059,
+            "name": "SHUT YOUR MOUTH",
+            "file": "Shut Your Fucking Mouth.mp3",
+            "category": 3,
+            "likeCount": 75,
+            "enabled": true
+        },
+        {
+            "id": 2018062120300060,
+            "name": "WHAT ARE THOSE",
+            "file": "What are those.mp3",
+            "category": 3,
+            "likeCount": 39,
+            "enabled": true
+        },
+        {
+            "id": 2018062120300061,
+            "name": "WOMBO COMBO",
+            "file": "Wombo Combo.mp3",
+            "category": 3,
+            "likeCount": 30,
+            "enabled": true
+        },
+        {
+            "id": 2018062120500028,
+            "name": "SAD VIOLEN",
+            "file": "sad violen.mp3",
+            "category": 5,
+            "likeCount": 190,
+            "enabled": true
+        },
+        {
+            "id": 2018062120500029,
+            "name": "TA DA TRUMPET",
+            "file": "ta da trumpet.mp3",
+            "category": 5,
+            "likeCount": 30,
+            "enabled": true
+        },
+        {
+            "id": 2018062220400036,
+            "name": "STAR WARS",
+            "file": "star wars.mp3",
+            "category": 4,
+            "likeCount": 56,
+            "enabled": true
+        },
+        {
+            "id": 2018071320300062,
+            "name": "BITCH",
+            "file": "bitch.mp3",
+            "category": 3,
+            "likeCount": 12,
+            "enabled": true
+        },
+        {
+            "id": 2018072220300063,
+            "name": "LOLITO CABREADO",
+            "file": "miAudio.mp3",
+            "category": 3,
+            "likeCount": 6,
+            "enabled": true
+        },
+        {
+            "id": 2018072620300064,
+            "name": "VE EL PENDEJO",
+            "file": "AUD-20180105-WA0014.mp3",
+            "category": 3,
+            "likeCount": 7,
+            "enabled": true
+        },
+        {
+            "id": 2018072720300065,
+            "name": "IEPA LOLITO",
+            "file": "miAudio.mp3",
+            "category": 3,
+            "likeCount": 5,
+            "enabled": true
+        },
+        {
+            "id": 2018111020300066,
+            "name": "????? ?????",
+            "file": "????? ????? ?????(MP3_128K).mp3",
+            "category": 3,
+            "likeCount": 3,
+            "enabled": true
+        }
+    ]
+}

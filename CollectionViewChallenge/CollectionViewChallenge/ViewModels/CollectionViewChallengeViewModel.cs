@@ -1,54 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.ObjectModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using CollectionViewChallenge.Models;
+using System.Collections.Generic;
 using CollectionViewChallenge.Controls;
-using System.IO;
-using System.Reflection;
-using Newtonsoft.Json;
+using System.Collections.ObjectModel;
+using Prism.Mvvm;
+using CollectionViewChallenge.Models;
+using System.ComponentModel;
 
-namespace CollectionViewChallenge.Views
+namespace CollectionViewChallenge.ViewModels
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CollectionViewChallengePage : ContentPage
+    public class CollectionViewChallengeViewModel : INotifyPropertyChanged 
     {
-        public ObservableCollection<CustomButton> Buttons { get; set; }
+        public ObservableCollection<CustomButton> Buttons {get; set;}
 
-        public CollectionViewChallengePage()
+        public CollectionViewChallengeViewModel()
         {
-            InitializeComponent();
-            Buttons = new ObservableCollection<CustomButton>();
-            //temp
             FillButtonList();
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
         private void FillButtonList()
         {
-            var assembly = typeof(CollectionViewChallengePage).GetTypeInfo().Assembly;
-            var exp = $"{ assembly.GetName().Name}.sfx.json";
-            Stream stream = assembly.GetManifestResourceStream(exp);
-
-            using (var reader = new System.IO.StreamReader(stream))
-            {
-
-                var json = reader.ReadToEnd();
-                var data = JsonConvert.DeserializeObject<SfxItems>(json);
-
-                data.sfx_items = data.sfx_items.OrderByDescending(x => x.likeCount).ToList();
-
-                foreach (SfxItem item in data.sfx_items)
-                {
-                    var btn = new CustomButton(item);
-                    Buttons.Add(btn);
-                }
-            }
-
-            /*var btnAlert = new CustomButton(new SfxItem
+            var btnAlert = new CustomButton(new SfxItem
             {
                 id = 0,
                 name = "Button 1",
@@ -98,9 +72,7 @@ namespace CollectionViewChallenge.Views
             Buttons.Add(btnAnimal);
             Buttons.Add(btnMeme);
             Buttons.Add(btnMusic);
-            Buttons.Add(btnSfx);*/
-
-            grvButtons.ItemsSource = Buttons;
+            Buttons.Add(btnSfx);
         }
     }
 }

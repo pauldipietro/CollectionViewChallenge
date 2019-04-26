@@ -123,6 +123,18 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\Logo.png" />
+    <BundleResource Include="Resources\alert_pressed.png" />
+    <BundleResource Include="Resources\alert_unpressed.png" />
+    <BundleResource Include="Resources\animal_pressed.png" />
+    <BundleResource Include="Resources\animal_unpressed.png" />
+    <BundleResource Include="Resources\meme_pressed.png" />
+    <BundleResource Include="Resources\meme_unpressed.png" />
+    <BundleResource Include="Resources\music_pressed.png" />
+    <BundleResource Include="Resources\music_unpressed.png" />
+    <BundleResource Include="Resources\sfx_pressed.png" />
+    <BundleResource Include="Resources\sfx_unpressed.png" />
+    <BundleResource Include="Resources\forced_square.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -135,11 +147,14 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.346134-pre9" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Prism.Forms">
+      <Version>7.1.0.431</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>

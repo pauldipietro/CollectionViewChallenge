@@ -14,6 +14,7 @@ namespace CollectionViewChallenge.ViewModels
         public ObservableCollection<Podcast> PodcastSocietyCultureList { get; set; }
         public ObservableCollection<Podcast> PodcastComedyList { get; set; }
         public ObservableCollection<Podcast> PodcastFavoritesList { get; set; }
+        public IList<GroupPodcast> PodcastList { get; private set; }
 
         public PodcastCollectionViewModel()
         {
@@ -22,6 +23,19 @@ namespace CollectionViewChallenge.ViewModels
             PodcastSocietyCultureList = GetPodcasts("Society and Culture");
             PodcastComedyList = GetPodcasts("Comedy");
             PodcastFavoritesList = GetPodcasts(null);
+            PodcastList = GetPodcastsList();
+        }
+
+        private IList<GroupPodcast> GetPodcastsList()
+        {
+            var podcasts = GetPodcasts(null);
+
+            var tempList = podcasts
+                .GroupBy(podcast => podcast.Category)
+                .Select(group => new GroupPodcast(group.Key, group.ToList()))
+                .ToList();
+
+            return tempList;
         }
 
         public ObservableCollection<Podcast> GetPodcasts(string filterCategory)

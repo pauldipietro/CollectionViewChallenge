@@ -100,6 +100,27 @@
                     HeightRequest="175"
                     ItemTemplate="{templates:PodcastCellDataTemplateSelector}">
                 </CollectionView>
+                
+                <StackLayout
+                BindableLayout.ItemsSource="{Binding PodcastList}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label
+                                Text="{Binding GroupName}"
+                                FontAttributes="Bold"
+                                Margin="5,15,5,0" />
+                            <CollectionView
+                                ItemsSource="{Binding .}"
+                                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                                HeightRequest="175"
+                                ItemTemplate="{templates:PodcastCellDataTemplateSelector}">
+                            </CollectionView>
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
@@ -93,6 +92,10 @@
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
     <AndroidResource Include="Resources\drawable\tab_about.png" />
     <AndroidResource Include="Resources\drawable\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable\vault.png" />
+    <AndroidResource Include="Resources\drawable\pay.png" />
+    <AndroidResource Include="Resources\drawable\request.png" />
+    <AndroidResource Include="Resources\drawable\scan.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -102,7 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>

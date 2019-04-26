@@ -13,12 +13,13 @@
                 <DataTemplate>
                     <Grid Padding="12" ColumnSpacing="0" RowSpacing="2">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="40" />
+                            <RowDefinition Height="50" />
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
                         
                         <imagecontrol:CircleImage Source="{Binding Image}" Aspect="AspectFill"
-                                                  WidthRequest="40" HeightRequest="40"
+                                                  WidthRequest="50" HeightRequest="50"
+                                                  BorderColor="Gray" BorderThickness="1"
                                                   VerticalOptions="Center" HorizontalOptions="Center"
                                                   Grid.Row="0" />
                         <Label Text="{Binding Name}"

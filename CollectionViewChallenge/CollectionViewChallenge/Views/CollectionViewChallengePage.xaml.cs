@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using CollectionViewChallenge.Models;
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 
 namespace CollectionViewChallenge.Views
@@ -38,6 +39,17 @@ namespace CollectionViewChallenge.Views
             set
             {
                 _kudos = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private ObservableCollection<Location> _pins = new ObservableCollection<Location>();
+        public ObservableCollection<Location> Pins
+        {
+            get => _pins;
+            set
+            {
+                _pins = value;
                 OnPropertyChanged();
             }
         }
@@ -94,6 +106,12 @@ namespace CollectionViewChallenge.Views
             Kudos.Add(new KudosDetail() { Name = "Tim Heuer", Image = "http://dgalywyr863hv.cloudfront.net/pictures/athletes/5534914/1702130/2/medium.jpg" });
             Kudos.Add(new KudosDetail() { Name = "Jan Karger", Image = "http://dgalywyr863hv.cloudfront.net/pictures/athletes/6182165/1891567/5/medium.jpg" });
             Kudos.Add(new KudosDetail() { Name = "Jan Van de Poel", Image = "http://dgalywyr863hv.cloudfront.net/pictures/athletes/2327722/7025716/2/medium.jpg" });
+
+            Pins.Add(new Location() { Description = "Begin", Position = new Position(51.098761, 4.607192) });
+            Pins.Add(new Location() { Description = "End", Position = new Position(51.028056, 4.605201) });
+
+            CycleMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(51.056214, 4.630840), Distance.FromKilometers(8)));
+
             #endregion
 
             BindingContext = this;

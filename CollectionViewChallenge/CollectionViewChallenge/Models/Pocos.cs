@@ -1,4 +1,7 @@
 ﻿using System;
+using Xamarin.Essentials;
+using Xamarin.Forms.Maps;
+
 namespace CollectionViewChallenge.Models
 {
     public class StatisticsDetail
@@ -13,5 +16,11 @@ namespace CollectionViewChallenge.Models
     {
         public string Name { get; set; }
         public string Image { get; set; }
+    }
+
+    public class Location
+    {
+        public string Description { get; set;  }
+        public Position Position { get; set; }
     }
 }

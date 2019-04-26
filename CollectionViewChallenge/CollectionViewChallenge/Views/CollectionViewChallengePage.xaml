@@ -28,7 +28,15 @@
                 <RowDefinition Height="2*" />
             </Grid.RowDefinitions>
             
-            <maps:Map x:Name="map" Grid.Row="0" />
+            <maps:Map x:Name="CycleMap"
+                      ItemsSource="{Binding Pins}"
+                      Grid.Row="0">
+                <maps:Map.ItemTemplate>
+                    <DataTemplate>
+                        <maps:Pin Position="{Binding Position}" Label="{Binding Description}" />
+                    </DataTemplate>
+                </maps:Map.ItemTemplate>
+            </maps:Map>
 
             <imagecontrol:CircleImage Source="http://dgalywyr863hv.cloudfront.net/pictures/athletes/4736940/1492208/2/medium.jpg"
                                       Aspect="AspectFill"

@@ -123,6 +123,18 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\search.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\more.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cast.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cast.imageset\cast.png" />
+    <ImageAsset Include="Assets.xcassets\cast.imageset\cast%402x.png" />
+    <ImageAsset Include="Assets.xcassets\cast.imageset\cast%403x.png" />
+    <ImageAsset Include="Assets.xcassets\more.imageset\more.png" />
+    <ImageAsset Include="Assets.xcassets\more.imageset\more%402x.png" />
+    <ImageAsset Include="Assets.xcassets\more.imageset\more%403x.png" />
+    <ImageAsset Include="Assets.xcassets\search.imageset\search.png" />
+    <ImageAsset Include="Assets.xcassets\search.imageset\search%402x.png" />
+    <ImageAsset Include="Assets.xcassets\search.imageset\search%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -139,8 +151,13 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\search.imageset\" />
+    <Folder Include="Assets.xcassets\more.imageset\" />
+    <Folder Include="Assets.xcassets\cast.imageset\" />
   </ItemGroup>
 </Project>

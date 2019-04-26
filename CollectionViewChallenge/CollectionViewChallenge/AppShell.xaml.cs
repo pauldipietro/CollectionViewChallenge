@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using CollectionViewChallenge.Views;
 using Xamarin.Forms;
 
 namespace CollectionViewChallenge
@@ -10,6 +10,7 @@ namespace CollectionViewChallenge
         public AppShell()
         {
             InitializeComponent();
+            App.NavigationRoot = this;
         }
     }
 }

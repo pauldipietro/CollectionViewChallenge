@@ -1,32 +1,139 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templates="clr-namespace:CollectionViewChallenge.Templates"
+    mc:Ignorable="d"
+    x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+    <Shell.TitleView>
+        <Grid
+            VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                 <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="9*" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.Column="0"
+                Source="search.png"
+                VerticalOptions="Center"
+                HeightRequest="25"
+                WidthRequest="35"/>
+            <Label
+                Grid.Column="2"
+                Text="Yo Podcasts"
+                FontSize="Large"
+                TextColor="White"
+                VerticalTextAlignment="Center"
+                HeightRequest="35"
+                HorizontalTextAlignment="Center" />
+            <Image
+                Grid.Column="3"
+                Source="cast.png"
+                WidthRequest="25"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Column="4"
+                Source="more.png"
+                WidthRequest="35"
+                HeightRequest="20"
+                VerticalOptions="Center" />
+        </Grid>
+    </Shell.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+        <ScrollView
+            x:Name="ScrollView">
+            <StackLayout
+                Padding="20,20,0,0">
+                <CollectionView
+                    x:Name="FavoritesGrid"
+                    Margin="-10,-10,10,10"
+                    ItemsSource="{Binding PodcastFavoritesList}"
+                    HeightRequest="300"
+                    SelectionMode="Single"
+                    SelectionChanged="Handle_SelectionChanged">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout
+                            Orientation="Horizontal"
+                            Span="3" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <templates:PodcastNew />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <Label
+                    Text="Top Podcasts"
+                    FontAttributes="Bold"
+                    Margin="5,0,5,0" />
+                <CollectionView
+                    ItemsSource="{Binding PodcastTopList}"
+                    ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                    HeightRequest="175"
+                    ItemTemplate="{templates:PodcastCellDataTemplateSelector}">
+                </CollectionView>
+                <Label
+                    Text="Trending Podcasts"
+                    FontAttributes="Bold"
+                    Margin="5,0,5,0" />
+                <CollectionView
+                    ItemsSource="{Binding PodcastTrendList}"
+                    ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                    HeightRequest="175"
+                    ItemTemplate="{templates:PodcastCellDataTemplateSelector}">
+                </CollectionView>
+                <Label
+                    Text="Top podcasts in Society and Culture"
+                    FontAttributes="Bold"
+                    Margin="5,0,5,0" />
+                <CollectionView
+                    ItemsSource="{Binding PodcastSocietyCultureList}"
+                    ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                    HeightRequest="175"
+                    ItemTemplate="{templates:PodcastCellDataTemplateSelector}">
+                </CollectionView>
+                <Label
+                    Text="Top podcasts in Comedy"
+                    FontAttributes="Bold"
+                    Margin="5,0,5,0" />
+                <CollectionView
+                    ItemsSource="{Binding PodcastComedyList}"
+                    ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                    HeightRequest="175"
+                    ItemTemplate="{templates:PodcastCellDataTemplateSelector}">
+                </CollectionView>
+                <StackLayout
+                    BindableLayout.ItemsSource="{Binding PodcastList}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label
+                                    Text="{Binding GroupName}"
+                                    FontAttributes="Bold"
+                                    Margin="5,15,5,0" />
+                                <CollectionView
+                                    ItemsSource="{Binding .}"
+                                    ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                                    HeightRequest="175"
+                                    ItemTemplate="{templates:PodcastCellDataTemplateSelector}"
+                                    SelectionMode="Single"
+                                    SelectionChanged="CollectionView2_Tapped">
+                                </CollectionView>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

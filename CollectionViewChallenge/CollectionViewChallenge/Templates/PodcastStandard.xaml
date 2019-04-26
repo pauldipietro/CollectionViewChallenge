@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CollectionViewChallenge.Templates.PodcastStandard">
+    <ContentView.Content>
+        <StackLayout
+            HeightRequest="125"
+            WidthRequest="100">
+            <Image
+                Source="{Binding Image}"
+                HeightRequest="100"
+                WidthRequest="100"
+                Margin="5,0" />
+            <Label
+                Text="{Binding Title}"
+                FontAttributes="Bold"
+                FontSize="Small"
+                LineBreakMode="WordWrap"
+                MaxLines="2" />
+            <Label
+                Text="{Binding Author}"
+                FontSize="Micro"
+                LineBreakMode="TailTruncation" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

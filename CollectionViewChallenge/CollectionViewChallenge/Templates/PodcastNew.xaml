@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CollectionViewChallenge.Templates.PodcastNew">
+    <ContentView.Content>
+        <Grid
+            Padding="3"
+            HeightRequest="130"
+            WidthRequest="100">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="3"
+                Source="{Binding Image}"
+                Aspect="AspectFill"
+                HeightRequest="70"
+                WidthRequest="60" />
+            <BoxView
+                Margin="5,5,-5,5"
+                Grid.Row="2"
+                Grid.Column="0"
+                Color="#4285F4" />
+            <Label
+                Margin="5,5,-5,5"
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="New"
+                FontAttributes="Bold"
+                FontSize="Micro"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                TextColor="White" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>

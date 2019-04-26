@@ -8,4 +8,10 @@ namespace CollectionViewChallenge.Models
 
         public string Icon { get; set; }
     }
+
+    public class KudosDetail
+    {
+        public string Name { get; set; }
+        public string Image { get; set; }
+    }
 }

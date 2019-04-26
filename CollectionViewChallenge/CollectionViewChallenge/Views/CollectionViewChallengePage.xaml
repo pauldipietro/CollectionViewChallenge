@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:views="clr-namespace:CollectionViewChallenge.Views;assembly=CollectionViewChallenge"
+             xmlns:imagecontrol="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
              mc:Ignorable="d"
@@ -27,16 +28,27 @@
             
             <maps:Map x:Name="map" Grid.Row="0" />
             
+<!--            <Grid RowSpacing="0" ColumnSpacing="0" HeightRequest="40" WidthRequest="40"
+                  BackgroundColor="Lime"
+                  Grid.Row="0">
+                <imagecontrol:CircleImage Source="http://dgalywyr863hv.cloudfront.net/pictures/athletes/4736940/1492208/2/medium.jpg"
+                                          Aspect="AspectFill"
+                                          WidthRequest="40" HeightRequest="40"
+                                          VerticalOptions="Center" HorizontalOptions="Center"
+                                          Grid.Row="0" />
+            </Grid>-->
+            
             <Grid RowSpacing="0" ColumnSpacing="0" Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 
+<!--                SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"-->
                 <tabs:TabHostView x:Name="TabHost"
                                   BackgroundColor="White"
-                                  SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
                                   ShadowType="Bottom"
+                                  SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}"
                                   Grid.Row="0">
                     <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="stats" />
                     <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="kudos" />
@@ -44,13 +56,19 @@
                 </tabs:TabHostView>
 
                 <ScrollView Grid.Row="1">
-                    <tabs:ViewSwitcher x:Name="Switcher"
+                    <Grid>
+                        <views:StatsView x:Name="StatsView" />
+<!--                        <views:KudosView x:Name="KudosView" />
+                        <views:CommentsView x:Name="CommentsView" />-->
+                   </Grid>
+                    
+<!--                    <tabs:ViewSwitcher x:Name="Switcher"
                                        Animate="True"
                                        SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}">
                         <views:StatsView />
                         <views:KudosView />
                         <views:CommentsView />
-                    </tabs:ViewSwitcher>
+                    </tabs:ViewSwitcher>-->
                 </ScrollView>
             </Grid>
         </Grid>

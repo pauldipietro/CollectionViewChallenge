@@ -31,10 +31,22 @@ namespace CollectionViewChallenge.Views
             }
         }
 
+        private ObservableCollection<KudosDetail> _kudos = new ObservableCollection<KudosDetail>();
+        public ObservableCollection<KudosDetail> Kudos
+        {
+            get => _kudos;
+            set
+            {
+                _kudos = value;
+                OnPropertyChanged();
+            }
+        }
+
         public CollectionViewChallengePage()
         {
             InitializeComponent();
 
+            #region Init data
             Stats.Add(new StatisticsDetail()
             {
                 DisplayValue = "24,5 km",
@@ -76,6 +88,17 @@ namespace CollectionViewChallenge.Views
                 DisplayDescription = "average heart rate",
                 Icon = MaterialFontIcons.HeartOutline
             });
+
+            Kudos.Add(new KudosDetail() { Name = "Bart Lannoeye", Image = "http://dgalywyr863hv.cloudfront.net/pictures/athletes/9979653/3476575/1/medium.jpg" });
+            Kudos.Add(new KudosDetail() { Name = "David Ortinau", Image = "http://dgalywyr863hv.cloudfront.net/pictures/athletes/1044152/247516/12/medium.jpg" });
+            Kudos.Add(new KudosDetail() { Name = "Tim Heuer", Image = "http://dgalywyr863hv.cloudfront.net/pictures/athletes/5534914/1702130/2/medium.jpg" });
+            Kudos.Add(new KudosDetail() { Name = "Jan Karger", Image = "http://dgalywyr863hv.cloudfront.net/pictures/athletes/6182165/1891567/5/medium.jpg" });
+            Kudos.Add(new KudosDetail() { Name = "Jan Van de Poel", Image = "http://dgalywyr863hv.cloudfront.net/pictures/athletes/2327722/7025716/2/medium.jpg" });
+            #endregion
+
+            StatsView.IsVisible = true;
+            //KudosView.IsVisible = false;
+            //CommentsView.IsVisible = false;
 
             BindingContext = this;
         }

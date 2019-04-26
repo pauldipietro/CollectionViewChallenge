@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using ImageCircle.Forms.Plugin.iOS;
 using Sharpnado.Presentation.Forms.iOS;
 using UIKit;
 
@@ -28,6 +29,7 @@ namespace CollectionViewChallenge.iOS
             global::Xamarin.FormsMaps.Init();
             LoadApplication(new App());
             SharpnadoInitializer.Initialize();
+            ImageCircleRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }

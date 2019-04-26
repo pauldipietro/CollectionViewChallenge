@@ -37,6 +37,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>materialdesignicons-webfont.ttf</string>
+		<string>OpenSans-Light.ttf</string>
 	</array>
 </dict>
 </plist>

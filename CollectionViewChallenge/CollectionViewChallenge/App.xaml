@@ -9,6 +9,11 @@
                 <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
             </OnPlatform>
             
+            <OnPlatform x:Key="OpenSansLight" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Open Sans" />
+                <On Platform="Android" Value="OpenSans-Light.ttf#Open Sans" />
+            </OnPlatform>
+            
             <Color x:Key="White">#F8F8F8</Color>
             <Color x:Key="Accent">#008DA8</Color>
         </ResourceDictionary>

@@ -25,10 +25,12 @@
                                  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
                         
                         <Label Text="{Binding DisplayValue}"
+                               FontFamily="{StaticResource OpenSansLight}"
                                FontSize="24"
                                VerticalTextAlignment="Start"
                                Grid.Row="1" Grid.Column="0" />
                         <Label Text="{Binding DisplayDescription}" TextColor="{StaticResource Accent}"
+                               FontFamily="{StaticResource OpenSansLight}"
                                FontSize="12"
                                Grid.Row="2" Grid.Column="0" />
                         

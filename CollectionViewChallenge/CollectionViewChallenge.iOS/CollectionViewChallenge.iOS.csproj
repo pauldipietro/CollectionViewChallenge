@@ -124,6 +124,7 @@
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
+    <BundleResource Include="Resources\OpenSans-Light.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -13,6 +13,8 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
                     Width="*" />
+                 <ColumnDefinition
+                    Width="*" />
                 <ColumnDefinition
                     Width="9*" />
                 <ColumnDefinition
@@ -20,23 +22,30 @@
                 <ColumnDefinition
                     Width="*" />
             </Grid.ColumnDefinitions>
-            <Label
+            <Image
                 Grid.Column="0"
-                Text="S"
+                Source="search.png"
                 VerticalOptions="Center"
-                WidthRequest="35" />
-            <Label
-                Grid.Column="1"
-                Text="Podcasts"
-                VerticalOptions="Center"
-                HorizontalOptions="CenterAndExpand" />
+                HeightRequest="25"
+                WidthRequest="35"/>
             <Label
                 Grid.Column="2"
-                Text="C"
-                VerticalOptions="Center" />
-            <Label
+                Text="Yo Podcasts"
+                FontSize="Large"
+                TextColor="White"
+                VerticalTextAlignment="Center"
+                HeightRequest="35"
+                HorizontalTextAlignment="Center" />
+            <Image
                 Grid.Column="3"
-                Text=":"
+                Source="cast.png"
+                WidthRequest="25"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Column="4"
+                Source="more.png"
+                WidthRequest="35"
+                HeightRequest="20"
                 VerticalOptions="Center" />
         </Grid>
     </Shell.TitleView>

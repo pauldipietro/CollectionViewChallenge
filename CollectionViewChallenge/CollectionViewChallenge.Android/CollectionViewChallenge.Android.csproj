@@ -92,6 +92,24 @@
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
     <AndroidResource Include="Resources\drawable\tab_about.png" />
     <AndroidResource Include="Resources\drawable\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cast.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cast.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cast.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cast.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\cast.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable\cast.png" />
+    <AndroidResource Include="Resources\drawable\more.png" />
+    <AndroidResource Include="Resources\drawable\search.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

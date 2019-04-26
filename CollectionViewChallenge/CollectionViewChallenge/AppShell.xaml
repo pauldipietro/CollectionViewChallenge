@@ -6,7 +6,7 @@
        RouteScheme="app"
        Route="CollectionViewChallenge"
        FlyoutBehavior="Disabled"
-       Title="CollectionViewChallenge"
+       Title="CollectionViewChallenge" 
        x:Class="CollectionViewChallenge.AppShell">
 
     <!--
@@ -52,7 +52,7 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#222224</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="Shell.ShellForegroundColor" Value="White" />
@@ -69,10 +69,30 @@
     </Shell.Resources>
 
     <!-- Your Pages -->
-    <ShellItem>
-        <ShellSection Title="CollectionView" Icon="tab_feed.png">
-            <ShellContent Title="CollectionView">
-                <local:CollectionViewChallengePage Title="CollectionView"/>
+    <ShellItem Shell.SetPaddingInsets="true">
+        <ShellSection Title="Accounts" Icon="tab_feed.png">
+            <ShellContent Title="Accounts">
+                <local:CollectionViewChallengePage Title="Accounts"/>
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Title="Events" Icon="tab_feed.png">
+            <ShellContent Title="Events">
+                <local:EventsPage Title="Events"/>
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Title="Cards" Icon="tab_feed.png">
+            <ShellContent Title="Cards">
+                <local:CardsPage Title="Cards"/>
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Title="Help" Icon="tab_about.png">
+            <ShellContent Title="Help">
+                <local:HelpPage Title="Help"/>
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Title="Profile" Icon="tab_feed.png">
+            <ShellContent Title="Profile">
+                <local:ProfilePage Title="Profile"/>
             </ShellContent>
         </ShellSection>
     </ShellItem>

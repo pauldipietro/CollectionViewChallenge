@@ -38,12 +38,43 @@ namespace CollectionViewChallenge.Views
             Stats.Add(new StatisticsDetail()
             {
                 DisplayValue = "24,5 km",
-                DisplayDescription = "total distance"
+                DisplayDescription = "total distance",
+                Icon = MaterialFontIcons.MapMarker
             });
+
             Stats.Add(new StatisticsDetail()
             {
                 DisplayValue = "27,1 km",
-                DisplayDescription = "average speed"
+                DisplayDescription = "average speed",
+                Icon = MaterialFontIcons.Speedometer
+            });
+
+            Stats.Add(new StatisticsDetail()
+            {
+                DisplayValue = "43,5 km",
+                DisplayDescription = "max speed",
+                Icon = MaterialFontIcons.Speedometer
+            });
+
+            Stats.Add(new StatisticsDetail()
+            {
+                DisplayValue = "1h 13m",
+                DisplayDescription = "moving time",
+                Icon = MaterialFontIcons.Timer
+            });
+
+            Stats.Add(new StatisticsDetail()
+            {
+                DisplayValue = "124,0m",
+                DisplayDescription = "elevation gain",
+                Icon = MaterialFontIcons.ImageFilterHdr
+            });
+
+            Stats.Add(new StatisticsDetail()
+            {
+                DisplayValue = "146 bpm",
+                DisplayDescription = "average heart rate",
+                Icon = MaterialFontIcons.HeartOutline
             });
 
             BindingContext = this;

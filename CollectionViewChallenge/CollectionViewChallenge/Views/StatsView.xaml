@@ -3,14 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CollectionViewChallenge.Views.StatsView">
     <ContentView.Content>
-        <CollectionView ItemsSource="{Binding Stats}">
+        <CollectionView ItemsSource="{Binding Stats}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" Span="2" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10" ColumnSpacing="0" RowSpacing="0">
+                    <Grid Padding="12" ColumnSpacing="0" RowSpacing="0">
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="5" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
@@ -19,16 +20,24 @@
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
                         
+                        <BoxView HeightRequest="1" Color="Black" BackgroundColor="Black"
+                                 VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                                 Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+                        
                         <Label Text="{Binding DisplayValue}"
                                FontSize="24"
-                               Grid.Row="0" Grid.Column="0" />
-                        <Label Text="{Binding DisplayDescription}"
-                               FontSize="12"
+                               VerticalTextAlignment="Start"
                                Grid.Row="1" Grid.Column="0" />
+                        <Label Text="{Binding DisplayDescription}" TextColor="{StaticResource Accent}"
+                               FontSize="12"
+                               Grid.Row="2" Grid.Column="0" />
                         
-                        <Label Text="ICON"
+                        <Label Text="{Binding Icon}"
+                               FontSize="24"
+                               FontFamily="{StaticResource MaterialFontFamily}"
                                HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End"
-                               Grid.Row="0" Grid.Column="1" />
+                               VerticalTextAlignment="Center"
+                               Grid.Row="1" Grid.Column="1" />
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

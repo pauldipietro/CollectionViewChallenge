@@ -10,9 +10,6 @@
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="White">#F8F8F8</Color>
-            <Color x:Key="Accent">#008DA8</Color>
-
             <Style x:Key="TabStyle" TargetType="tabs:UnderlinedTabItem">
                 <Setter Property="SelectedTabColor" Value="{StaticResource White}" />
                 <Setter Property="LabelSize" Value="14" />

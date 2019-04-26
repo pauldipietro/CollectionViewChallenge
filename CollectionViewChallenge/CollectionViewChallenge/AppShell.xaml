@@ -52,7 +52,7 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#008DA8</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="Shell.ShellForegroundColor" Value="White" />
@@ -72,7 +72,7 @@
     <ShellItem>
         <ShellSection Title="CollectionView" Icon="tab_feed.png">
             <ShellContent Title="CollectionView">
-                <local:CollectionViewChallengePage Title="CollectionView"/>
+                <local:CollectionViewChallengePage Title="Training on sunny roads"/>
             </ShellContent>
         </ShellSection>
     </ShellItem>

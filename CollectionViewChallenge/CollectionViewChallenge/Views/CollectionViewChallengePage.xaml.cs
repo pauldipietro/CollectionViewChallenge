@@ -24,12 +24,5 @@ namespace CollectionViewChallenge.Views
                 collectionViewSource.ItemsSource = viewModel.Characters;
             }
         }
-        //protected override void OnAppearing()
-        //{
-        //    base.OnAppearing();
-
-        //    //if (viewModel.Characters.Count == 0)
-        //    //    viewModel.LoadCharactersCommand.Execute(null);
-        //}
     }
 }

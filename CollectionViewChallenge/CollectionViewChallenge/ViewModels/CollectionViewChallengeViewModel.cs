@@ -15,7 +15,7 @@ namespace CollectionViewChallenge.ViewModels
 
         public CollectionViewChallengeViewModel()
         {
-            Title = "Marvel's Super Heros";
+            Title = "Marvel's Super Heroes";
             Characters = new ObservableCollection<Character>();
             LoadCharactersCommand = new Command(async () => await ExecuteLoadCharactersCommand());
         }

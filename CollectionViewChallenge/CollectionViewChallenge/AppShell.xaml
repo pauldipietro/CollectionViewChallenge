@@ -70,9 +70,9 @@
 
     <!-- Your Pages -->
     <ShellItem>
-        <ShellSection Title="CollectionView" Icon="tab_feed.png">
-            <ShellContent Title="CollectionView">
-                <local:CollectionViewChallengePage Title="CollectionView"/>
+        <ShellSection Title="{Binding Title}" Icon="tab_feed.png">
+            <ShellContent Title="{Binding Title}">
+                <local:CollectionViewChallengePage Title="{Binding Title}"/>
             </ShellContent>
         </ShellSection>
     </ShellItem>

@@ -4,7 +4,7 @@
              xmlns:imagecontrol="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="CollectionViewChallenge.Views.KudosView">
     <ContentView.Content>
-        <CollectionView ItemsSource="{Binding Stats}"
+        <CollectionView ItemsSource="{Binding Kudos}"
                         VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" Span="3" />

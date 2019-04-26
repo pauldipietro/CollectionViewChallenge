@@ -6,6 +6,7 @@
              xmlns:views="clr-namespace:CollectionViewChallenge.Views;assembly=CollectionViewChallenge"
              xmlns:imagecontrol="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:customViews="clr-namespace:Sharpnado.Presentation.Forms.CustomViews;assembly=Sharpnado.Presentation.Forms"
              xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
              mc:Ignorable="d"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
@@ -43,11 +44,10 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 
-<!--                SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"-->
                 <tabs:TabHostView x:Name="TabHost"
                                   BackgroundColor="White"
                                   ShadowType="Bottom"
-                                  SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}"
+                                  SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
                                   Grid.Row="0">
                     <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="stats" />
                     <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="kudos" />
@@ -55,19 +55,13 @@
                 </tabs:TabHostView>
 
                 <ScrollView Grid.Row="1">
-                    <Grid>
-                        <views:StatsView x:Name="StatsView" />
-<!--                        <views:KudosView x:Name="KudosView" />
-                        <views:CommentsView x:Name="CommentsView" />-->
-                   </Grid>
-                    
-<!--                    <tabs:ViewSwitcher x:Name="Switcher"
+                    <tabs:ViewSwitcher x:Name="Switcher"
                                        Animate="True"
                                        SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}">
                         <views:StatsView />
-                        <views:KudosView />
-                        <views:CommentsView />
-                    </tabs:ViewSwitcher>-->
+                        <customViews:LazyView x:TypeArguments="views:KudosView" />
+                        <customViews:LazyView x:TypeArguments="views:CommentsView" />
+                    </tabs:ViewSwitcher>
                 </ScrollView>
             </Grid>
         </Grid>

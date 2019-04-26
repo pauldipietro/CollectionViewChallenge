@@ -96,10 +96,6 @@ namespace CollectionViewChallenge.Views
             Kudos.Add(new KudosDetail() { Name = "Jan Van de Poel", Image = "http://dgalywyr863hv.cloudfront.net/pictures/athletes/2327722/7025716/2/medium.jpg" });
             #endregion
 
-            StatsView.IsVisible = true;
-            //KudosView.IsVisible = false;
-            //CommentsView.IsVisible = false;
-
             BindingContext = this;
         }
     }

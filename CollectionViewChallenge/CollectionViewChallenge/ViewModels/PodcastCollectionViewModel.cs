@@ -9,16 +9,24 @@ namespace CollectionViewChallenge.ViewModels
 {
     public class PodcastCollectionViewModel
     {
-        public IList<GroupPodcast> PodcastList { get; private set; }
+        public ObservableCollection<Podcast> PodcastTopList { get; set; }
+        public ObservableCollection<Podcast> PodcastTrendList { get; set; }
+        public ObservableCollection<Podcast> PodcastSocietyCultureList { get; set; }
+        public ObservableCollection<Podcast> PodcastComedyList { get; set; }
+        public ObservableCollection<Podcast> PodcastFavoritesList { get; set; }
 
         public PodcastCollectionViewModel()
         {
-            PodcastList = GetPodcasts();
+            PodcastTopList = GetPodcasts("Top");
+            PodcastTrendList = GetPodcasts("Trending");
+            PodcastSocietyCultureList = GetPodcasts("Society and Culture");
+            PodcastComedyList = GetPodcasts("Comedy");
+            PodcastFavoritesList = GetPodcasts(null);
         }
 
-        private IList<GroupPodcast> GetPodcasts()
+        public ObservableCollection<Podcast> GetPodcasts(string filterCategory)
         {
-            var podcasts = new List<Podcast>();
+            var podcasts = new ObservableCollection<Podcast>();
 
             podcasts.Add(new Podcast
             {
@@ -218,14 +226,12 @@ namespace CollectionViewChallenge.ViewModels
                 CellType = Enum.PodcastCellType.Standard
             });
 
-            var tempList =  podcasts
-                .GroupBy(podcast => podcast.Category)
-                .Select(group => new GroupPodcast(group.Key, group.ToList()))
-                .ToList();
+            if (filterCategory != null)
+                return new ObservableCollection<Podcast>(podcasts.Where(p => p.Category == filterCategory));
+            else
+                return new ObservableCollection<Podcast>(podcasts);
 
-            return tempList;
+
         }
-
-
     }
 }

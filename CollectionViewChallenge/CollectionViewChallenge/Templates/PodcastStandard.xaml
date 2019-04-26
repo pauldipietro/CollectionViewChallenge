@@ -5,7 +5,6 @@
     x:Class="CollectionViewChallenge.Templates.PodcastStandard">
     <ContentView.Content>
         <StackLayout
-            
             HeightRequest="125"
             WidthRequest="100">
             <Image

@@ -8,10 +8,12 @@ namespace CollectionViewChallenge.Templates
     public class PodcastCellDataTemplateSelector : DataTemplateSelector
     {
         private readonly DataTemplate PodcastStandard;
+        private readonly DataTemplate PodcastNew;
 
         public PodcastCellDataTemplateSelector()
         {
             PodcastStandard = new DataTemplate(typeof(PodcastStandard));
+            PodcastNew = new DataTemplate(typeof(PodcastNew));
         }
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
@@ -26,7 +28,7 @@ namespace CollectionViewChallenge.Templates
             switch (podcast.CellType)
             {
                 case PodcastCellType.New:
-                    throw new NotImplementedException();
+                    return PodcastNew;
 
                 case PodcastCellType.Standard:
                     return PodcastStandard;

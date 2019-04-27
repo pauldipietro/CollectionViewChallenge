@@ -15,6 +15,7 @@ namespace CollectionViewChallenge.Views
         public CollectionViewChallengePage()
         {
             InitializeComponent();
+            BindingContext = new ViewModels.CollecionViewModel(); 
         }
     }
 }

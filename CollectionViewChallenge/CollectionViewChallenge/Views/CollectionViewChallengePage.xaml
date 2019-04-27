@@ -4,29 +4,56 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             BackgroundImage="bluebg.png">
     <ContentPage.Content>
         <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+            <CollectionView x:Name="cv_Songs"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Start" 
+                  ScrollToRequested="Cv_Songs_ScrollToRequested">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Horizontal"
+                             SnapPointsAlignment="Center"
+                             SnapPointsType="Mandatory"/>
+                </CollectionView.ItemsLayout>
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
+                        <Frame BackgroundColor="Transparent" CornerRadius="10" HasShadow="True">
+                            <Image  Source="{Binding CoverImage}" HeightRequest="450" WidthRequest="450"/>
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+
+            <StackLayout Margin="10" HeightRequest="200" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                <ScrollView>
+                    <Label x:Name="lblLyrics"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   FontSize="Medium" LineHeight="2"/>
+                </ScrollView>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+                <Label x:Name="lblStartTimer" Text="00:00" FontSize="Medium" TextColor="White"/>
+                <Slider ThumbColor="White" x:Name="slider" WidthRequest="280" Minimum="0" Maximum="100"/>
+                <Label x:Name="lblEndTimer" Text="04:12" FontSize="Medium" TextColor="White"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+                <Image Source="fav.png" WidthRequest="35" HeightRequest="35" Margin="10"/>
+                <Image Source="prev.png" WidthRequest="35" HeightRequest="35" Margin="10"/>
+                <ImageButton x:Name="playBtn" Source="pause.png" Margin="10" Clicked="ImageButton_Clicked" />
+                <Image Source="next.png" WidthRequest="35" HeightRequest="35" Margin="10">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="nextBtn_Tapped">
+                        </TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="list.png" WidthRequest="35" HeightRequest="35" Margin="10"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

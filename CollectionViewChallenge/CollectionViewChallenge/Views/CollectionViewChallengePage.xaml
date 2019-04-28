@@ -3,30 +3,195 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:microchars="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             BackgroundColor="#1B213B"
+             Shell.NavBarIsVisible="False">
+
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+        <ScrollView>
+            <FlexLayout Padding="20" Direction="Column" AlignContent="Center" JustifyContent="Start">
+
+                <Label Text="Dashboard"  TextColor="White" FontAttributes="Bold" Margin="0,0,0,10"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <CollectionView x:Name="DaysCollectionView"
+                                ItemsSource="{Binding Days}"  
+                                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}" 
+                                BackgroundColor="#0B0C14"
+                                HeightRequest="60"
+                                WidthRequest="300"
+                                SelectionMode="Single"
+                                SelectedItem="{Binding SelectedDay, Mode=TwoWay}"
+                                >
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Padding="5" Visual="Material" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True" BackgroundColor="Transparent">
+                                    <Grid HeightRequest="50"
+                                      WidthRequest="50">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="25" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions >
+                                            <ColumnDefinition Width="50" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0"
+                                        Text="{Binding DayName}"
+                                        FontAttributes="None"
+                                        FontSize="Small"
+                                        TextColor="White"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"/>
+                                        <Label Grid.Row="1"
+                                        Grid.Column="0"
+                                        Text="{Binding Id}"
+                                        FontAttributes="Bold"
+                                        FontSize="Large"
+                                        TextColor="White"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"/>
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <StackLayout Orientation="Vertical" Grid.Column="1">
+                        <Label Text="Day" TextColor="Orange" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="Month" TextColor="White" HorizontalOptions="Center"/>
+                        <Label Text="Year" TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    
+                </Grid>
+                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="10">
+                    <Label Text="Reports" TextColor="White" FontAttributes="Bold" ></Label>
+                </StackLayout>
+
+                <CollectionView
+                    HeightRequest="200"
+                    ItemsSource="{Binding Charts}" 
+                    ItemsLayout="{x:Static ListItemsLayout.HorizontalList}" 
+                    BackgroundColor="#0B0C14"
+                    >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="5" Visual="Material" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True" BackgroundColor="Transparent" >
+                                <Grid
+                                    HeightRequest="200"
+                                    WidthRequest="200">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <microchars:ChartView Chart="{Binding ChartItem}" 
+                                                          Grid.Row="0"
+                                                          Grid.Column="0"
+                                                          BackgroundColor="Azure"
+                                                          />
+
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="10">
+                    <Label Text="Current Data" TextColor="White" FontAttributes="Bold" ></Label>
+                </StackLayout>
+                <CollectionView 
+                    HeightRequest="80"
+                    ItemsSource="{Binding Items}" 
+                    BackgroundColor="#0B0C14" Margin="0">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                        Span="1" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Row="0" Grid.Column="0"
+                                   Margin="10,0,0,0"
+                                   Text="{Binding ValueLabel}"
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+                                <Label Grid.Row="0"
+                                   Grid.Column="1"
+                                   Text="{Binding Label}"
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="10">
+                    <Label Text="Share Dashboard" TextColor="White" FontAttributes="Bold" ></Label>
+                </StackLayout>
+                <CollectionView x:Name="PeopleCollectionView" 
+                                ItemsSource="{Binding People}" 
+                                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}" 
+                                HeightRequest="120" 
+                                ItemSizingStrategy="MeasureFirstItem" 
+                                BackgroundColor="#0B0C14" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10,0" Spacing="5" >
+
+                                <imagecircle:CircleImage 
+                                    WidthRequest="75" 
+                                    HeightRequest="75" 
+                                    Aspect="AspectFill" 
+                                    Source="{Binding Avatar}" 
+                                    Margin="0,5,0,0">
+                                </imagecircle:CircleImage>
+
+                                <Label HorizontalTextAlignment="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding FirstName}" TextColor="White"></Span>
+                                            <Span Text="&#10;"></Span>
+                                            <Span Text="{Binding LastName}" TextColor="White"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"/>
+
+                
+            </FlexLayout>
+
+        </ScrollView>
     </ContentPage.Content>
+
 </ContentPage>

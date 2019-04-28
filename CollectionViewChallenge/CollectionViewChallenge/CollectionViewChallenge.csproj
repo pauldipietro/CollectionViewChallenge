@@ -13,8 +13,13 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.346134-pre9" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="Data\AlbumsResource.json" />
+    <EmbeddedResource Include="Data\ArtistsResource.json" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Views\CollectionViewChallengePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -24,5 +29,10 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Data\AlbumsResource.json" />
+    <None Remove="Data\ArtistsResource.json" />
   </ItemGroup>
 </Project>

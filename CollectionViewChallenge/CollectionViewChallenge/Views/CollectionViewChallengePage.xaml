@@ -1,32 +1,153 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
-    <ContentPage.Content>
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    BackgroundColor="#1E1E1E"
+    x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                    Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView>
         <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+            <Label Margin="10"
+                Text="The Top Hip Hop Artists"
+                TextColor="White"
+                HorizontalTextAlignment="Center"
+                FontFamily="sans-serif"
+                FontSize="24"
+                Font="Bold" />
+            <CollectionView x:Name="headCollectionView"
+                FlowDirection="LeftToRight"
+                Margin="2,10"
+                HeightRequest="250"
+                VerticalOptions="Start"
+                HorizontalOptions="FillAndExpand"
+                ItemsSource="{Binding Artists}"
+                SelectionMode="Single"
+                SelectionChanged="Handle_SelectionChanged"
+                EmptyView="wesh"
+                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Horizontal"
+                        SnapPointsType="Mandatory"
+                        SnapPointsAlignment="Start" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10,5"
+                            HeightRequest="200"
+                            WidthRequest="200">
+                            <Grid>
+                                <Frame Margin="0"
+                                    Padding="0"
+                                    BackgroundColor="Gray"
+                                    IsClippedToBounds="true"
+                                    CornerRadius="10"
+                                    HeightRequest="200"
+                                    WidthRequest="200">
+                                    <Image Aspect="AspectFill">
+                                        <Image.Source>
+                                            <UriImageSource Uri="{Binding Picture}" />
+                                        </Image.Source>
+                                    </Image>
+                                </Frame>
+                                <Image HorizontalOptions="Start"
+                                    VerticalOptions="Start"
+                                    Source="xamarin_logo"
+                                    HeightRequest="50"
+                                    WidthRequest="50"
+                                    Aspect="AspectFill" />
+                            </Grid>
+                            <Label Text="{Binding Name}"
+                                TextColor="White"
+                                HorizontalTextAlignment="Center"
+                                FontFamily="sans-serif"
+                                FontSize="15"
+                                Font="Bold">
+                            </Label>
+                            <Label LineBreakMode="WordWrap"
+                                HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Followers.Total}"
+                                            TextColor="White"
+                                            FontSize="10"
+                                            FontFamily="sans-serif-light" />
+                                        <Span Text=" FOLLOWERS"
+                                            TextColor="White"
+                                            FontSize="10"
+                                            FontFamily="sans-serif-light" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label Margin="10"
+                Text="Albums and Top Tracks"
+                TextColor="White"
+                HorizontalTextAlignment="Center"
+                FontFamily="sans-serif"
+                FontSize="24"
+                Font="Bold" />
+            <CollectionView x:Name="bodyCollectionView"
+                FlowDirection="LeftToRight"
+                ItemsSource="{Binding Albums}"
+                SelectionMode="Single"
+                EmptyView="wesh"
+                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                        SnapPointsType="Mandatory"
+                        SnapPointsAlignment="Start"
+                        Span="3" />
+                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
+                            <Frame Margin="0"
+                                Padding="0"
+                                VerticalOptions="Start"
+                                IsClippedToBounds="true"
+                                CornerRadius="10"
+                                HeightRequest="100"
+                                WidthRequest="100">
+                                <Image Aspect="AspectFill"
+                                    Source="{Binding Cover}">
+                                    <!--<Image.Source>
+                                            <UriImageSource Uri="{Binding Cover}" />
+                                        </Image.Source>-->
+                                </Image>
+                            </Frame>
+                            <Label Text="{Binding Name}"
+                                TextColor="White"
+                                FontFamily="sans-serif-light"
+                                FontSize="15" />
+                            <Label Text="{Binding AlbumGroup}"
+                                TextColor="White"
+                                FontFamily="sans-serif-light"
+                                FontSize="10" />
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

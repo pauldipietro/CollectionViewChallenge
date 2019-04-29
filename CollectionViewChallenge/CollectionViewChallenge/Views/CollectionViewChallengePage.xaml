@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+<ContentPage
+    x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
-            <!-- Use your own layout and functionality here! -->
+            <!--  Use your own layout and functionality here!  -->
             <CollectionView>
                 <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -15,14 +16,90 @@
                         <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
                         <x:String>Here are three general questions:</x:String>
                         <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
+                        <!--
+                            It was easy, but I couldn't get the Pull to Refresh behavior
+                            I found here: https://github.com/xamarin/Xamarin.Forms/issues/3172
+                            IsPullToRefreshEnabled - this is now handled by the RefreshView.
+                            But couldn't get it to work.
+                        -->
                         <x:String>2. How is the performance compared to the ListView?</x:String>
+                        <!--  Seems to be the same  -->
                         <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
+                        <!--  Infinite Scroll  -->
                     </x:Array>
                 </CollectionView.ItemsSource>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
+                        <StackLayout BackgroundColor="White" VerticalOptions="Center">
+                            <ContentView Padding="20,15,20,15">
+                                <StackLayout Spacing="0">
+                                    <Label
+                                        FontSize="16"
+                                        Text="{Binding .}"
+                                        TextColor="#17a19e"
+                                        VerticalOptions="Start"
+                                        VerticalTextAlignment="Start" />
+                                    <StackLayout Padding="0,10,5,0" Orientation="Horizontal">
+                                        <!--<Label
+                                            FontSize="10"
+                                            Text="&#xf095;"
+                                            TextColor="#17a19e"
+                                            VerticalTextAlignment="Center">
+                                            <Label.FontFamily>
+                                                <OnPlatform
+                                                    x:TypeArguments="x:String"
+                                                    Android="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                                                    iOS="Font Awesome 5 Free" />
+                                            </Label.FontFamily>
+                                        </Label>-->
+                                        <Label
+                                            FontSize="10"
+                                            Text="{Binding .}"
+                                            TextColor="#51565f"
+                                            VerticalTextAlignment="Center" />
+                                    </StackLayout>
+                                    <StackLayout Padding="0,5,5,0" Orientation="Horizontal">
+                                        <!--<Label
+                                            FontSize="10"
+                                            Text="&#xf3c5;"
+                                            TextColor="#17a19e"
+                                            VerticalTextAlignment="Center">
+                                            <Label.FontFamily>
+                                                <OnPlatform
+                                                    x:TypeArguments="x:String"
+                                                    Android="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                                                    iOS="Font Awesome 5 Free" />
+                                            </Label.FontFamily>
+                                        </Label>-->
+                                        <Label
+                                            FontSize="10"
+                                            Text="{Binding .}"
+                                            TextColor="#51565f"
+                                            VerticalTextAlignment="Center" />
+                                    </StackLayout>
+                                    <StackLayout Padding="0,5,5,0" Orientation="Horizontal">
+                                        <!--<Label
+                                            FontAttributes="Bold"
+                                            FontSize="10"
+                                            Text="&#xf108;"
+                                            TextColor="#17a19e"
+                                            VerticalTextAlignment="Center">
+                                            <Label.FontFamily>
+                                                <OnPlatform
+                                                    x:TypeArguments="x:String"
+                                                    Android="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+                                                    iOS="Font Awesome 5 Free" />
+                                            </Label.FontFamily>
+                                        </Label>-->
+                                        <Label
+                                            FontSize="10"
+                                            Text="{Binding .}"
+                                            TextColor="#51565f"
+                                            VerticalTextAlignment="Center" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ContentView>
+                            <BoxView HeightRequest="0.1" Color="Gray" />
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

@@ -4,29 +4,213 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             Title="Pokédex">
+
+    <ContentPage.Resources>
+        <Style x:Key="BasicLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="Micro"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+
+        <Style x:Key="StatLabel" BasedOn="{StaticResource BasicLabel}" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="Start"/>
+        </Style>
+
+        <Style x:Key="StatValueLabel" BasedOn="{StaticResource BasicLabel}" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="End"/>
+            <Setter Property="Margin" Value="0,0,2,0"/>
+        </Style>
+
+        <Style x:Key="StatValueBox" TargetType="BoxView">
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="HeightRequest" Value="10"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+        </Style>
+
+        <DataTemplate x:Key="pokemonTemplate">
+            <Grid VerticalOptions="Center" Padding="10,10,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                </Grid.RowDefinitions>
+                <Frame HasShadow="True" Padding="5">
+                    <Grid BackgroundColor="#F9FFBC">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Row="0"
+                               Grid.Column="0"
+                               Grid.RowSpan="4"
+                               Source="{Binding ImageURL}"
+                               WidthRequest="60"
+                               HeightRequest="60"
+                               HorizontalOptions="Center"
+                               Aspect="AspectFit" />
+
+                        <Label Grid.Row="4" 
+                               Grid.Column="0"
+                               Text="{Binding name.english}"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               FontSize="Micro"
+                               TextColor="Blue"/>
+
+                        <Label Grid.Row="5"
+                               Grid.Column="0"
+                               Text="{Binding Types}"
+                               FontAttributes="Italic"
+                               HorizontalOptions="Center"
+                               TextColor="#606060"
+                               FontSize="Micro"
+                               VerticalOptions="Start"/>
+
+                        <Label Grid.Row="0"
+                               Grid.Column="1"
+                               Text="HP"
+                               Style="{StaticResource StatLabel}"/>
+
+                        <BoxView Grid.Row="0"
+                                 Grid.Column="2"
+                                 Color="#A5FF82"
+                                 WidthRequest="{Binding HP}"
+                                 Style="{StaticResource StatValueBox}"/>
+
+                        <Label Grid.Row="0"
+                               Grid.Column="3"
+                               Text="{Binding _base.HP}"
+                               Style="{StaticResource StatValueLabel}"/>
+
+                        <Label Grid.Row="1"
+                               Grid.Column="1"
+                               Text="Attack"
+                               Style="{StaticResource StatLabel}"/>
+
+                        <BoxView Grid.Row="1"
+                                 Grid.Column="2"
+                                 Color="#A32F2F"
+                                 WidthRequest="{Binding Attack}"
+                                 Style="{StaticResource StatValueBox}"/>
+
+                        <Label Grid.Row="1"
+                               Grid.Column="3"
+                               Text="{Binding _base.Attack}"
+                               Style="{StaticResource StatValueLabel}"/>
+
+                        <Label Grid.Row="2"
+                               Grid.Column="1"
+                               Text="Defense"
+                               Style="{StaticResource StatLabel}"/>
+
+                        <BoxView Grid.Row="2"
+                                 Grid.Column="2"
+                                 Color="#47B7C1"
+                                 WidthRequest="{Binding Defense}"
+                                 Style="{StaticResource StatValueBox}"/>
+
+                        <Label Grid.Row="2"
+                               Grid.Column="3"
+                               Text="{Binding _base.Defense}"
+                               Style="{StaticResource StatValueLabel}"/>
+
+                        <Label Grid.Row="3"
+                               Grid.Column="1"
+                               Text="Sp. Attack"
+                               Style="{StaticResource StatLabel}"/>
+
+                        <BoxView Grid.Row="3"
+                                 Grid.Column="2"
+                                 Color="#EACA15"
+                                 WidthRequest="{Binding SpAttack}"
+                                 Style="{StaticResource StatValueBox}"/>
+
+                        <Label Grid.Row="3"
+                               Grid.Column="3"
+                               Text="{Binding _base.SpAttack}"
+                               Style="{StaticResource StatValueLabel}"/>
+
+                        <Label Grid.Row="4"
+                               Grid.Column="1"
+                               Text="Sp. Defense"
+                               Style="{StaticResource StatLabel}"/>
+
+                        <BoxView Grid.Row="4"
+                                 Grid.Column="2"
+                                 Color="#FF6811"
+                                 WidthRequest="{Binding SpDefense}"
+                                 Style="{StaticResource StatValueBox}"/>
+
+                        <Label Grid.Row="4"
+                               Grid.Column="3"
+                               Text="{Binding _base.SpDefense}"
+                               Style="{StaticResource StatValueLabel}"/>
+
+                        <Label Grid.Row="5"
+                               Grid.Column="1"
+                               Text="Speed"
+                               Style="{StaticResource StatLabel}"/>
+
+                        <BoxView Grid.Row="5"
+                                 Grid.Column="2"
+                                 Color="#D693B4"
+                                 WidthRequest="{Binding Speed}"
+                                 Style="{StaticResource StatValueBox}"/>
+
+                        <Label Grid.Row="5"
+                               Grid.Column="3"
+                               Text="{Binding _base.Speed}"
+                               Style="{StaticResource StatValueLabel}"/>
+
+                    </Grid>
+                </Frame>
+            </Grid>
+        </DataTemplate>
+
+        <Style TargetType="CollectionView">
+            <Setter Property="HeightRequest" Value="150"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="Margin" Value="0,10,0,20"/>
+            <Setter Property="BackgroundColor" Value="LightGray"/>
+            <Setter Property="ItemTemplate" Value="{StaticResource pokemonTemplate}"/>
+            <Setter Property="ItemsLayout" Value="{x:Static ListItemsLayout.HorizontalList}"/>
+        </Style>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+        <StackLayout Margin="20">
+            <ActivityIndicator Color="Blue"
+                               IsVisible="{Binding IsLoading}"
+                               IsRunning="{Binding IsLoading}"
+                               IsEnabled="{Binding IsLoading}"/>
+
+            <Label Text="Ice Pokémon" 
+                   TextColor="#5DBCD2" />
+
+            <CollectionView ItemsSource="{Binding IcePokemonList}" 
+                            x:Name="collectionViewIce"/>
+
+            <Label Text="Dark Pokémon" 
+                   TextColor="Black" />
+
+            <CollectionView ItemsSource="{Binding DarkPokemonList}"
+                            x:Name="collectionViewDark"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

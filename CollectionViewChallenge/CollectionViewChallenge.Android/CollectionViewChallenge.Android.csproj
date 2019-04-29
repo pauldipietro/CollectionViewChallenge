@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
@@ -93,6 +92,118 @@
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
     <AndroidResource Include="Resources\drawable\tab_about.png" />
     <AndroidResource Include="Resources\drawable\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable\banner1.jpg" />
+    <AndroidResource Include="Resources\drawable\banner2.jpg" />
+    <AndroidResource Include="Resources\drawable\banner3.jpg" />
+    <AndroidResource Include="Resources\drawable\banner4.jpg" />
+    <AndroidResource Include="Resources\drawable\banner5.jpg" />
+    <AndroidResource Include="Resources\drawable\banner6.jpg" />
+    <AndroidResource Include="Resources\drawable\banner7.jpg" />
+    <AndroidResource Include="Resources\drawable\banner8.jpg" />
+    <AndroidResource Include="Resources\drawable\circular1.jpg" />
+    <AndroidResource Include="Resources\drawable\circular2.jpg" />
+    <AndroidResource Include="Resources\drawable\circular3.jpg" />
+    <AndroidResource Include="Resources\drawable\circular4.jpg" />
+    <AndroidResource Include="Resources\drawable\circular5.jpg" />
+    <AndroidResource Include="Resources\drawable\circular6.jpg" />
+    <AndroidResource Include="Resources\drawable\circular7.jpg" />
+    <AndroidResource Include="Resources\drawable\icon_info.png" />
+    <AndroidResource Include="Resources\drawable\icon_play.png" />
+    <AndroidResource Include="Resources\drawable\icon_plus.png" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\drawable\tituloimage.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner1.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner2.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner3.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner4.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner5.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner6.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner7.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner8.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\circular1.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\circular2.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\circular3.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\circular4.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\circular5.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\circular6.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\circular7.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_info.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_play.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_plus.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_about.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tituloimage.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\xamarin_logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner1.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner2.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner3.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner4.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner5.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner6.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner7.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner8.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\circular1.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\circular2.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\circular3.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\circular4.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\circular5.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\circular6.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\circular7.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_info.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_play.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_plus.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_about.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tituloimage.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xamarin_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner1.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner2.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner3.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner4.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner5.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner6.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner7.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner8.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\circular1.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\circular2.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\circular3.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\circular4.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\circular5.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\circular6.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\circular7.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_info.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_play.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_plus.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_about.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tituloimage.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xamarin_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner1.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner2.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner3.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner4.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner5.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner6.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner7.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner8.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\circular1.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\circular2.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\circular3.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\circular4.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\circular5.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\circular6.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\circular7.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon_info.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon_play.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon_plus.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_about.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tituloimage.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\xamarin_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -102,7 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>

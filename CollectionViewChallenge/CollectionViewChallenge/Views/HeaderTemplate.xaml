@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CollectionViewChallenge.Views.HeaderTemplate">
+    <ContentView.Content>
+         <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="220" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Source="banner1.jpg" Grid.RowSpan="3" Aspect="AspectFill" />
+                <Grid Padding="0,18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="logo.png" HeightRequest="30" Margin="15,8,0,8" />
+                    <Label Grid.Column="1" Text="Series" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Small" />
+                    <Label Grid.Column="2" Text="Películas" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Small" />
+                    <Label Grid.Column="3" Text="Mi lista" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Small" />
+                </Grid>
+                <StackLayout Grid.Row="1">
+                    <Image Source="tituloimage.jpg" HeightRequest="100" VerticalOptions="EndAndExpand" />
+                </StackLayout>
+                <Grid Grid.Row="2" Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout>
+                        <Image Source="icon_plus.png">
+                            <Image.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="iOS">15</On>
+                                    <On Platform="Android,Windows">20</On>
+                                </OnPlatform>
+                            </Image.HeightRequest>
+                        </Image>
+                        <Label Text="Mi lista" FontSize="Micro" TextColor="White" VerticalTextAlignment="End" HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White" Padding="5">
+                        <Image Source="icon_play.png" HeightRequest="15" />
+                        <Label Text="Reproducir" FontSize="Micro" TextColor="Black" FontAttributes="Bold" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="2">
+                        <Image Source="icon_info.png">
+                            <Image.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="iOS">18</On>
+                                    <On Platform="Android,Windows">22</On>
+                                </OnPlatform>
+                            </Image.HeightRequest>
+                        </Image>
+                        <Label Text="Información" FontSize="Micro" TextColor="White" VerticalTextAlignment="End" HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

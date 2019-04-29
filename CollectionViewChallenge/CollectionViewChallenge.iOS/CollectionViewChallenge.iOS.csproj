@@ -123,6 +123,31 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\banner1%402x.jpg" />
+    <BundleResource Include="Resources\banner2%402x.jpg" />
+    <BundleResource Include="Resources\banner3%402x.jpg" />
+    <BundleResource Include="Resources\banner4%402x.jpg" />
+    <BundleResource Include="Resources\banner5%402x.jpg" />
+    <BundleResource Include="Resources\banner6%402x.jpg" />
+    <BundleResource Include="Resources\banner7%402x.jpg" />
+    <BundleResource Include="Resources\banner8%402x.jpg" />
+    <BundleResource Include="Resources\circular1%402x.jpg" />
+    <BundleResource Include="Resources\circular2%402x.jpg" />
+    <BundleResource Include="Resources\circular3%402x.jpg" />
+    <BundleResource Include="Resources\circular4%402x.jpg" />
+    <BundleResource Include="Resources\circular5%402x.jpg" />
+    <BundleResource Include="Resources\circular6%402x.jpg" />
+    <BundleResource Include="Resources\circular7%402x.jpg" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\icon_info%402x.png" />
+    <BundleResource Include="Resources\icon_play%402x.png" />
+    <BundleResource Include="Resources\icon_plus%402x.png" />
+    <BundleResource Include="Resources\logo%402x.png" />
+    <BundleResource Include="Resources\tituloimage%402x.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -139,7 +164,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewChallenge\CollectionViewChallenge.csproj">
-      <Project>{BA39825E-3CF8-4A31-B120-782B2A651542}</Project>
+      <Project>{9A9DDEE5-8C48-4274-82D7-22EB79C97206}</Project>
       <Name>CollectionViewChallenge</Name>
     </ProjectReference>
   </ItemGroup>

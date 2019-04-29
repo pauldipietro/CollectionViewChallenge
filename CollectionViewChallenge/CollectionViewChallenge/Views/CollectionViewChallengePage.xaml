@@ -1,29 +1,160 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+<ContentPage
+    x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Triggers="clr-namespace:CollectionViewChallenge.Triggers"
+    xmlns:ViewModels="clr-namespace:CollectionViewChallenge.ViewModels"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="#EFEFF4"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <ViewModels:ServicePageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="#eb3493" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+        <StackLayout Spacing="0">
+            <AbsoluteLayout BackgroundColor="#2cb695" HeightRequest="200">
+                <Image
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    Aspect="Fill"
+                    Source="GenericBackground.png" />
+                <CollectionView
+                    x:Name="ServiceCollection"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    HeightRequest="180"
+                    ItemsSource="{Binding ServiceList}"
+                    SelectedItem="{Binding SelectedService, Mode=TwoWay}"
+                    SelectionMode="Single">
+                    <CollectionView.ItemsLayout>
+                        <ListItemsLayout SnapPointsAlignment="Center" SnapPointsType="MandatorySingle">
+                            <x:Arguments>
+                                <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>
+                            </x:Arguments>
+                        </ListItemsLayout>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid
+                                    Margin="8"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand">
+                                    <Grid.Triggers>
+                                        <DataTrigger
+                                            Binding="{Binding Animate}"
+                                            TargetType="Grid"
+                                            Value="True">
+                                            <DataTrigger.EnterActions>
+                                                <Triggers:ServiceSelectedTriggerAction Scale="1.25" />
+                                            </DataTrigger.EnterActions>
+                                        </DataTrigger>
+                                    </Grid.Triggers>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Image
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        HeightRequest="50"
+                                        HorizontalOptions="Center"
+                                        Source="{Binding Icon}" />
+                                    <StackLayout
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        HorizontalOptions="Center">
+                                        <Label
+                                            FontSize="24"
+                                            Text="{Binding Name}"
+                                            TextColor="White" />
+                                        <Label Text="{Binding Description}" TextColor="White" />
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </AbsoluteLayout>
+            <CollectionView
+                HorizontalOptions="FillAndExpand"
+                ItemsSource="{Binding CaseStudyList}"
+                SelectedItem="{Binding SelectedCaseStudy, Mode=TwoWay}"
+                SelectionMode="Single"
+                VerticalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <ListItemsLayout>
+                        <x:Arguments>
+                            <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>
+                        </x:Arguments>
+                    </ListItemsLayout>
+                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Frame
+                                Margin="8"
+                                BackgroundColor="#55c5cd"
+                                HorizontalOptions="FillAndExpand"
+                                Visual="Material">
+                                <Frame.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding ShowQuote}"
+                                        TargetType="Frame"
+                                        Value="True">
+                                        <DataTrigger.EnterActions>
+                                            <Triggers:CaseStudySelectedTriggerAction Degrees="180" />
+                                        </DataTrigger.EnterActions>
+                                        <DataTrigger.ExitActions>
+                                            <Triggers:CaseStudySelectedTriggerAction Degrees="0" />
+                                        </DataTrigger.ExitActions>
+                                    </DataTrigger>
+                                </Frame.Triggers>
+                                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Image
+                                        HeightRequest="50"
+                                        IsVisible="{Binding ShowCompany}"
+                                        Source="{Binding Icon}" />
+                                    <Label
+                                        FontSize="24"
+                                        IsVisible="{Binding ShowCompany}"
+                                        Text="{Binding Project}"
+                                        TextColor="White" />
+                                    <Label
+                                        HorizontalOptions="End"
+                                        IsVisible="{Binding ShowQuote}"
+                                        RotationX="180"
+                                        Text="{Binding Company}"
+                                        TextColor="White" />
+                                    <Label
+                                        IsVisible="{Binding ShowQuote}"
+                                        RotationX="180"
+                                        Style="{DynamicResource QuoteText}"
+                                        Text="{Binding Quote}" />
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

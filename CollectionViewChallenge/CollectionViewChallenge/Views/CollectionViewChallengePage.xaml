@@ -3,27 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              mc:Ignorable="d"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+        <StackLayout Margin="5">
+            <ActivityIndicator Color="Brown" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" IsEnabled="{Binding IsBusy}"/>
+
+            <CollectionView ItemsSource="{Binding DogCollection}" SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2"/>
+                </CollectionView.ItemsLayout>
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
+                        <Frame Margin="1" Padding="3" OutlineColor="Blue" HasShadow="True">
+                            <Grid Margin="1" BackgroundColor="#D0D0D0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="55"/>
+                                    <RowDefinition Height="40"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="55"/>
+                                    <ColumnDefinition Width="125"/>
+                                </Grid.ColumnDefinitions>
+
+                                <controls:CircleImage Source="{Binding url}" Aspect="AspectFill"
+                                                      WidthRequest="55" HeightRequest="55"/>
+
+                                <Label Grid.Column="1" Text="{Binding breed}"
+                                       TextColor="SaddleBrown" FontSize="13"
+                                       FontAttributes="Bold" VerticalTextAlignment="Center"
+                                       LineBreakMode="WordWrap"/>
+
+                                <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
+                                       Text="{Binding temperament}"
+                                       TextColor="Green" FontSize="9"
+                                       FontAttributes="Italic" Margin="3"
+                                       LineBreakMode="WordWrap"/>
+                            </Grid>
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

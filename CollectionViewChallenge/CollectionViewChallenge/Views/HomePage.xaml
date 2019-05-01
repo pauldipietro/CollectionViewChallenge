@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="CollectionViewChallenge.Views.HomePage">
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <ffimageloading:CachedImage 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand"      
+			Grid.Row="0"
+			DownsampleToViewSize="true"
+			Source = "https://api.dominos.co.in/prod-olo-api/images/brandOfferImages/worldcup_pizza_banner.jpg">
+            </ffimageloading:CachedImage>
+
+            <Label Text="Whats New"
+                   Grid.Row="1"
+                   FontSize="16"
+                   FontAttributes="Bold" />
+            <CollectionView 
+                Grid.Row="2"
+                            ItemsSource="{Binding ActionMovies}" 
+                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                            >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame HasShadow="True"
+                           Margin="10, 0"
+                           Padding="5"
+                           BackgroundColor="Beige">
+                            <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                            </Grid.RowDefinitions>
+
+                            <ffimageloading:CachedImage 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand"      
+			Grid.Row="0"
+			DownsampleToViewSize="true"
+			Source = "{Binding ImagePath}">
+                            </ffimageloading:CachedImage>
+
+                            <Label Text="{Binding Name}"
+                   Grid.Row="1"
+                   FontSize="16"
+                   FontAttributes="Bold" />
+
+                        </Grid>
+                        </Frame>
+                    </DataTemplate>                        
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+           
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -3,30 +3,131 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ViewModel="clr-namespace:CollectionViewChallenge.ViewModels"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:Hmodel="clr-namespace:CollectionViewChallenge.Models"
              mc:Ignorable="d"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+    <ContentPage.BindingContext>
+        <ViewModel:CVChallangeVM></ViewModel:CVChallangeVM>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+        <Grid Margin="5,10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+
+
+            
+
+                <ffimageloading:CachedImage 
+                     Grid.Row="0"
+                    Source="https://www.dominos.co.in/theme2/front/images/home/Dom_EVO2_Brand_Desktop_1366x452.jpg" Aspect="Fill" />
+           
+            <Label Text="Whats New"
+                   Grid.Row="1"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   />
+            <CollectionView 
+                Grid.Row="2"
+                            ItemsSource="{Binding NewPizza}" 
+                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                            >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
+
+                        
+                       
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="150" />
+                                    <RowDefinition Height="50" />
+                                </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                                <ffimageloading:CachedImage 
+               
+			Grid.Row="0"
+                                    Grid.Column="0"
+                                     Aspect="Fill"
+                                      
+			DownsampleToViewSize="true"
+			Source = "{Binding ImagePath}">
+                                </ffimageloading:CachedImage>
+
+                                <Label Text="{Binding Name}"
+                                       HeightRequest="30"
+                                      
+                   Grid.Row="1"
+                                       Grid.Column="0"
+                   FontSize="16"
+                   FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+                            </Grid>
+                        
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </StackLayout>
+
+
+            <Label Text="Bestsellers"
+                   Grid.Row="3"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   />
+            <CollectionView 
+                Grid.Row="4"
+                            ItemsSource="{Binding BestSellers}" 
+                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                            >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+
+
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="150" />
+                                <RowDefinition Height="50" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <ffimageloading:CachedImage 
+               
+			Grid.Row="0"
+                                    Grid.Column="0"
+                                     Aspect="Fill"
+                                      
+			DownsampleToViewSize="true"
+			Source = "{Binding ImagePath}">
+                            </ffimageloading:CachedImage>
+
+                            <Label Text="{Binding Name}"
+                                       HeightRequest="30"
+                                      
+                   Grid.Row="1"
+                                       Grid.Column="0"
+                   FontSize="16"
+                   FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

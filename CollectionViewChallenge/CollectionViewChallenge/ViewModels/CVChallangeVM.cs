@@ -35,21 +35,8 @@ namespace CollectionViewChallenge.ViewModels
 			new Pizza { Name = "Chicken Tikka", ImagePath="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products/originals/IndianTandooriChickenTikka.jpg"}
 			});
 
-			//HomePage = new Command(async () => await HomePageFunc());
-			//MenuPage = new Command(async() => await MenuPageFunc());
+			
 		}
-
-		//public ICommand HomePage { private set; get; }
-
-		//public async Task HomePageFunc()
-		//{
-		//	await Navigation.PushModalAsync(new HomePage());
-		//}
-
-		//public ICommand MenuPage { private set; get; }
-
-		//public async Task MenuPageFunc()
-		//{
-		//}
+		
 	}
 }

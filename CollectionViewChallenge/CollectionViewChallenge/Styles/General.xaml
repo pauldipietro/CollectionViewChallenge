@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    
+    <!-- STYLES BlogPage-->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <Style TargetType="Label" x:Key="lbl2TitleMaster">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2DescriptionMaster">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2DescriptionPost">
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="TextColor" Value="#0a0808"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2TitleFrame">
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2AuthorFrame">
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2Description1Frame">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2Description2Frame">
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android" Value="12"/>
+                    <On Platform="iOS" Value="15"/>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    
+</ResourceDictionary>

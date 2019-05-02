@@ -1,0 +1,17 @@
+﻿^ContentPage {
+    background-color: #e4e4e4;
+}
+
+CollectionView > frame {
+    background-color: #e4e4e4;
+}
+
+.FramePost {
+    background-color: #281A61;
+    border-radius: 15;
+}
+
+.FrameRecentPost {
+    background-color: #BA1F6C;
+    border-radius: 15;
+}

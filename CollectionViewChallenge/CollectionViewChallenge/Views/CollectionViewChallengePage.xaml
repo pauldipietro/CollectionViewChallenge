@@ -1,32 +1,165 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
+             xmlns:Custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage"
+             NavigationPage.HasNavigationBar="False">
+    
+     <ContentPage.Content>
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0"
+                   Source="BackgroundImage2.png"
+                   Aspect="AspectFit"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <StackLayout Grid.Row="0"
+                         Spacing="3"
+                         Padding="30,70,30,0">
+
+                <Label Text="Planet Xamarin"
+                       Style="{StaticResource lbl2TitleMaster}"/>
+
+                <Label Text="Xamarin world community"
+                       Style="{StaticResource lbl2DescriptionMaster}"/>
+
+            </StackLayout>
+
+
+            <Grid Grid.Row="1"
+                  RowSpacing="40">
+
+
+
+              
+                    <StackLayout Grid.Row="0"
+                              Padding="20,0,0,0"
+                              Spacing="0">
+
+                   
+                    <StackLayout Grid.Row="0"
+                                 Margin="0,15,20,0">
+                        <Label Text="Posts"
+                               Style="{StaticResource lbl2DescriptionPost}"
+                               VerticalOptions="StartAndExpand"
+                               Margin="0,0,0,0"/>
+
+                        <CollectionView ItemsSource="{Binding ListPublications}">
+                            <CollectionView.HeightRequest>
+                                <OnPlatform iOS="270"
+                                            Android="580"/>
+                            </CollectionView.HeightRequest>
+                                <CollectionView.ItemsLayout>
+                                    <GridItemsLayout Orientation="Horizontal"
+                                                     SnapPointsType="Mandatory"
+                                                     SnapPointsAlignment="Start"/>
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Frame Padding="10,0,10,0"
+                                               HasShadow="False">
+                                            <Frame WidthRequest="203"
+                                                   Padding="13"
+                                                   StyleClass="FramePost">
+
+                                                <StackLayout Spacing="0">
+                                                    <Label Text="{Binding Title}"
+                                                           Style="{StaticResource lbl2TitleFrame}"
+                                                           MaxLines="2"
+                                                           LineBreakMode="TailTruncation"/>
+                                                    <StackLayout Orientation="Horizontal"
+                                                                     Margin="0,7,0,12">
+                                                        <Custom:CircleImage Source="{Binding ImageAuthor}"
+                                                        BorderThickness="1"
+                                                        BorderColor="#5fffa0"
+                                                        HeightRequest="25"
+                                                        WidthRequest="25"
+                                                                    HorizontalOptions="Start"/>
+                                                        <Label Text="{Binding Author}"
+                                                       Style="{StaticResource lbl2AuthorFrame}"
+                                                       HorizontalOptions="StartAndExpand"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       MaxLines="1"
+                                                       LineBreakMode="TailTruncation"/>
+                                                    </StackLayout>
+                                                    <Label Text="{Binding Description}"
+                                                   Style="{StaticResource lbl2Description1Frame}"
+                                                   MaxLines="3"
+                                                   LineBreakMode="TailTruncation"/>
+                                                </StackLayout>
+                                            </Frame>
+                                        </Frame>
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
                         </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+
+
+                        <StackLayout Grid.Row="1"
+                                 Margin="0,20,20,0">
+                            <Label Text="Recent Posts"
+                           Style="{StaticResource lbl2DescriptionPost}"
+                           VerticalOptions="StartAndExpand"/>
+
+                            <CollectionView ItemsSource="{Binding ListPublications}">
+                                <CollectionView.ItemsLayout>
+                                    <GridItemsLayout Orientation="Vertical"
+                                                     SnapPointsType="Mandatory"
+                                                     SnapPointsAlignment="Start"/>
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Frame Padding="0,10"
+                                            HasShadow="False">
+
+                                            <Frame HeightRequest="100"
+                                                   Padding="0"
+                                                   StyleClass="FrameRecentPost"
+                                                   Visual="Material">
+
+                                                <StackLayout Spacing="10"
+                                                             Orientation="Horizontal">
+
+                                                    <Image Source="{Binding ImagePost}"
+                                                               Aspect="AspectFill"
+                                                               WidthRequest="100"
+                                                               HorizontalOptions="StartAndExpand"
+                                                               VerticalOptions="FillAndExpand"/>
+
+
+                                                    <Label Text="{Binding Title}"
+                                                            Style="{StaticResource lbl2Description2Frame}"
+                                                               MaxLines="4"
+                                                               LineBreakMode="TailTruncation"
+                                                               VerticalOptions="CenterAndExpand"
+                                                               HorizontalOptions="CenterAndExpand"
+                                                               Margin="0,0,10,0"/>
+
+                                                </StackLayout>
+                                            </Frame>
+                                        </Frame>
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+
+                    </StackLayout>
+             
+            </Grid>
+
+
+        </Grid>
     </ContentPage.Content>
+    
 </ContentPage>

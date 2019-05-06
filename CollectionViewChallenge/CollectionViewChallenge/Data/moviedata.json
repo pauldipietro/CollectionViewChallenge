@@ -411,69 +411,67 @@
             "imdbID": "tt1338724",
             "Type": "series",
             "Poster": "https://m.media-amazon.com/images/M/MV5BMDYwOTU0MjYtZjk0NC00NmM4LWFkZWItYWQxZGE4ZTExNjg0XkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
-        },
-        {
-            "Title": "Battlestar Galactica: Razor Flashbacks",
-            "Year": "2007–",
-            "imdbID": "tt1334430",
+        },{
+            "Title": "Battlestar Galactica",
+            "Year": "2004–2009",
+            "imdbID": "tt0407362",
             "Type": "series",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ1ZDI1MTYtMzJkYi00OTA1LTg5NGMtOTZjZTllMmUyYzFkXkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
-        },
-        {
-            "Title": "Mission Galactica: The Cylon Attack",
-            "Year": "1979",
-            "imdbID": "tt0077937",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BMjE0OTk3NzAyM15BMl5BanBnXkFtZTYwMjYwNTc4._V1_SX300.jpg"
-        },
-        {
-            "Title": "Battlestar Galactica: The Second Coming",
-            "Year": "1999",
-            "imdbID": "tt0193000",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BOGYyNzAzNzgtZTgzNC00YjNhLTg3NWYtMWI4ZGVmNzZlZjMxXkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
-        },
-        {
-            "Title": "Battlestar Galactica: The Last Frakkin' Special",
-            "Year": "2009",
-            "imdbID": "tt1401100",
-            "Type": "movie",
-            "Poster": "N/A"
-        },
-        {
-          "Title": "Battlestar Galactica: The Story So Far",
-          "Year": "2006",
-          "imdbID": "tt1056417",
-          "Type": "movie",
-          "Poster": "N/A"
-        },
-        {
-            "Title": "Battlestar Galactica: Revealed",
-            "Year": "2008",
-            "imdbID": "tt1195467",
-            "Type": "movie",
-            "Poster": "N/A"
-        },
-        {
-            "Title": "Battlestar Galactica: The Phenomenon",
-            "Year": "2008",
-            "imdbID": "tt1198334",
-            "Type": "movie",
-            "Poster": "N/A"
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTc1NTg1MDk3NF5BMl5BanBnXkFtZTYwNDYyMjI3._V1_SX300.jpg"
         },
         {
             "Title": "Battlestar Galactica",
             "Year": "2003",
-            "imdbID": "tt0368594",
-            "Type": "game",
-            "Poster": "N/A"
+            "imdbID": "tt0314979",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZjJlYzgzOWUtZmJlZi00ZGM4LTliNzctNWFkNThlMDJhZDQxXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
         },
         {
-            "Title": "Remembering 'Battlestar Galactica'",
-            "Year": "2004",
-            "imdbID": "tt0488624",
+            "Title": "Battlestar Galactica: Razor",
+            "Year": "2007",
+            "imdbID": "tt0991178",
             "Type": "movie",
-            "Poster": "N/A"
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTk5MzUxNTYwMF5BMl5BanBnXkFtZTcwNTIyMjU1MQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica: The Plan",
+            "Year": "2009",
+            "imdbID": "tt1286130",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTgyODE2MjY2OF5BMl5BanBnXkFtZTcwMjQxMTI5Mg@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica: Blood & Chrome",
+            "Year": "2012",
+            "imdbID": "tt1704292",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BM2RiNjA4MzctMGU1MC00MThiLTk4OWUtODI4ZmM4MmU3YTllXkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica",
+            "Year": "1978–1979",
+            "imdbID": "tt0076984",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTY4NzQ5MDAwM15BMl5BanBnXkFtZTgwODU0OTkwMDE@._V1_SX300.jpg"
+        },
+        {
+          "Title": "Battlestar Galactica: The Resistance",
+          "Year": "2006–",
+          "imdbID": "tt0840800",
+          "Type": "series",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BM2NiN2M3MmUtOWFiZC00M2ZjLWI0MjEtNWU4NmQwNGM5NGQyXkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica",
+            "Year": "1978",
+            "imdbID": "tt0077215",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYjhhYzBlZjktMmU2Ny00OTIyLThhZjctNTVjMGQxZWQyMzE4XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Galactica 1980",
+            "Year": "1980",
+            "imdbID": "tt0080221",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTk1ODI1Mzg0MV5BMl5BanBnXkFtZTcwODkxMDU1MQ@@._V1._CR22,35,331,463_SY132_CR2,0,89,132_AL_.jpg_V1_SX300.jpg"
         }
-
 ]

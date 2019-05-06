@@ -196,13 +196,6 @@
             "Poster": "https://m.media-amazon.com/images/M/MV5BMTI3NzczMTk5NF5BMl5BanBnXkFtZTcwNDM5NjEzMQ@@._V1_SX300.jpg"
         },
         {
-            "Title": "The New Batman Adventures",
-            "Year": "1997–1999",
-            "imdbID": "tt0118266",
-            "Type": "series",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BN2Q5MWY3YTUtNTQ0Ny00MDNlLWJiMmYtNDkwZTg5ZDFiMTFkXkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg"
-        },
-        {
             "Title": "Batman v Superman: Dawn of Justice",
             "Year": "2016",
             "imdbID": "tt2975590",
@@ -210,39 +203,11 @@
             "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
         },
         {
-            "Title": "Superman Returns",
-            "Year": "2006",
-            "imdbID": "tt0348150",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BNzY2ZDQ2MTctYzlhOC00MWJhLTgxMmItMDgzNDQwMDdhOWI2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
-        },
-        {
-            "Title": "Superman",
-            "Year": "1978",
-            "imdbID": "tt0078346",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
-        },
-        {
-            "Title": "Superman II",
-            "Year": "1980",
-            "imdbID": "tt0081573",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BMWUzNDJjMDUtNGEzMi00YThlLTlkMmEtNjVlOGQwOWM3MjM3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
-        },
-        {
             "Title": "Superman III",
             "Year": "1983",
             "imdbID": "tt0086393",
             "Type": "movie",
             "Poster": "https://m.media-amazon.com/images/M/MV5BMzI3ZDllMTctNmI2Mi00OGQ4LTk2ZTQtYTJhMjA5ZGI2YmRkXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
-        },
-        {
-            "Title": "Superman IV: The Quest for Peace",
-            "Year": "1987",
-            "imdbID": "tt0094074",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BMmIwZWY1YTYtNDlhOS00NDRmLWI4MzItNjk2NDc1N2NhYzNlXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg"
         },
         {
             "Title": "Superman/Batman: Apocalypse",
@@ -439,6 +404,76 @@
             "imdbID": "tt0361243",
             "Type": "series",
             "Poster": "https://m.media-amazon.com/images/M/MV5BMzhmNTg1NWYtNTUzNy00NWI0LTk1ZmYtODA1YTE0NGNkYWZkXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica: The Face of the Enemy",
+            "Year": "2008–",
+            "imdbID": "tt1338724",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMDYwOTU0MjYtZjk0NC00NmM4LWFkZWItYWQxZGE4ZTExNjg0XkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica: Razor Flashbacks",
+            "Year": "2007–",
+            "imdbID": "tt1334430",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ1ZDI1MTYtMzJkYi00OTA1LTg5NGMtOTZjZTllMmUyYzFkXkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Mission Galactica: The Cylon Attack",
+            "Year": "1979",
+            "imdbID": "tt0077937",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjE0OTk3NzAyM15BMl5BanBnXkFtZTYwMjYwNTc4._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica: The Second Coming",
+            "Year": "1999",
+            "imdbID": "tt0193000",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BOGYyNzAzNzgtZTgzNC00YjNhLTg3NWYtMWI4ZGVmNzZlZjMxXkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica: The Last Frakkin' Special",
+            "Year": "2009",
+            "imdbID": "tt1401100",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+          "Title": "Battlestar Galactica: The Story So Far",
+          "Year": "2006",
+          "imdbID": "tt1056417",
+          "Type": "movie",
+          "Poster": "N/A"
+        },
+        {
+            "Title": "Battlestar Galactica: Revealed",
+            "Year": "2008",
+            "imdbID": "tt1195467",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Battlestar Galactica: The Phenomenon",
+            "Year": "2008",
+            "imdbID": "tt1198334",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Battlestar Galactica",
+            "Year": "2003",
+            "imdbID": "tt0368594",
+            "Type": "game",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Remembering 'Battlestar Galactica'",
+            "Year": "2004",
+            "imdbID": "tt0488624",
+            "Type": "movie",
+            "Poster": "N/A"
         }
 
 ]

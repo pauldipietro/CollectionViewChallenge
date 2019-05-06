@@ -29,7 +29,8 @@
                                         VerticalOptions="Center" />
                                     <StackLayout Grid.Column="1" VerticalOptions="Center" >
                                         <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="20" />
-                                        <Label Text="{Binding Type}" FontAttributes="Italic" FontSize="20"/>
+                                        <Label Text="{Binding Type}" FontAttributes="Italic" FontSize="16"/>
+                                        <Label Text="{Binding Year}" FontAttributes="Italic" FontSize="16"/>
                                     </StackLayout>
                                 </Grid>
                             </StackLayout>

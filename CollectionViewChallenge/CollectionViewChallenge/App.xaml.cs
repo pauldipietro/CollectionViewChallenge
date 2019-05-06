@@ -11,7 +11,7 @@ namespace CollectionViewChallenge
         public App()
         {
             InitializeComponent();
-            MainPage = new CollectionViewChallengePage();
+            MainPage = new NavigationPage(new  CollectionViewChallengePage());
             //MainPage = new AppShell();
         }
 

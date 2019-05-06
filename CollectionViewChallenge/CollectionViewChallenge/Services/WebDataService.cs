@@ -17,8 +17,7 @@ namespace CollectionViewChallenge.Services
 
         public async Task<IEnumerable<Movie>> GetMoviesAsync()
         {
-            var json = await Client.GetStringAsync("https://raw.githubusercontent.com/BryanOroxon/CollectionViewChallenge/master/CollectionViewChallenge/CollectionViewChallenge/Data/moviedata.json");
-            //var json = await Client.GetStringAsync("https://blobluis.blob.core.windows.net/data/moviedata.json");
+            var json = await Client.GetStringAsync("https://raw.githubusercontent.com/BryanOroxon/CollectionViewChallenge/master/CollectionViewChallenge/CollectionViewChallenge/Data/moviedata.json");           
             var all = Movie.FromJson(json);
             return all;
         }

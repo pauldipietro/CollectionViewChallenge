@@ -18,20 +18,7 @@ namespace CollectionViewChallenge.Views
 		public MainPage ()
 		{
 			InitializeComponent ();
-            //mv = new MovieViewModel();
-           // BindingContext = mv;
 		}
-
-        protected async override void OnAppearing()
-        {
-            base.OnAppearing();
-
-          //  await mv.GetMoviesCommand();
-
-            await Task.Delay(8000);
-        }
-
-
     }
 
 }

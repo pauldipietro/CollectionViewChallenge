@@ -20,7 +20,6 @@ namespace CollectionViewChallenge.ViewModels
         public MovieViewModel()
         {
             Movies = new ObservableRangeCollection<Movie>();
-            Title = "Movies CollectionV";
             GetMoviesCommand = new Command<string>(async (test) => await GetMoviesAsync(test));
 
             GetMoviesCommand.Execute("Hello Bryan");
@@ -37,7 +36,7 @@ namespace CollectionViewChallenge.ViewModels
 
                 Movies.ReplaceRange(movies);
 
-                Title = $"Movies finder ({Movies.Count})";
+                Title = $"Movies CollectionView ({Movies.Count})";
             }
             catch (Exception ex)
             {

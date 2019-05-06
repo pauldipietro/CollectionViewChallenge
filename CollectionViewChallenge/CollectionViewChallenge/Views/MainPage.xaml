@@ -35,23 +35,15 @@
                                 <ColumnDefinition Width="60"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Image 
-                                Source="{Binding Poster}"
-                                HeightRequest="90"
-                                WidthRequest="70"
-                                Aspect="AspectFill"
-                                VerticalOptions="Center"
-                                
-                                />
-                            <!--circle:CircleImage
+                            <circle:CircleImage
                                 Aspect="AspectFill"
                                 BorderColor="Orange"
                                 BorderThickness="3"
-                                HeightRequest="70"
+                                HeightRequest="100"
                                 HorizontalOptions="Center"
                                 Source="{Binding Poster}"
                                 VerticalOptions="Center"
-                                WidthRequest="70" /-->
+                                WidthRequest="100" />
                             <StackLayout Grid.Column="1" VerticalOptions="Center">
                                 <Label Text="{Binding Title}" FontAttributes="Bold" />
                                 <Label Text="{Binding Type}" FontAttributes="Italic"/>

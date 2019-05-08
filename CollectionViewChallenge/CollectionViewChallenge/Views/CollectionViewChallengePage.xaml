@@ -1,31 +1,57 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CollectionViewChallenge.Views.CollectionViewChallengePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Clear" Clicked="OnClearClicked"/>
+        <ToolbarItem Text="" x:Name="TBUpdating"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <!-- Use your own layout and functionality here! -->
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>This is a CollectionView!</x:String>
-                        <x:String>Your feedback on the experience of converting a ListView to a CollectionView is incredibly appreciated.</x:String>
-                        <x:String>Here are three general questions:</x:String>
-                        <x:String>1. How was the experience of converting your existing ListView to a CollectionView?</x:String>
-                        <x:String>2. How is the performance compared to the ListView?</x:String>
-                        <x:String>3. Is there a specific piece of functionality that you'd like to see?</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
+            <CollectionView
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand"
+                Margin="10"
+                ItemSizingStrategy="MeasureAllItems"
+                BackgroundColor="White"
+                ItemsSource="{Binding Data}"
+                SelectionMode="Single"
+                SelectionChanged="OnCollectionViewSelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="5">
-                            <Label Text="{Binding .}" d:Text="Design Time Data" FontSize="10"/>
-                        </StackLayout>
+                        <Grid
+                            ColumnSpacing="10"
+                            RowSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="35*" />
+                                <ColumnDefinition Width="65*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                   Text="{Binding Column1}"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Column2}"
+                                   FontAttributes="Italic" />
+                        </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <StackLayout>
+                        <Label Text="No entries!"
+                               Margin="10,25,10,10"
+                               FontAttributes="Bold"
+                               FontSize="18"
+                               HorizontalOptions="Fill"
+                               HorizontalTextAlignment="Center" />
+                    </StackLayout>
+        </CollectionView.EmptyView>
             </CollectionView>
         </StackLayout>
     </ContentPage.Content>

@@ -11,8 +11,8 @@ namespace CollectionViewChallenge
         public App()
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new  CollectionViewChallengePage());
+            //MainPage = new AppShell();
         }
 
         protected override void OnStart()

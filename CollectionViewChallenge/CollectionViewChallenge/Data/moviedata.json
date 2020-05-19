@@ -1,0 +1,477 @@
+[
+    {
+            "Title": "Batman: The Killing Joke",
+            "Year": "2016",
+            "imdbID": "tt4853102",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTdjZTliODYtNWExMi00NjQ1LWIzN2MtN2Q5NTg5NTk3NzliL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: The Dark Knight Returns, Part 2",
+            "Year": "2013",
+            "imdbID": "tt2166834",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYTEzMmE0ZDYtYWNmYi00ZWM4LWJjOTUtYTE0ZmQyYWM3ZjA0XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: Mask of the Phantasm",
+            "Year": "1993",
+            "imdbID": "tt0106364",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BODE0YTBiMjQtNWQyZC00YTNjLWJmYjAtMWUwNzI4NGVlZTAzL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: Year One",
+            "Year": "2011",
+            "imdbID": "tt1672723",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNTJjMmVkZjctNjNjMS00ZmI2LTlmYWEtOWNiYmQxYjY0YWVhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: Assault on Arkham",
+            "Year": "2014",
+            "imdbID": "tt3139086",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZDU1ZGRiY2YtYmZjMi00ZDQwLWJjMWMtNzUwNDMwYjQ4ZTVhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: The Movie",
+            "Year": "1966",
+            "imdbID": "tt0060153",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMmM1OGIzM2UtNThhZS00ZGNlLWI4NzEtZjlhOTNhNmYxZGQ0XkEyXkFqcGdeQXVyNTkxMzEwMzU@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: Gotham Knight",
+            "Year": "2008",
+            "imdbID": "tt1117563",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BM2I0YTFjOTUtMWYzNC00ZTgyLTk2NWEtMmE3N2VlYjEwN2JlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Superman/Batman: Apocalypse",
+            "Year": "2010",
+            "imdbID": "tt1673430",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjk3ODhmNjgtZjllOC00ZWZjLTkwYzQtNzc1Y2ZhMjY2ODE0XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman Beyond",
+            "Year": "1999–2001",
+            "imdbID": "tt0147746",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYTBiZjFlZDQtZjc1MS00YzllLWE5ZTQtMmM5OTkyNjZjMWI3XkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman Beyond: Return of the Joker",
+            "Year": "2000",
+            "imdbID": "tt0233298",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNmRmODEwNzctYzU1MS00ZDQ1LWI2NWMtZWFkNTQwNDg1ZDFiXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg"
+        },
+                {
+            "Title": "Batman Begins",
+            "Year": "2005",
+            "imdbID": "tt0372784",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZmUwNGU2ZmItMmRiNC00MjhlLTg5YWUtODMyNzkxODYzMmZlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman v Superman: Dawn of Justice",
+            "Year": "2016",
+            "imdbID": "tt2975590",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman",
+            "Year": "1989",
+            "imdbID": "tt0096895",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman Returns",
+            "Year": "1992",
+            "imdbID": "tt0103776",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BOGZmYzVkMmItM2NiOS00MDI3LWI4ZWQtMTg0YWZkODRkMmViXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman Forever",
+            "Year": "1995",
+            "imdbID": "tt0112462",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNWY3M2I0YzItNzA1ZS00MzE3LThlYTEtMTg2YjNiOTYzODQ1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman & Robin",
+            "Year": "1997",
+            "imdbID": "tt0118688",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMGQ5YTM1NmMtYmIxYy00N2VmLWJhZTYtN2EwYTY3MWFhOTczXkEyXkFqcGdeQXVyNTA2NTI0MTY@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Lego Batman Movie",
+            "Year": "2017",
+            "imdbID": "tt4116284",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: The Animated Series",
+            "Year": "1992–1995",
+            "imdbID": "tt0103359",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: Under the Red Hood",
+            "Year": "2010",
+            "imdbID": "tt1569923",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYTdlODI0YTYtNjk5ZS00YzZjLTllZjktYmYzNWM4NmI5MmMxXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: The Dark Knight Returns, Part 1",
+            "Year": "2012",
+            "imdbID": "tt2313197",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMzIxMDkxNDM2M15BMl5BanBnXkFtZTcwMDA5ODY1OQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Son of Batman",
+            "Year": "2014",
+            "imdbID": "tt3139072",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYjdkZWFhNzctYmNhNy00NGM5LTg0Y2YtZWM4NmU2MWQ3ODVkXkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: Arkham Asylum",
+            "Year": "2009",
+            "imdbID": "tt1282022",
+            "Type": "game",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMWE1MGI0ZmItNzU2My00Mzk5LThkNTMtMmFiMjRiZDNlNzkwXkEyXkFqcGdeQXVyNjgyODQ1Mzk@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Superman/Batman: Public Enemies",
+            "Year": "2009",
+            "imdbID": "tt1398941",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZDc5NTFiMzgtZWJiOS00N2M1LWJmOGYtZmNjMzFhMzcxZjRiXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman",
+            "Year": "1966–1968",
+            "imdbID": "tt0059968",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTkzNDY5NTg5MF5BMl5BanBnXkFtZTgwNzI4NzM1MjE@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman: Bad Blood",
+            "Year": "2016",
+            "imdbID": "tt4870838",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZWZiZmZhYmQtYjVkZi00MWIzLWEzM2MtYzhkNjliNzc2MTMwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman vs. Robin",
+            "Year": "2015",
+            "imdbID": "tt4324274",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjI0ODY2MDE5Nl5BMl5BanBnXkFtZTgwMTk0NTcyNTE@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman Ninja",
+            "Year": "2018",
+            "imdbID": "tt7451284",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYmFhYzZhYzgtZjZiYS00NWEwLWFhYTUtN2UxM2FmYzdhNDUyXkEyXkFqcGdeQXVyNDk2Nzc1Mg@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman Begins",
+            "Year": "2005",
+            "imdbID": "tt0450392",
+            "Type": "game",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTI3NzczMTk5NF5BMl5BanBnXkFtZTcwNDM5NjEzMQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Batman v Superman: Dawn of Justice",
+            "Year": "2016",
+            "imdbID": "tt2975590",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Superman III",
+            "Year": "1983",
+            "imdbID": "tt0086393",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMzI3ZDllMTctNmI2Mi00OGQ4LTk2ZTQtYTJhMjA5ZGI2YmRkXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Superman/Batman: Apocalypse",
+            "Year": "2010",
+            "imdbID": "tt1673430",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjk3ODhmNjgtZjllOC00ZWZjLTkwYzQtNzc1Y2ZhMjY2ODE0XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Superman/Batman: Public Enemies",
+            "Year": "2009",
+            "imdbID": "tt1398941",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZDc5NTFiMzgtZWJiOS00N2M1LWJmOGYtZmNjMzFhMzcxZjRiXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Lois & Clark: The New Adventures of Superman",
+            "Year": "1993–1997",
+            "imdbID": "tt0106057",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZTU1ZGFjNzEtZWYzZC00ZmI0LTg2NmMtN2YyNTY4YzhlODIyXkEyXkFqcGdeQXVyMjExMjk0ODk@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Superman/Doomsday",
+            "Year": "2007",
+            "imdbID": "tt0934706",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZjU4MzIyZWUtNWQ4Yy00YTU4LTk5NjUtNDBiNDkxZTVlZDgwXkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Adventures of Young Indiana Jones: Adventures in the Secret Service",
+            "Year": "1999",
+            "imdbID": "tt0250196",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMzI1MDYzODM0MF5BMl5BanBnXkFtZTcwOTYwNjAyMQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Adventures of Young Indiana Jones: Daredevils of the Desert",
+            "Year": "1999",
+            "imdbID": "tt0275186",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZDQ0NGI4ZjktYmQyNC00ZDZhLTgyMGYtYjU1Zjg5N2YzZDRlXkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Adventures of Young Indiana Jones: Travels with Father",
+            "Year": "1996",
+            "imdbID": "tt0154003",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjU0NTY3M2UtZGJlYi00MDk4LWE0ZTAtZWI1MzcyZDg3Y2U5XkEyXkFqcGdeQXVyMzU0NzkwMDg@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Adventures of Young Indiana Jones: Trenches of Hell",
+            "Year": "1999",
+            "imdbID": "tt0250199",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNzgzMDQxNjY3N15BMl5BanBnXkFtZTcwODQ0NTgxMQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Adventures of Young Indiana Jones: Spring Break Adventure",
+            "Year": "1999",
+            "imdbID": "tt0250198",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMzQ5MzI2NTgwMl5BMl5BanBnXkFtZTcwMzQ3MzQyMQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Indiana Jones and the Last Crusade",
+            "Year": "1989",
+            "imdbID": "tt0251138",
+            "Type": "game",
+            "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BODZkNzllNGYtODdiMy00NDU0LWE0NDEtMjc4NmZkYjk0MTQzXkEyXkFqcGdeQXVyMDEwMjgxNg@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Adventures of Young Indiana Jones: Masks of Evil",
+            "Year": "1999",
+            "imdbID": "tt0250197",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTUwODkwOTYzNV5BMl5BanBnXkFtZTcwNjUyMzMyMQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Adventures of Young Indiana Jones: Hollywood Follies",
+            "Year": "1994",
+            "imdbID": "tt0111806",
+            "Type": "movie",
+            "Poster": "https://ia.media-imdb.com/images/M/MV5BMTMyMDgxMzA4Ml5BMl5BanBnXkFtZTcwMjcyMzMyMQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Indiana Jones: Making the Trilogy",
+            "Year": "2003",
+            "imdbID": "tt0395656",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNDUyZWVmZDItNzYwMy00ZTE1LTk4ZWEtOGU2MTQxY2VkZDVhXkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Adventures of Young Indiana Jones: The Phantom Train of Doom",
+            "Year": "1999",
+            "imdbID": "tt0278285",
+            "Type": "movie",
+            "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMThlMTAxZGUtMjJiYy00YTJlLWFiMmQtYjY0NGM4NzJkMjRjXkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: Episode IV - A New Hope",
+            "Year": "1977",
+            "imdbID": "tt0076759",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: Episode V - The Empire Strikes Back",
+            "Year": "1980",
+            "imdbID": "tt0080684",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: Episode VI - Return of the Jedi",
+            "Year": "1983",
+            "imdbID": "tt0086190",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: The Force Awakens",
+            "Year": "2015",
+            "imdbID": "tt2488496",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: Episode I - The Phantom Menace",
+            "Year": "1999",
+            "imdbID": "tt0120915",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: Episode III - Revenge of the Sith",
+            "Year": "2005",
+            "imdbID": "tt0121766",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: Episode II - Attack of the Clones",
+            "Year": "2002",
+            "imdbID": "tt0121765",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMDAzM2M0Y2UtZjRmZi00MzVlLTg4MjEtOTE3NzU5ZDVlMTU5XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Rogue One: A Star Wars Story",
+            "Year": "2016",
+            "imdbID": "tt3748528",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: The Last Jedi",
+            "Year": "2017",
+            "imdbID": "tt2527336",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Solo: A Star Wars Story",
+            "Year": "2018",
+            "imdbID": "tt3778644",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BOTM2NTI3NTc3Nl5BMl5BanBnXkFtZTgwNzM1OTQyNTM@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: The Clone Wars",
+            "Year": "2008",
+            "imdbID": "tt1185834",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTI1MDIwMTczOV5BMl5BanBnXkFtZTcwNTI4MDE3MQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: The Clone Wars",
+            "Year": "2008–2019",
+            "imdbID": "tt0458290",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNjZmMDE2NTctNjNlNC00ZWJhLWJmZjUtZjlkNzljNzkzMmEwXkEyXkFqcGdeQXVyMjg5NDMwMQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars Rebels",
+            "Year": "2014–2018",
+            "imdbID": "tt2930604",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BY2Q1ZTAzNzMtMzlmNy00NjdjLThhYjgtMzgxN2ZkYmFhMDIwXkEyXkFqcGdeQXVyMjg5NDMwMQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Star Wars: Clone Wars",
+            "Year": "2003–2005",
+            "imdbID": "tt0361243",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMzhmNTg1NWYtNTUzNy00NWI0LTk1ZmYtODA1YTE0NGNkYWZkXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica: The Face of the Enemy",
+            "Year": "2008–",
+            "imdbID": "tt1338724",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMDYwOTU0MjYtZjk0NC00NmM4LWFkZWItYWQxZGE4ZTExNjg0XkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
+        },{
+            "Title": "Battlestar Galactica",
+            "Year": "2004–2009",
+            "imdbID": "tt0407362",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTc1NTg1MDk3NF5BMl5BanBnXkFtZTYwNDYyMjI3._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica",
+            "Year": "2003",
+            "imdbID": "tt0314979",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZjJlYzgzOWUtZmJlZi00ZGM4LTliNzctNWFkNThlMDJhZDQxXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica: Razor",
+            "Year": "2007",
+            "imdbID": "tt0991178",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTk5MzUxNTYwMF5BMl5BanBnXkFtZTcwNTIyMjU1MQ@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica: The Plan",
+            "Year": "2009",
+            "imdbID": "tt1286130",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTgyODE2MjY2OF5BMl5BanBnXkFtZTcwMjQxMTI5Mg@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica: Blood & Chrome",
+            "Year": "2012",
+            "imdbID": "tt1704292",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BM2RiNjA4MzctMGU1MC00MThiLTk4OWUtODI4ZmM4MmU3YTllXkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica",
+            "Year": "1978–1979",
+            "imdbID": "tt0076984",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTY4NzQ5MDAwM15BMl5BanBnXkFtZTgwODU0OTkwMDE@._V1_SX300.jpg"
+        },
+        {
+          "Title": "Battlestar Galactica: The Resistance",
+          "Year": "2006–",
+          "imdbID": "tt0840800",
+          "Type": "series",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BM2NiN2M3MmUtOWFiZC00M2ZjLWI0MjEtNWU4NmQwNGM5NGQyXkEyXkFqcGdeQXVyMDM0MzU2NA@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Battlestar Galactica",
+            "Year": "1978",
+            "imdbID": "tt0077215",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYjhhYzBlZjktMmU2Ny00OTIyLThhZjctNTVjMGQxZWQyMzE4XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Galactica 1980",
+            "Year": "1980",
+            "imdbID": "tt0080221",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTk1ODI1Mzg0MV5BMl5BanBnXkFtZTcwODkxMDU1MQ@@._V1._CR22,35,331,463_SY132_CR2,0,89,132_AL_.jpg_V1_SX300.jpg"
+        }
+]

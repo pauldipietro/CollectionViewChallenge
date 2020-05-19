@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewChallenge.Views.MainPage"
+             xmlns:viewmodel="clr-namespace:CollectionViewChallenge.ViewModels"
+             xmlns:local="clr-namespace:CollectionViewChallenge"
+             Title="{Binding Title}"
+             xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             >
+    <ContentPage.BindingContext>
+        <viewmodel:MovieViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid ColumnSpacing="5" RowSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListView
+            Grid.ColumnSpan="2"
+            HasUnevenRows="True"
+            CachingStrategy="RecycleElement"
+            ItemsSource="{Binding Movies}"
+            SeparatorColor="{OnPlatform Android=Transparent, iOS=Orange}"
+            SeparatorVisibility="Default"    >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="2" ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <circle:CircleImage
+                                Aspect="AspectFill"
+                                BorderColor="Orange"
+                                BorderThickness="3"
+                                HeightRequest="100"
+                                HorizontalOptions="Center"
+                                Source="{Binding Poster}"
+                                VerticalOptions="Center"
+                                WidthRequest="100" />
+                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                <Label Text="{Binding Type}" FontAttributes="Italic"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            Command="{Binding GetMoviesCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Text="Search" />
+        <ActivityIndicator
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="FillAndExpand"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="FillAndExpand" />
+    </Grid>
+</ContentPage>
